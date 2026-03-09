@@ -1,40 +1,11 @@
 # 📖 Contexto do Projeto
 
-## 🧩 Sprint 01 – Uma Nova Jornada
-
-Esta é a primeira sprint do projeto **Iara Games**.
-
-Nesta etapa, o time inicia o desenvolvimento da plataforma compreendendo:
-
-- o contexto do projeto
-- o mercado em que ele está inserido
-- a visão inicial do produto
-
-O objetivo **não é desenvolver um website completo**, mas estabelecer as bases conceituais que orientarão as próximas sprints.
-
----
-
 ## 🎯 Objetivo da Sprint
-
-Ao final da Sprint 01, o grupo deve apresentar:
-
-- entendimento claro da proposta da plataforma
-- decisões iniciais de **design e UX**
-- uma **página inicial estática em HTML e CSS**
-- organização do projeto em **repositório público no GitHub**
-
----
+Estabelecer bases conceituais sobre a plataforma, decisões de design, UX, página inicial estática (HTML/CSS) e organizar o repositório.
 
 ## 💡 Proposta da Plataforma
 
-@TODO
+A plataforma **Iara Games** tem como propósito impulsionar desenvolvedoras de jogos brasileiras indies. O projeto piloto foca na **venda e distribuição direta** (sem *cloud gaming* ou multiplayer online nativo). O nome homenageia nosso folclore e guiará uma identidade visual baseada em "brasilidades".
 
----
-
-<p align="left">
-  <a href="../README.md">⬅️ Voltar</a>
-</p>
-
-<p align="right">
-  <a href="./02_pesquisa_plataformas.md">➡️ Próxima página</a>
-</p>
+<p align="left"><a href="../README.md">🏠 Voltar à Home</a></p>
+<p align="right"><a href="./02_pesquisa_plataformas.md">➡️ Próxima: Pesquisa de Plataformas</a></p>
