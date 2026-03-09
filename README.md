@@ -28,13 +28,9 @@ O objetivo desta etapa é estabelecer as **bases conceituais, visuais e estrutur
 ## Sumário
 
 1. [Contexto e Proposta do Projeto](./READMES/01_contexto_projeto.md)
-
 2. [Pesquisa de Plataformas](./READMES/02_pesquisa_plataformas.md)
-
 3. [Decisões de Design (GDW)](./READMES/03_design.md)
-
 4. [UX e Acessibilidade](./READMES/04_ux_acessibilidade.md)
-
 5.  [Página Inicial](./READMES/05_pagina_inicial.md)
 
 ## Instruções de Uso
