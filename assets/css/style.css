@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 :root {
     /* Brand colors */
     --color-primary: #E34A38;
@@ -6,6 +8,9 @@
     /* Neutral colors */
     --color-dark: #0F1714;
     --color-light: #E8ECEB;
+
+    /* Fonts */
+    --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -17,8 +22,12 @@
 }
 
 body {
+    font-family: var(--font-inter);
+    background-color: var(--color-light);
+    color: var(--color-dark);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
     align-items: center;
