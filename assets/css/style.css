@@ -1,0 +1,40 @@
+:root {
+    /* Brand colors */
+    --color-primary: #E34A38;
+    --color-secondary: #FCA311;
+
+    /* Neutral colors */
+    --color-dark: #0F1714;
+    --color-light: #E8ECEB;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+::selection {
+    background-color: var(--color-secondary);
+    color: var(--color-light)
+}
