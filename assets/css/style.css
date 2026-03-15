@@ -45,7 +45,20 @@ body {
 }
 
 input[type="radio"][name="carousel"] {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+input[type="radio"][name="carousel"]:focus-visible~.hero-carousel__slides {
+    outline: 4px solid var(--color-secondary);
+    outline-offset: -4px;
 }
 
 .hero-carousel__slides {
@@ -132,6 +145,11 @@ input[type="radio"][name="carousel"] {
     bottom: -10rem;
 }
 
+.hero-carousel__age-rating img {
+    width: 3.4375rem;
+    height: 3.4375rem;
+}
+
 .hero-carousel__age-rating div {
     display: flex;
     flex-direction: column;
@@ -181,9 +199,6 @@ input[type="radio"][name="carousel"] {
         width: 100%;
         gap: 1rem;
         max-width: 100%;
-        /* flex-direction: column;
-        align-items: center;
-        justify-content: center; */
     }
 
     .hero-carousel__button {

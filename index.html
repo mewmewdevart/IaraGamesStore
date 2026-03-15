@@ -80,17 +80,16 @@
 </head>
 
 <body>
-	<section class="hero-carousel">
-		<!-- Inputs for CSS-only carousel logic -->
-		<input type="radio" name="carousel" id="carousel-1" checked>
-		<input type="radio" name="carousel" id="carousel-2">
-		<input type="radio" name="carousel" id="carousel-3">
-		<input type="radio" name="carousel" id="carousel-4">
+	<section class="hero-carousel" aria-label="Carrossel de Destaques" aria-roledescription="carousel">
+		<input type="radio" name="carousel" id="carousel-1" aria-label="Slide 1: Ruff Ghanor" checked>
+		<input type="radio" name="carousel" id="carousel-2" aria-label="Slide 2: Dandara">
+		<input type="radio" name="carousel" id="carousel-3" aria-label="Slide 3: Pixel Ripped 1995">
+		<input type="radio" name="carousel" id="carousel-4" aria-label="Slide 4: Zueirama">
 
 		<div class="hero-carousel__slides">
 			<!-- Slide 1 -->
 			<div class="hero-carousel__slide"
-				style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-RuffGhanor.jpg');">
+				style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-ruff-ghanor.jpg');">
 				<div class="hero-carousel__container">
 					<div class="hero-carousel__dots">
 						<label for="carousel-1"></label>
@@ -108,10 +107,12 @@
 					</p>
 
 					<div class="hero-carousel__buttons">
-						<button class="hero-carousel__button hero-carousel__button--primary">
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--primary">
 							Comprar Agora
 						</button>
-						<button class="hero-carousel__button hero-carousel__button--icon"
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--icon"
 							aria-label="Adicionar ao carrinho">
 							<i class="fa-solid fa-cart-shopping"></i>
 						</button>
@@ -120,136 +121,143 @@
 					<div class="hero-carousel__age-rating">
 						<div>
 							<p>Classificação Indicativa</p>
-							<p>Violencia</p>
+							<p>Violência</p>
 							<span class="hero-carousel__age-rating-line"></span>
 						</div>
 
-						<img src="./assets/img/icon-age-classification.svg" alt="">
+						<img src="./assets/img/icon-age-classification_12.png" alt="12 Anos">
 					</div>
 				</div>
 			</div>
 
 			<!-- Slide 2 -->
 			<div class="hero-carousel__slide"
-				style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-Dandara.jpg'); ">
-				<div class="hero-carousel__container"">
-					<div class=" hero-carousel__dots">
-					<label for="carousel-1"></label>
-					<label for="carousel-2"></label>
-					<label for="carousel-3"></label>
-					<label for="carousel-4"></label>
-				</div>
-
-				<h1 class="hero-carousel__title">Dandara</h1>
-				<p class="hero-carousel__description">
-					Em Dandara, você assume o papel de uma guerreira que desafia a gravidade para restaurar o
-					equilíbrio do mundo de Salt. Movendo-se livremente entre paredes, teto e chão, Dandara
-					enfrenta um regime opressor e criaturas estranhas enquanto luta para libertar um universo
-					à beira do colapso...
-				</p>
-
-				<div class="hero-carousel__buttons">
-					<button class="hero-carousel__button hero-carousel__button--primary">
-						Comprar Agora
-					</button>
-					<button class="hero-carousel__button hero-carousel__button--icon"
-						aria-label="Adicionar ao carrinho">
-						<i class="fa-solid fa-cart-shopping"></i>
-					</button>
-				</div>
-
-				<div class="hero-carousel__age-rating">
-					<div>
-						<p>Classificação Indicativa</p>
-						<p>Violencia</p>
-						<span class="hero-carousel__age-rating-line"></span>
+				style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-dandara.jpg'); ">
+				<div class="hero-carousel__container">
+					<div class="hero-carousel__dots">
+						<label for="carousel-1"></label>
+						<label for="carousel-2"></label>
+						<label for="carousel-3"></label>
+						<label for="carousel-4"></label>
 					</div>
 
-					<img src="./assets/img/icon-age-classification.svg" alt="">
-				</div>
-			</div>
-		</div>
+					<h1 class="hero-carousel__title">Dandara</h1>
+					<p class="hero-carousel__description">
+						Em Dandara, você assume o papel de uma guerreira que desafia a gravidade para restaurar o
+						equilíbrio do mundo de Salt. Movendo-se livremente entre paredes, teto e chão, Dandara
+						enfrenta um regime opressor e criaturas estranhas enquanto luta para libertar um universo
+						à beira do colapso...
+					</p>
 
-		<!-- Slide 3 -->
-		<div class="hero-carousel__slide"
-			style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-PixelRipped.jpg');">
-			<div class="hero-carousel__container" ">
-					<div class=" hero-carousel__dots">
-				<label for="carousel-1"></label>
-				<label for="carousel-2"></label>
-				<label for="carousel-3"></label>
-				<label for="carousel-4"></label>
-			</div>
-
-			<h1 class="hero-carousel__title">Pixel Ripped 1995</h1>
-			<p class="hero-carousel__description">
-				Em Pixel Ripped 1995, você embarca em uma aventura nostálgica que mistura realidade e
-				videogame. Ao lado da heroína digital Dot, você ajuda a salvar o universo dos jogos
-				enquanto vive o dia a dia de um garoto nos anos 90, enfrentando desafios dentro e fora
-				da tela para impedir que uma ameaça corrompa o mundo dos videogames...
-			</p>
-
-			<div class="hero-carousel__buttons">
-				<button class="hero-carousel__button hero-carousel__button--primary">
-					Comprar Agora
-				</button>
-				<button class="hero-carousel__button hero-carousel__button--icon" aria-label="Adicionar ao carrinho">
-					<i class="fa-solid fa-cart-shopping"></i>
-				</button>
-			</div>
-
-			<div class="hero-carousel__age-rating">
-				<div>
-					<p>Classificação Indicativa</p>
-					<p>Violencia</p>
-					<span class="hero-carousel__age-rating-line"></span>
-				</div>
-
-				<img src="./assets/img/icon-age-classification.svg" alt="">
-			</div>
-		</div>
-		</div>
-
-		<!-- Slide 4 -->
-		<div class="hero-carousel__slide"
-			style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-Zueirama.jpg'); ">
-			<div class="hero-carousel__container">
-				<div class="hero-carousel__dots">
-					<label for="carousel-1"></label>
-					<label for="carousel-2"></label>
-					<label for="carousel-3"></label>
-					<label for="carousel-4"></label>
-				</div>
-
-				<h1 class="hero-carousel__title">Zueirama</h1>
-				<p class="hero-carousel__description">
-					Em Horizon Chase Turbo, atravesse paisagens inspiradas em cidades brasileiras e pistas
-					ao redor do mundo em corridas cheias de velocidade. Com visual retrô inspirado nos
-					clássicos dos anos 90, trilha sonora marcante e disputas intensas, o jogo celebra a
-					essência dos arcades de corrida com muita adrenalina.
-				</p>
-
-				<div class="hero-carousel__buttons">
-					<button class="hero-carousel__button hero-carousel__button--primary">
-						Comprar Agora
-					</button>
-					<button class="hero-carousel__button hero-carousel__button--icon"
-						aria-label="Adicionar ao carrinho">
-						<i class="fa-solid fa-cart-shopping"></i>
-					</button>
-				</div>
-
-				<div class="hero-carousel__age-rating">
-					<div>
-						<p>Classificação Indicativa</p>
-						<p>Violencia</p>
-						<span class="hero-carousel__age-rating-line"></span>
+					<div class="hero-carousel__buttons">
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--primary">
+							Comprar Agora
+						</button>
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--icon"
+							aria-label="Adicionar ao carrinho">
+							<i class="fa-solid fa-cart-shopping"></i>
+						</button>
 					</div>
 
-					<img src="./assets/img/icon-age-classification.svg" alt="">
+					<div class="hero-carousel__age-rating">
+						<div>
+							<p>Classificação Indicativa</p>
+							<p>Fantasia</p>
+							<span class="hero-carousel__age-rating-line"></span>
+						</div>
+
+						<img src="./assets/img/icon-age-classification_10.png" alt="10 Anos">
+					</div>
 				</div>
 			</div>
-		</div>
+
+			<!-- Slide 3 -->
+			<div class="hero-carousel__slide"
+				style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-pixel-ripped.jpg');">
+				<div class="hero-carousel__container">
+					<div class="hero-carousel__dots">
+						<label for="carousel-1"></label>
+						<label for="carousel-2"></label>
+						<label for="carousel-3"></label>
+						<label for="carousel-4"></label>
+					</div>
+
+					<h1 class="hero-carousel__title">Pixel Ripped 1995</h1>
+					<p class="hero-carousel__description">
+						Em Pixel Ripped 1995, você embarca em uma aventura nostálgica que mistura realidade e
+						videogame. Ao lado da heroína digital Dot, você ajuda a salvar o universo dos jogos
+						enquanto vive o dia a dia de um garoto nos anos 90, enfrentando desafios dentro e fora
+						da tela para impedir que uma ameaça corrompa o mundo dos videogames...
+					</p>
+
+					<div class="hero-carousel__buttons">
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--primary">
+							Comprar Agora
+						</button>
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--icon"
+							aria-label="Adicionar ao carrinho">
+							<i class="fa-solid fa-cart-shopping"></i>
+						</button>
+					</div>
+
+					<div class="hero-carousel__age-rating">
+						<div>
+							<p>Classificação Indicativa</p>
+							<p>Livre</p>
+							<span class="hero-carousel__age-rating-line"></span>
+						</div>
+
+						<img src="./assets/img/icon-age-classification_free.png" alt="Livre">
+					</div>
+				</div>
+			</div>
+
+			<!-- Slide 4 -->
+			<div class="hero-carousel__slide"
+				style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-zueirama.jpg'); ">
+				<div class="hero-carousel__container">
+					<div class="hero-carousel__dots">
+						<label for="carousel-1"></label>
+						<label for="carousel-2"></label>
+						<label for="carousel-3"></label>
+						<label for="carousel-4"></label>
+					</div>
+
+					<h1 class="hero-carousel__title">Zueirama</h1>
+					<p class="hero-carousel__description">
+						Em Horizon Chase Turbo, atravesse paisagens inspiradas em cidades brasileiras e pistas
+						ao redor do mundo em corridas cheias de velocidade. Com visual retrô inspirado nos
+						clássicos dos anos 90, trilha sonora marcante e disputas intensas, o jogo celebra a
+						essência dos arcades de corrida com muita adrenalina.
+					</p>
+
+					<div class="hero-carousel__buttons">
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--primary">
+							Comprar Agora
+						</button>
+						<button onclick="window.location.href='#'"
+							class="hero-carousel__button hero-carousel__button--icon"
+							aria-label="Adicionar ao carrinho">
+							<i class="fa-solid fa-cart-shopping"></i>
+						</button>
+					</div>
+
+					<div class="hero-carousel__age-rating">
+						<div>
+							<p>Classificação Indicativa</p>
+							<p>Linguagem Imprópria</p>
+							<span class="hero-carousel__age-rating-line"></span>
+						</div>
+
+						<img src="./assets/img/icon-age-classification_14.png" alt="14 Anos">
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
