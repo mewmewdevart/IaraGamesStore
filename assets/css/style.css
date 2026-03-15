@@ -33,7 +33,7 @@ body {
 
 ::selection {
     background-color: var(--color-secondary);
-    color: var(--color-light);
+    color: var(--color-dark);
 }
 
 .hero-carousel {
