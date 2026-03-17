@@ -21,8 +21,8 @@
 
 body {
     font-family: var(--font-inter);
-    background-color: var(--color-light);
-    color: var(--color-dark);
+    background-color: var(--color-dark);
+    color: var(--color-light);
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
@@ -171,7 +171,7 @@ input[type="radio"][name="carousel"] {
     }
 
     .hero-carousel__container {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
         gap: 1.5rem;
         text-align: center;
         align-items: center;
@@ -233,10 +233,6 @@ input[type="radio"][name="carousel"] {
 }
 
 @media (max-width: 480px) {
-    .hero-carousel__container {
-        padding: 0 1rem;
-    }
-
     .hero-carousel__title {
         font-size: 1.75rem;
     }
@@ -280,4 +276,225 @@ input[type="radio"][name="carousel"] {
 
 #carousel-4:checked~.hero-carousel__slides {
     transform: translateX(-75%);
+}
+
+/*  =============================== SECTION : DIA DO CONSUMIDOR =============================== */
+/* =========================================
+   LAYOUT ÚNICO (Foco na Vitrine)
+   ========================================= */
+.layout-unico {
+    width: 100%;
+    margin: 0 auto;
+    padding: 3rem 5rem;
+}
+
+/* =========================================
+   CABEÇALHO DA SEÇÃO E GLOW EFFECT
+   ========================================= */
+.cabecalho-sessao {
+    margin-bottom: 32px;
+}
+
+.subtitulo-sessao {
+    font-size: 1rem;
+    color: rgba(232, 236, 235, 0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.titulo-campanha {
+    font-size: 2rem;
+    margin: 5px 0 0 0;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    animation: pulsar 1s infinite alternate;
+}
+
+@keyframes pulsar {
+    from {
+        text-shadow: 0 0 10px rgba(227, 74, 56, 0.4), 0 0 20px rgba(252, 163, 17, 0.2);
+    }
+
+    to {
+        text-shadow: 0 0 20px rgba(227, 74, 56, 0.9), 0 0 40px rgba(252, 163, 17, 0.7);
+    }
+}
+
+/* =========================================
+   CARROSSEL NATIVO
+   ========================================= */
+.carrossel-css {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 24px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-dark);
+}
+
+.carrossel-css::-webkit-scrollbar {
+    height: 8px;
+}
+
+.carrossel-css::-webkit-scrollbar-track {
+    background: var(--color-dark);
+    border-radius: 12px;
+}
+
+.carrossel-css::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 12px;
+}
+
+/* =========================================
+   CARDS E INTERATIVIDADE
+   ========================================= */
+.card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(227, 74, 56, 0.25);
+}
+
+.card-destaque {
+    width: 60%;
+    min-width: 340px;
+    height: 320px;
+}
+
+.card-normal {
+    width: 220px;
+    height: 320px;
+}
+
+.img-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.5s ease;
+}
+
+.card:hover .img-bg {
+    transform: scale(1.05);
+}
+
+/* Gradiente escuro para garantir leitura em fundos claros */
+.overlay-gradiente {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    background: linear-gradient(to top, rgba(15, 23, 20, 0.95) 0%, rgba(15, 23, 20, 0) 100%);
+    z-index: 1;
+}
+
+/* =========================================
+   CONTEÚDO INTERNO, TIPOGRAFIA E PREÇOS
+   ========================================= */
+.conteudo-card {
+    position: relative;
+    z-index: 2;
+    padding: 24px 20px;
+}
+
+.categoria-jogo {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(232, 236, 235, 0.7);
+    margin-bottom: 6px;
+}
+
+.conteudo-card h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-light);
+    line-height: 1.1;
+}
+
+/* GATILHOS DE VENDA */
+.badge-desconto {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background-color: var(--color-secondary);
+    color: var(--color-dark);
+    padding: 6px 14px;
+    border-radius: 8px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    z-index: 2;
+
+}
+
+.bloco-compra {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.preco-antigo {
+    font-size: 0.85rem;
+    color: var(--color-light);
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.preco-novo {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* =========================================
+   RESPONSIVIDADE (MOBILE)
+   ========================================= */
+@media (max-width: 900px) {
+    .titulo-campanha {
+        font-size: 1.8rem;
+    }
+
+    .card-destaque {
+        width: 85%;
+        min-width: 280px;
+        height: 280px;
+    }
+
+    .card-normal {
+        width: 180px;
+        height: 280px;
+    }
+
+    .conteudo-card h3 {
+        font-size: 1.1rem;
+    }
+
+    .layout-unico {
+        padding: 0 1rem;
+    }
 }
