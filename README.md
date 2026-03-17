@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/e5240d16-79aa-4c13-8be8-1b49d1b132e6" width="120" height="150" alt="IaraGames Logo" />
+  <img src="https://github.com/user-attachments/assets/8c579f14-d4f8-462b-8e7f-51fcb3140f26" width="200"  alt="IaraGames Logo" />
   <h1>Iara Games 🌊 </h1>
   <p>Protótipo inicial da plataforma Iara Games desenvolvido na Sprint 01, incluindo decisões de design, UX e uma homepage estática em HTML e CSS.</p>
   
