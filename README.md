@@ -98,10 +98,8 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 * **Mayla Mayumi Motobe** — [rm571213@fiap.com.br](mailto:rm571213@fiap.com.br)
 
 ## Referências
+- @TODO
 
 <p align="right">
   <a href="./docs/sprint_01.md">➡️ Iniciar leitura</a>
 </p>
-
-
----
