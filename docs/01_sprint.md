@@ -52,3 +52,8 @@ A estruturação fundamentou-se nos indicadores *Core Web Vitals* para garantir 
 
 ## 7. Roadmap e Visão de Futuro
 A infraestrutura proposta é a fundação tecnológica da Iara Games. A longo prazo, a plataforma escalará essa arquitetura para absorver volume expansivo de dados B2B/B2C, transformando algo concebido como "loja" na **comunidade definitiva e indispensável** dos estúdios locais.
+
+
+<p align="left"><a href="../README.md">🏠 Voltar à Home</a></p>
+<!-- <p align="right"><a href="#">➡️ Próxima Página</a></p> -->
+
