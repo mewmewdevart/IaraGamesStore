@@ -36,6 +36,8 @@ body {
     color: var(--color-dark);
 }
 
+/*  =============================== SECTION : HERO CAROUSEL =============================== */
+
 .hero-carousel {
     width: 100%;
     min-height: clamp(24rem, 45vw, 40.5rem);
@@ -279,6 +281,7 @@ input[type="radio"][name="carousel"] {
 }
 
 /*  =============================== SECTION : DIA DO CONSUMIDOR =============================== */
+
 /* =========================================
    LAYOUT ÚNICO (Foco na Vitrine)
    ========================================= */
