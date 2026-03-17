@@ -1,0 +1,189 @@
+1. Introdução e Escopo do Projeto 
+
+Este documento formaliza a primeira etapa de concepção da Iara Games, uma plataforma digital de distribuição focada no ecossistema de jogos independentes brasileiros. O desenvolvimento é conduzido pela equipe de desenvolvedores da agência simulatória Master3 (composta por Ingrid Silva de Lima, Julia Souza Gonçalves, Larissa Cristina Benedito, Mateus Teixeira Ribeiro e Mayla Mayumi Motobe). Nesta Sprint 01, sob a gestão da Scrum Master fictícia Lu Easy, o escopo foca no levantamento de requisitos junto à stakeholder principal (Iara Silva), definição do Design Visual (GDW), arquitetura de informação e entrega do protótipo estático (HTML/CSS) da Home Page. Esta documentação exclui, no momento, implementações de back-end. 
+
+ 
+
+(Sequência de imagens da Tela Inicial (Home Page) do Projeto Iara Games) 
+
+(Sequência de imagens da Tela Inicial (Home Page) do Projeto Iara Games) 
+
+2. Visão do Produto (Product Vision) 
+
+A Iara Games visa suprir uma lacuna no mercado de distribuição digital, oferecendo infraestrutura de e-commerce e comunidade exclusivamente para estúdios emergentes do Brasil. O briefing inicial foi fornecido pela cliente Iara Silva (ilustradora e designer). A partir de suas validações de mercado e demandas, a Master3 elaborou a arquitetura da solução, incluindo uma contraproposta de Interface de Usuário (UI) e Experiência do Usuário (UX). Este processo de alinhamento de requisitos funcionais e visuais foi homologado pela tutora do projeto, Marina Moreira Medeiros Polverari. O produto final atuará como um modelo de negócio Business-to-Consumer (B2C) e Business-to-Business (B2B), conectando os desenvolvedores locais diretamente ao consumidor final, com foco estrito na valorização da produção nacional. 
+
+ 
+
+(Printscreen de como organizamos o Projeto ) 
+
+3. Pesquisa de Plataformas de Distribuição (Referências) 
+
+Para fundamentar as decisões de arquitetura e usabilidade da Iara Games, a equipe conduziu uma análise competitiva baseada em três plataformas referenciais de mercado: 
+
+Steam: 
+
+A maior plataforma de distribuição de jogos para PC no mundo. Conta com uma base massiva de jogadores, o que garante enorme visibilidade estrutural. Para publicar, é necessário ingressar no Steamworks e pagar uma taxa de US$ 100 por jogo (reembolsável após atingir US$ 1.000 em vendas). 
+
+Perfil de inspiração:  
+
+Ideal para jogos premium para PC e projetos 2D/3D com forte foco comercial. 
+
+Itch.Io: 
+
+É praticamente a casa dos desenvolvedores indies e experimentais. A plataforma permite publicar jogos gratuitamente, concedendo ao criador controle total sobre a precificação. O modelo "pay-what-you-want" (pague o quanto quiser) é excelente para apoiar o cenário independente. 
+
+Perfil de inspiração: 
+
+Excelente referência para protótipos, jogos curtos, pixel art, submissões de game jams e projetos estritamente autorais.  
+
+Nuuvem: 
+
+Destaca-se como a maior plataforma de distribuição digital da América Latina. 
+
+Perfil de inspiração: 
+
+ Serve como a principal referência nacional para a Iara Games devido à sua comunicação localizada, interface focada nas necessidades do público brasileiro e integração nativa com métodos de pagamento locais e acessíveis.  
+
+4. Posicionamento Estratégico 
+
+O projeto baseia-se em três pilares operacionais que o diferenciam de concorrentes globais: 
+
+Curadoria 100% Nacional: 
+
+Restrição de catálogo. A plataforma rejeita submissões de empresas internacionais, garantindo que o algoritmo de descoberta e o tráfego de usuários sejam direcionados exclusivamente à indústria brasileira. 
+
+Identidade Visual e Cultural: 
+
+Aplicação de diretrizes de design que remetem ao folclore e à cultura nacional, traduzindo o conceito de "brasilidade" em uma interface moderna e funcional para o nicho gamer. 
+
+Distribuição Digital (MVP): 
+
+A primeira versão da plataforma possui limitações técnicas estruturais definidas: ausência de cloud gaming ou infraestrutura de servidores multiplayer. O escopo limita-se à venda de licenças e distribuição de pacotes de dados para instalação local (download direto). 
+
+5. Requisitos Funcionais (Versão Piloto) 
+
+A arquitetura do Produto Mínimo Viável (MVP) contempla o desenvolvimento de cinco módulos principais. Para a Sprint 01, a entrega técnica concentra-se na "Área Inicial". 
+
+Área Inicial (Home Page - Entrega Sprint 01): 
+
+Interface de conversão principal, com vitrine de destaque e navegação global para os módulos internos. 
+
+Área do Usuário (Gestão de Contas): 
+
+Autenticação (Cadastro e Login), Painel de Privacidade (Conformidade com a LGPD), Configurações de Segurança, Acesso ao Histórico de Transações e Encerramento de Sessão (Logout). 
+
+Módulo Loja (Marketplace): 
+
+Ordenação e filtros de catálogo (Ordem alfabética, Volume de vendas, Avaliação de usuários, Categorização por gênero). 
+
+Módulo Biblioteca (Acervo do Usuário): 
+
+Gestão de licenças/jogos adquiridas, Filtros de ordenação (Data de aquisição, Ordem alfabética, Nota atribuída pelo consumidor). 
+
+Módulo Fórum (Comunidade): 
+
+Criação e indexação de tópicos, Ordenação cronológica e por volume de engajamento (comentários), Fixação de tópicos criados pelo usuário logado no topo da thread. 
+
+Módulo Central de Suporte: 
+
+Diretório de contatos técnicos e Sistema de chamados (Ticketing) integrado ao histórico do usuário. 
+
+6. Design (GDW) 
+
+Logo e Definição Visual 
+
+A identidade visual baseia-se na interseção entre a tecnologia de games e a brasilidade orgânica. O design afasta-se de estereótipos óbvios, adotando uma postura Dark-first essencial para o conforto visual de jogadores. 
+
+Paleta de Cores 
+
+Fundo (Deep Moss): #0F1714 – Preto profundo com leve subtom verde-musgo, utilizado como cor base de fundo, criando imersão visual sem o peso do preto absoluto. 
+
+Primária (Terracota Iara): #E34A38 – Vermelho terroso utilizado em elementos principais de ação, como botões de Call to Action (ex.: “Jogar” ou “Comprar”) e destaques importantes da interface. 
+
+Secundária (Fogo Fátuo): #FCA311 – Amarelo vibrante aplicado em estados interativos, como hover, indicadores de foco e alertas visuais. 
+
+Texto / Suporte Claro (Off-White): #E8ECEB – Cor clara utilizada principalmente para tipografia e elementos de apoio, garantindo alto contraste para leitura e conformidade com diretrizes de acessibilidade sem o brilho excessivo do branco puro. 
+
+Suporte Escuro (Gray): #2C2E30 – Cinza escuro usado em elementos estruturais ou secundários, como divisores, ícones neutros, superfícies intermediárias e estados desativados.  
+
+ 
+
+(Imagem da paleta de cores do projeto Iara Games) 
+
+Tipografia (Inter) 
+
+Fonte sans-serif moderna otimizada para interfaces digitais, escolhida por sua alta legibilidade em telas e excelente renderização. 
+
+Títulos Principais (H1 / Hero): Peso 700 (Bold) – Uso em chamadas visuais importantes. 
+
+Subtítulos (H2 / H3): Peso 600 (SemiBold) – Uso na organização estrutural do conteúdo. 
+
+Elementos de Interface: Peso 500 (Medium) – Uso em botões, links e menus. 
+
+Texto de Interface (Parágrafos): Peso 400 (Regular) – Uso em descrições de jogos. 
+
+ 
+
+(Imagem da Fonte Inter do projeto Iara Games) 
+
+Decisões Visuais Estratégicas 
+
+Padrão Dark Mode Nativo: Utilização do Deep Moss como fundo principal para reduzir a emissão de luz azul e a fadiga ocular, seguindo o padrão cognitivo esperado por usuários de plataformas de jogos. 
+
+ 
+
+7. Usabilidade (UX) 
+
+A interface foi projetada para minimizar a carga cognitiva (Cognitive Load), otimizando o fluxo de navegação. A aplicação das Heurísticas de Usabilidade norteou as seguintes decisões estruturais: 
+
+Arquitetura da Informação e Hierarquia Visual: 
+
+Aplicação de contraste tipográfico rigoroso (escala de tamanhos e variações de peso) para a segmentação semântica. A conversão principal utiliza a cor de destaque (Terracota Iara), o que maximiza a affordance (percepção de interatividade) e direciona o fluxo ocular (Eye Tracking Pattern) intuitivamente. 
+
+Visibilidade do Status do Sistema (Feedback Contínuo): 
+
+Interações transacionais disparam respostas visuais imediatas, como spinners de carregamento e notificações Toast. Atende à primeira heurística de Nielsen, mitigando a incerteza operacional do usuário. 
+
+Consistência e Padronização Global: 
+
+O componente de navegação global (Navbar) possui posicionamento previsível em todas as rotas. Atende à quarta heurística de Nielsen, achatando a curva de aprendizado. 
+
+Adequação de Linguagem (Microcopy): 
+
+Desenvolvimento de um Tom de Voz focado em termos familiares à comunidade gamer brasileira, eliminando jargões técnicos estritos de TI. Atende à segunda heurística de Nielsen (compatibilidade com o mundo real). 
+
+Prevenção de Erros Críticos (Error Prevention): 
+
+Inserção de atrito intencional (friction by design) em fluxos de ações destrutivas (ex: exclusão de tópicos no fórum), exigindo modais de confirmação. Baseia-se na quinta heurística de Nielsen. 
+
+8. Diretrizes de Acessibilidade (Accessibility by Design) 
+
+A arquitetura front-end da Iara Games assume a acessibilidade como requisito técnico primário, e não como refatoração póstuma. O desenvolvimento segue os princípios do Design Universal e opera em conformidade com as exigências da norma técnica ABNT NBR 17225 (março de 2025). As validações de contraste estrutural, semântica de código para leitores de tela e navegabilidade autônoma por teclado são critérios determinantes para a aprovação das interfaces de usuário. 
+
+9. Arquitetura Front-end, SEO e Performance (Diferencial Técnico) 
+
+A estruturação do código fundamentou-se nas melhores práticas globais de engenharia front-end e diretrizes de Core Web Vitals do Google: 
+
+Otimização para Motores de Busca (Technical SEO) 
+
+Semântica Estrutural HTML5: Implementação rigorosa de landmarks semânticos (<header>, <nav>, <main>, <section>, <article>, <footer>). Esta prática estabelece uma Árvore de Acessibilidade (AOM) impecável e orienta os crawlers de busca. 
+
+Rich Snippets e Metadados: Inserção de marcação JSON-LD (Schema.org) e mapeamento completo de meta tags Open Graph e Twitter/X Cards no <head> para garantir cards dinâmicos otimizados ao compartilhar a URL. 
+
+Performance e Core Web Vitals 
+
+Otimização de LCP (Largest Contentful Paint): Adoção de carregamento assíncrono via atributo loading="lazy" para imagens abaixo da primeira dobra (below the fold), priorizando a renderização do banner principal. 
+
+Otimização de Renderização de Fontes: Utilização de <link rel="preconnect"> para as requisições de tipografia externa (Google Fonts), reduzindo a latência de DNS e prevenindo o efeito FOIT. 
+
+Arquitetura CSS Escalável: 
+
+Design Tokens e Variáveis Nativas: Toda a nova paleta de cores estratégicas (Deep Moss, Terracota Iara, Fogo Fátuo) e a escala tipográfica foram mapeadas como CSS Custom Properties no escopo global (:root). 
+
+Encapsulamento Metodológico: A escrita adotou convenções de nomenclatura rígidas (inspiradas na metodologia BEM) para manter o CSS isolado, evitando "guerra de seletores" e preparando o código-fonte para a futura injeção de frameworks JavaScript. 
+
+10. Roadmap e Escalabilidade (Visão de Futuro) 
+
+A infraestrutura proposta para a versão piloto estabelece a fundação tecnológica do projeto. A longo prazo, a Iara Games planeja escalar sua arquitetura para absorver um volume maior de dados e transações, consolidando-se como o hub principal e oficial de consumo e fomento do ecossistema de jogos independentes no Brasil. A plataforma evoluirá de um sistema de vendas para uma estrutura de suporte e comunidade indispensável aos estúdios locais. 
+
+11. Referências 
