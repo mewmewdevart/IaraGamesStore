@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/8c579f14-d4f8-462b-8e7f-51fcb3140f26" width="200" alt="IaraGames Logo" />
+  <img src="https://github.com/user-attachments/assets/fe4828cc-49b5-474b-9ee3-36ae7f8f4a9e" width="200" alt="IaraGames Logo" />
   
   <h1>Iara Games 🌊</h1>
   
