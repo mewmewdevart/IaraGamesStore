@@ -1,419 +1,527 @@
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="pt-BR">
 
-	<title>Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros</title>
+<head>
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>
+		Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros
+	</title>
 
 	<!-- Favicon - Icone da Aba do Navegador-->
-	<link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico">
-	<link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+	<link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico" />
+	<link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
 
 	<meta name="description"
-		content="A Iara Games é uma plataforma brasileira de distribuição digital de jogos indie. Descubra, jogue e apoie desenvolvedores independentes do Brasil.">
+		content="A Iara Games é uma plataforma brasileira de distribuição digital de jogos indie. Descubra, jogue e apoie desenvolvedores independentes do Brasil." />
 
-	<meta name="author" content="Iara Games Fiap Team (Mayla, Julia, Ingrid, Matheus, Larissa)">
-	<meta name="application-name" content="Iara Games">
-	<meta name="robots" content="index, follow">
-	<meta name="referrer" content="strict-origin-when-cross-origin">
-	<meta name="theme-color" content="#E34A38">
-	<meta name="color-scheme" content="light dark">
+	<meta name="author" content="Iara Games Fiap Team (Mayla, Julia, Ingrid, Matheus, Larissa)" />
+	<meta name="application-name" content="Iara Games" />
+	<meta name="robots" content="index, follow" />
+	<meta name="referrer" content="strict-origin-when-cross-origin" />
+	<meta name="theme-color" content="#E34A38" />
+	<meta name="color-scheme" content="light dark" />
 
 	<!-- Canonical -->
-	<link rel="canonical" href="https://mewmewdevart.github.io/IaraGamesStore/">
+	<link rel="canonical" href="https://mewmewdevart.github.io/IaraGamesStore/" />
 
 	<!-- Open Graph -->
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros" />
 	<meta property="og:description"
-		content="Descubra e apoie jogos criados por desenvolvedores independentes do Brasil em uma plataforma dedicada à distribuição de jogos indie nacionais.">
-	<meta property="og:url" content="https://mewmewdevart.github.io/IaraGamesStore/">
-	<meta property="og:site_name" content="Iara Games">
-	<meta property="og:locale" content="pt_BR">
-	<meta property="og:image" content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/og-image.jpg">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
-	<meta property="og:image:alt" content="Iara Games - Plataforma brasileira de jogos indie">
+		content="Descubra e apoie jogos criados por desenvolvedores independentes do Brasil em uma plataforma dedicada à distribuição de jogos indie nacionais." />
+	<meta property="og:url" content="https://mewmewdevart.github.io/IaraGamesStore/" />
+	<meta property="og:site_name" content="Iara Games" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:image" content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/og-image.jpg" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Iara Games - Plataforma brasileira de jogos indie" />
 
 	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Iara Games | Plataforma de Jogos Indie Brasileiros">
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Iara Games | Plataforma de Jogos Indie Brasileiros" />
 	<meta name="twitter:description"
-		content="Descubra jogos indie brasileiros e apoie desenvolvedores independentes na plataforma Iara Games.">
-	<meta name="twitter:image" content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/og-image.jpg">
-
-	<!-- Performance -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-	<!-- Styles -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-	<link rel="stylesheet" href="assets/css/style.css">
-
-	<!-- Performance -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		content="Descubra jogos indie brasileiros e apoie desenvolvedores independentes na plataforma Iara Games." />
+	<meta name="twitter:image"
+		content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/iara-games-plataforma-jogos-indie-brasileiros-og.jpg" />
 
 	<!-- Icons -->
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-	<!-- Styles -->
-	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<link rel="stylesheet" href="assets/css/style.css" />
 
 	<!-- Structured Data -->
 	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		"name": "Iara Games",
-		"url": "https://mewmewdevart.github.io/IaraGamesStore/",
-		"description": "Plataforma brasileira de distribuição digital de jogos indie.",
-		"inLanguage": "pt-BR",
-		"publisher": {
-			"@type": "Organization",
-			"name": "Iara Games",
-			"url": "https://mewmewdevart.github.io/IaraGamesStore/"
-		},
-		"potentialAction": {
-			"@type": "SearchAction",
-			"target": "https://mewmewdevart.github.io/IaraGamesStore/?search={search_term_string}",
-			"query-input": "required name=search_term_string"
-		}
-	}
-	</script>
-
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Iara Games",
+        "url": "https://mewmewdevart.github.io/IaraGamesStore/",
+        "description": "Plataforma brasileira de distribuição digital de jogos indie.",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@type": "Organization",
+          "name": "Iara Games",
+          "url": "https://mewmewdevart.github.io/IaraGamesStore/"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://mewmewdevart.github.io/IaraGamesStore/?search={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
 </head>
 
 <body>
-	<!-- ================================  SECTION : HERO CAROUSEL  ================================  -->
-	<section class="hero-carousel" aria-label="Carrossel de Destaques" aria-roledescription="carousel">
-		<input type="radio" name="carousel" id="carousel-1" aria-label="Slide 1: Ruff Ghanor" checked>
+	<main>
+		<h1 class="sr-only">Iara Games - Os melhores indies brasileiros</h1>
+		<!-- ================================  SEÇÃO : MENU ================================  -->
 
-		<div class="hero-carousel__slides">
-			<div class="hero-carousel__slide"
-				style="background-image: linear-gradient(to right, var(--color-dark), rgba(0,0,0,0)), url('./assets/img/banner-ruff-ghanor.jpg');">
-				<div class="hero-carousel__container">
-					<div class="hero-carousel__dots">
-						<label for="carousel-1"></label>
-						<label for="carousel-2"></label>
-						<label for="carousel-3"></label>
-						<label for="carousel-4"></label>
-					</div>
 
-					<h1 class="hero-carousel__title">Ruff Ghanor</h1>
-					<p class="hero-carousel__description">
-						Em Ruff Ghanor, você assume o papel de Ruff, um jovem clérigo treinado pelos monges do mosteiro
-						de São
-						Arnaldo que precisa enfrentar o tirano Dragão Vermelho Zamir para libertar o reino de sua
-						opressão...
-					</p>
+		<!-- ================================  SEÇÃO : HERO CAROUSEL  ================================  -->
+		<section class="carrossel-principal" aria-label="Carrossel de Destaques" aria-roledescription="carousel">
+			<fieldset style="border: none; margin: 0; padding: 0">
+				<legend class="sr-only">Controles do Carrossel</legend>
+				<input type="radio" name="carousel" id="carousel-1" aria-label="Slide 1: Ruff Ghanor" checked />
+				<input type="radio" name="carousel" id="carousel-2" aria-label="Slide 2: Arida Backlands Awakening" />
+				<input type="radio" name="carousel" id="carousel-3" aria-label="Slide 3: Fobia St. Dinfna Hotel" />
 
-					<div class="hero-carousel__buttons">
-						<button onclick="window.location.href='#'"
-							class="hero-carousel__button hero-carousel__button--primary">
-							Comprar agora
-						</button>
-						<button onclick="window.location.href='#'"
-							class="hero-carousel__button hero-carousel__button--icon"
-							aria-label="Adicionar ao carrinho">
-							<i class="fa-solid fa-cart-shopping"></i>
-						</button>
-					</div>
+				<div class="carrossel-principal__slides">
+					<div class="carrossel-principal__slide">
+						<div class="carrossel-principal__conteiner">
+							<div class="carrossel-principal__indicadores">
+								<label for="carousel-1" tabindex="0" role="button"><span class="sr-only">Exibir slide
+										1</span></label>
+								<label for="carousel-2" tabindex="0" role="button"><span class="sr-only">Exibir slide
+										2</span></label>
+								<label for="carousel-3" tabindex="0" role="button"><span class="sr-only">Exibir slide
+										3</span></label>
+							</div>
 
-					<div class="hero-carousel__age-rating">
-						<div>
-							<p>Classificação Indicativa</p>
-							<p>Violência</p>
-							<span class="hero-carousel__age-rating-line"></span>
+							<h2 class="carrossel-principal__titulo">Ruff Ghanor</h2>
+							<p class="carrossel-principal__descricao">
+								Em Ruff Ghanor, você assume o papel de Ruff, um jovem clérigo
+								treinado pelos monges do mosteiro de São Arnaldo que precisa
+								enfrentar o tirano Dragão Vermelho Zamir para libertar o reino
+								de sua opressão...
+							</p>
+
+							<div class="carrossel-principal__botoes">
+								<button onclick="window.location.href = '#'"
+									class="carrossel-principal__botao carrossel-principal__botao--primario">
+									<span>Comprar</span>
+									R$ 55,99
+								</button>
+								<button onclick="window.location.href = '#'"
+									class="carrossel-principal__botao carrossel-principal__botao--icone"
+									aria-label="Adicionar ao carrinho">
+									<i class="fa-solid fa-cart-shopping"></i>
+								</button>
+							</div>
+
+							<div class="carrossel-principal__classificacao-indicativa">
+								<div>
+									<p>Classificação Indicativa</p>
+									<p>Violência</p>
+									<span class="carrossel-principal__linha-classificacao"></span>
+								</div>
+
+								<img src="./assets/img/icone-classificacao-indicativa-12-anos.png" alt="12 Anos" />
+							</div>
 						</div>
-
-						<img src="./assets/img/icon-age-classification_12.png" alt="12 Anos">
 					</div>
 				</div>
-			</div>
-
-		</div>
-
-		<div class="gradient-box"></div>
-	</section>
-
-
-
-	<!-- ================================  SECTION : DIA DO CONSUMIDOR 1/2  ================================  -->
-	<section class="layout-unico">
-		<section class="sessao-novidades">
-			<header class="cabecalho-sessao">
-				<span class="subtitulo-sessao">Novidades no Rio</span>
-				<h2 class="titulo-campanha">Dia do Consumidor</h2>
-			</header>
-
-			<div class="carrossel-css">
-				<article class="card card-destaque">
-					<div class="overlay-gradiente"></div>
-					<img src="./assets/img/fobia-st-dinfna.jpg" alt="Capa: Fobia St. Dinfna Hotel" class="img-bg">
-
-					<span class="badge-desconto">-50%</span>
-
-					<div class="conteudo-card">
-						<span class="categoria-jogo">Terror Psicológico</span>
-						<h3>Fobia - St. Dinfna Hotel</h3>
-
-						<div class="bloco-compra">
-							<span class="preco-antigo">R$ 56,00</span>
-							<span class="preco-novo">R$ 28,00</span>
-						</div>
-					</div>
-				</article>
-
-				<article class="card card-normal">
-					<div class="overlay-gradiente"></div>
-					<img src="./assets/img/arida-backlands.jpg" alt="Capa: Árida Backlands Awakening" class="img-bg">
-
-					<span class="badge-desconto">-30%</span>
-
-					<div class="conteudo-card">
-						<span class="categoria-jogo">Sobrevivência</span>
-						<h3>Árida: Backlands Awakening</h3>
-						<div class="bloco-compra">
-							<span class="preco-antigo">R$ 32,00</span>
-							<span class="preco-novo">R$ 22,40</span>
-						</div>
-					</div>
-				</article>
-
-				<article class="card card-normal">
-					<div class="overlay-gradiente"></div>
-					<img src="./assets/img/dandara-trials.jpg" alt="Capa: Dandara Trials of Fear" class="img-bg">
-
-					<span class="badge-desconto">-40%</span>
-
-					<div class="conteudo-card">
-						<span class="categoria-jogo">Metroidvania</span>
-						<h3>Dandara: Trials of Fear</h3>
-						<div class="bloco-compra">
-							<span class="preco-antigo">R$ 45,00</span>
-							<span class="preco-novo">R$ 27,00</span>
-						</div>
-					</div>
-				</article>
-
-				<article class="card card-normal">
-					<div class="overlay-gradiente"></div>
-					<img src="./assets/img/bloodless.jpg" alt="Capa: Bloodless" class="img-bg">
-
-					<span class="badge-desconto">-20%</span>
-
-					<div class="conteudo-card">
-						<span class="categoria-jogo">Ação 2D</span>
-						<h3>Bloodless</h3>
-						<div class="bloco-compra">
-							<span class="preco-antigo">R$ 40,00</span>
-							<span class="preco-novo">R$ 32,00</span>
-						</div>
-					</div>
-				</article>
-			</div>
+			</fieldset>
 		</section>
 
+		<!-- ================================  SEÇÃO : DIA DO CONSUMIDOR 1/2  ================================  -->
+		<section class="secao-consumidor" aria-labelledby="titulo-consumidor">
+			<header class="secao-consumidor__cabecalho">
+				<span class="secao-consumidor__subtitulo">Novidades no Rio</span>
+				<h2 class="secao-consumidor__titulo" id="titulo-consumidor">
+					Dia do Consumidor
+				</h2>
+			</header>
 
-		<!-- ================================  SECTION : DIA DO CONSUMIDOR 2/2  ================================  -->
-		<!-- @TODO
-		<div class="section-header">
-			<div class="section-title-wrap">
-			<h2 class="section-title">Destaques</h2>
-			<p class="section-subtitle">Escolhidos a dedo pela equipe Iara</p>
+			<div class="secao-consumidor__carrossel">
+				<article class="secao-consumidor__card secao-consumidor__card--destaque">
+					<div class="secao-consumidor__overlay"></div>
+					<img src="./assets/img/capa-jogo-fobia-st-dinfna-hotel.jpg" alt="Capa: Fobia St. Dinfna Hotel"
+						class="secao-consumidor__imagem-fundo" />
+
+					<span class="secao-consumidor__selo-desconto">-50%</span>
+
+					<div class="secao-consumidor__conteudo">
+						<span class="secao-consumidor__categoria">Terror Psicológico</span>
+						<h3 class="secao-consumidor__nome-jogo">
+							Fobia - St. Dinfna Hotel
+						</h3>
+
+						<div class="secao-consumidor__bloco-compra">
+							<span class="secao-consumidor__preco-antigo">R$ 56,00</span>
+							<span class="secao-consumidor__preco-novo">R$ 28,00</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="secao-consumidor__card secao-consumidor__card--normal">
+					<div class="secao-consumidor__overlay"></div>
+					<img src="./assets/img/capa-jogo-arida-backlands-awakening.jpg"
+						alt="Capa: Árida Backlands Awakening" class="secao-consumidor__imagem-fundo" />
+
+					<span class="secao-consumidor__selo-desconto">-30%</span>
+
+					<div class="secao-consumidor__conteudo">
+						<span class="secao-consumidor__categoria">Sobrevivência</span>
+						<h3 class="secao-consumidor__nome-jogo">
+							Árida: Backlands Awakening
+						</h3>
+						<div class="secao-consumidor__bloco-compra">
+							<span class="secao-consumidor__preco-antigo">R$ 32,00</span>
+							<span class="secao-consumidor__preco-novo">R$ 22,40</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="secao-consumidor__card secao-consumidor__card--normal">
+					<div class="secao-consumidor__overlay"></div>
+					<img src="./assets/img/capa-jogo-dandara-trials-of-fear.jpg" alt="Capa: Dandara Trials of Fear"
+						class="secao-consumidor__imagem-fundo" />
+
+					<span class="secao-consumidor__selo-desconto">-40%</span>
+
+					<div class="secao-consumidor__conteudo">
+						<span class="secao-consumidor__categoria">Metroidvania</span>
+						<h3 class="secao-consumidor__nome-jogo">
+							Dandara: Trials of Fear
+						</h3>
+						<div class="secao-consumidor__bloco-compra">
+							<span class="secao-consumidor__preco-antigo">R$ 45,00</span>
+							<span class="secao-consumidor__preco-novo">R$ 27,00</span>
+						</div>
+					</div>
+				</article>
+
+				<article class="secao-consumidor__card secao-consumidor__card--normal">
+					<div class="secao-consumidor__overlay"></div>
+					<img src="./assets/img/capa-jogo-bloodless.jpg" alt="Capa: Bloodless"
+						class="secao-consumidor__imagem-fundo" />
+
+					<span class="secao-consumidor__selo-desconto">-20%</span>
+
+					<div class="secao-consumidor__conteudo">
+						<span class="secao-consumidor__categoria">Ação 2D</span>
+						<h3 class="secao-consumidor__nome-jogo">
+							<a href="#" class="link-cobre-card">Bloodless</a>
+						</h3>
+						<div class="secao-consumidor__bloco-compra">
+							<span class="secao-consumidor__preco-antigo">R$ 40,00</span>
+							<span class="secao-consumidor__preco-novo">R$ 32,00</span>
+						</div>
+					</div>
+				</article>
 			</div>
-			<a href="#" class="ver-tudo">Ver tudo ›</a>
+
+			<!-- ================================  SEÇÃO : DIA DO CONSUMIDOR 2/2  ================================  -->
+			<!-- @TODO
+		<div class="secao-consumidor__cabecalho-destaques">
+			<div class="secao-consumidor__titulo-envolucro">
+			<h2 class="secao-consumidor__titulo">Destaques</h2>
+			<p class="secao-consumidor__subtitulo">Escolhidos a dedo pela equipe Iara</p>
+			</div>
+			<a href="#" class="secao-consumidor__link-ver-todos" aria-label="Ver todos os Destaques">Ver tudo ›</a>
 		</div> 
 	-->
 
-		<div class="cards-grid">
-			<!-- Card 1 -->
-			<div class="card-wrap">
-				<div class="card">
-					<div class="badge-discount">-20%</div>
-					<div class="card-img-wrap">
-						<img src="./assets/img/busao.png" class="card-img" alt="Busao Lotado Simulator" />
-					</div>
-					<div class="card-info">
-						<p class="card-title">Busao Lotado</p>
-						<p class="card-studio">SP Games</p>
-						<div class="card-rating">
-							<span class="star">★</span>
-							<span class="rating-number">4.7</span>
-							<span class="rating-count">(109)</span>
+			<div class="secao-consumidor__grade-secundaria">
+				<!-- Card 1 -->
+				<div class="secao-consumidor__envolucro-cartao">
+					<article class="secao-consumidor__cartao-lista">
+						<div class="secao-consumidor__selo-desconto">-20%</div>
+						<div class="secao-consumidor__imagem-envolucro">
+							<img src="./assets/img/capa-jogo-busao-lotado-simulator.png"
+								class="secao-consumidor__imagem-lista" alt="Busao Lotado Simulator" />
 						</div>
-						<div class="card-price">
-							<span class="price-old">R$ 19,90</span>
-							<span class="price-discounted">R$ 15,92</span>
+						<div class="secao-consumidor__info-lista">
+							<h3 class="secao-consumidor__titulo-lista">
+								<a href="#" class="link-cobre-card">Busao Lotado</a>
+							</h3>
+							<p class="secao-consumidor__estudio">SP Games</p>
+							<div class="secao-consumidor__avaliacao">
+								<span class="secao-consumidor__icone-estrela">★</span>
+								<span class="secao-consumidor__nota">4.7</span>
+								<span class="secao-consumidor__total-votos">(109)</span>
+							</div>
+							<div class="secao-consumidor__bloco-preco">
+								<span class="secao-consumidor__preco-antigo">R$ 19,90</span>
+								<span class="secao-consumidor__preco-desconto">R$ 15,92</span>
+							</div>
 						</div>
-					</div>
+					</article>
+				</div>
+				<!-- Card 2 -->
+				<div class="secao-consumidor__envolucro-cartao">
+					<article class="secao-consumidor__cartao-lista">
+						<div class="secao-consumidor__imagem-envolucro">
+							<img src="./assets/img/capa-jogo-coxinha-empire.png" class="secao-consumidor__imagem-lista"
+								alt="Coxinha Empire" style="object-position: center top" />
+						</div>
+						<div class="secao-consumidor__info-lista">
+							<h3 class="secao-consumidor__titulo-lista">
+								<a href="#" class="link-cobre-card">Coxinha Empire</a>
+							</h3>
+							<p class="secao-consumidor__estudio">Pixel Caipira</p>
+							<div class="secao-consumidor__avaliacao">
+								<span class="secao-consumidor__icone-estrela">★</span>
+								<span class="secao-consumidor__nota">4.3</span>
+								<span class="secao-consumidor__total-votos">(289)</span>
+							</div>
+							<div class="secao-consumidor__bloco-preco">
+								<span class="secao-consumidor__preco-novo">R$ 29,90</span>
+							</div>
+						</div>
+					</article>
+				</div>
+				<!-- Card 3 -->
+				<div class="secao-consumidor__envolucro-cartao">
+					<article class="secao-consumidor__cartao-lista">
+						<div class="secao-consumidor__imagem-envolucro">
+							<img src="./assets/img/capa-jogo-dandara.png" class="secao-consumidor__imagem-lista"
+								alt="Dandara" style="object-position: center top" />
+						</div>
+						<div class="secao-consumidor__info-lista">
+							<h3 class="secao-consumidor__titulo-lista">
+								<a href="#" class="link-cobre-card">Dandara</a>
+							</h3>
+							<p class="secao-consumidor__estudio">Long Hat House</p>
+							<div class="secao-consumidor__avaliacao">
+								<span class="secao-consumidor__icone-estrela">★</span>
+								<span class="secao-consumidor__nota">4.8</span>
+								<span class="secao-consumidor__total-votos">(312)</span>
+							</div>
+							<div class="secao-consumidor__bloco-preco">
+								<span class="secao-consumidor__preco-novo">R$ 14,90</span>
+							</div>
+						</div>
+					</article>
+				</div>
+				<!-- Card 4 -->
+				<div class="secao-consumidor__envolucro-cartao">
+					<article class="secao-consumidor__cartao-lista">
+						<div class="secao-consumidor__imagem-envolucro">
+							<div class="secao-consumidor__imagem-envolucro">
+								<img src="./assets/img/capa-jogo-iara-cantos-do-rio.png"
+									class="secao-consumidor__imagem-lista" alt="iara" />
+							</div>
+						</div>
+						<div class="secao-consumidor__info-lista">
+							<h3 class="secao-consumidor__titulo-lista">
+								Iara: Cantos do Rio
+							</h3>
+							<p class="secao-consumidor__estudio">Iara Games Studio</p>
+							<div class="secao-consumidor__avaliacao">
+								<span class="secao-consumidor__icone-estrela">★</span>
+								<span class="secao-consumidor__nota">4.9</span>
+								<span class="secao-consumidor__total-votos">(567)</span>
+							</div>
+							<div class="secao-consumidor__bloco-preco">
+								<span class="secao-consumidor__preco-gratis">Gratuito</span>
+							</div>
+						</div>
+					</article>
+				</div>
+				<!-- Card 5 -->
+				<div class="secao-consumidor__envolucro-cartao">
+					<article class="secao-consumidor__cartao-lista">
+						<div class="secao-consumidor__selo-desconto">-25%</div>
+						<div class="secao-consumidor__imagem-envolucro">
+							<div class="secao-consumidor__imagem-envolucro">
+								<img src="./assets/img/capa-jogo-ruff-ghanor.png" class="secao-consumidor__imagem-lista"
+									alt="Ruff" style="object-position: left 5%" />
+							</div>
+						</div>
+						<div class="secao-consumidor__info-lista">
+							<h3 class="secao-consumidor__titulo-lista">
+								<a href="#" class="link-cobre-card">Ruff Ghanor</a>
+							</h3>
+							<p class="secao-consumidor__estudio">DX Gameworks</p>
+							<div class="secao-consumidor__avaliacao">
+								<span class="secao-consumidor__icone-estrela">★</span>
+								<span class="secao-consumidor__nota">4.3</span>
+								<span class="secao-consumidor__total-votos">(903)</span>
+							</div>
+							<div class="secao-consumidor__bloco-preco">
+								<span class="secao-consumidor__preco-antigo">R$ 34,90</span>
+							</div>
+						</div>
+					</article>
 				</div>
 			</div>
-			<!-- Card 2 -->
-			<div class="card-wrap">
-				<div class="card">
-					<div class="card-img-wrap">
-						<img src="./assets/img/coxinha.png" class="card-img" alt="Coxinha Empire"
-							style="object-position: center top;" />
-					</div>
-					<div class="card-info">
-						<p class="card-title">Coxinha Empire</p>
-						<p class="card-studio">Pixel Caipira</p>
-						<div class="card-rating">
-							<span class="star">★</span>
-							<span class="rating-number">4.3</span>
-							<span class="rating-count">(289)</span>
+		</section>
+
+		<!-- ================================  SEÇÃO :  LANÇAMENTOS ================================  -->
+		<section class="secao-lancamentos" aria-labelledby="titulo-lancamentos">
+			<header class="secao-lancamentos__cabecalho">
+				<div>
+					<span class="secao-lancamentos__subtitulo">Fresquinhos para você</span>
+					<h2 class="secao-lancamentos__titulo" id="titulo-lancamentos">
+						Lançamentos
+					</h2>
+				</div>
+				<a href="#" class="secao-lancamentos__link-ver-todos" aria-label="Ver todos os Lançamentos">Ver tudo
+					></a>
+			</header>
+
+			<div class="secao-lancamentos__grade">
+				<div class="secao-lancamentos__envolucro-cartao">
+					<article class="secao-lancamentos__cartao">
+						<div class="secao-lancamentos__selo-desconto">-20%</div>
+						<div class="secao-lancamentos__imagem-envolucro">
+							<img src="https://i.pinimg.com/originals/b8/c7/b0/b8c7b06888d4e36b9a48d348415e48c6.png"
+								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Guardião do Curupira" />
 						</div>
-						<div class="card-price">
-							<span class="price-new">R$ 29,90</span>
+						<div class="secao-lancamentos__info">
+							<h3 class="secao-lancamentos__titulo-jogo">
+								Guardião do Curupira
+							</h3>
+							<p class="secao-lancamentos__estudio">Estúdio Amazônia</p>
+							<div class="secao-lancamentos__avaliacao">
+								<span class="secao-lancamentos__icone-estrela">★</span>
+								<span class="secao-lancamentos__nota">4.7</span>
+								<span class="secao-lancamentos__total-votos">(234)</span>
+							</div>
+							<div class="secao-lancamentos__bloco-preco">
+								<span class="secao-lancamentos__preco-desconto">R$ 39,90</span>
+							</div>
 						</div>
-					</div>
+					</article>
+				</div>
+
+				<div class="secao-lancamentos__envolucro-cartao">
+					<article class="secao-lancamentos__cartao">
+						<div class="secao-lancamentos__imagem-envolucro">
+							<img src="https://t3.ftcdn.net/jpg/17/58/40/38/360_F_1758403884_CuAc7BxYBS6g6Roleu1Nl6nlgBvvj2Wc.jpg"
+								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Saci: Redemoinho" />
+						</div>
+						<div class="secao-lancamentos__info">
+							<h3 class="secao-lancamentos__titulo-jogo">
+								<a href="#" class="link-cobre-card">Saci: Redemoinho</a>
+							</h3>
+							<p class="secao-lancamentos__estudio">Pixel Caipira</p>
+							<div class="secao-lancamentos__avaliacao">
+								<span class="secao-lancamentos__icone-estrela">★</span>
+								<span class="secao-lancamentos__nota">4.5</span>
+								<span class="secao-lancamentos__total-votos">(189)</span>
+							</div>
+							<div class="secao-lancamentos__bloco-preco">
+								<span class="secao-lancamentos__preco-novo">R$ 29,90</span>
+							</div>
+						</div>
+					</article>
+				</div>
+
+				<div class="secao-lancamentos__envolucro-cartao">
+					<article class="secao-lancamentos__cartao">
+						<div class="secao-lancamentos__imagem-envolucro">
+							<img src="https://img.freepik.com/fotos-gratis/papel-de-parede-digital-de-barco-a-vela-preto_395237-274.jpg?semt=ais_hybrid&w=740&q=80"
+								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Rio de Estrelas" />
+						</div>
+						<div class="secao-lancamentos__info">
+							<h3 class="secao-lancamentos__titulo-jogo">
+								<a href="#" class="link-cobre-card">Rio de Estrelas</a>
+							</h3>
+							<p class="secao-lancamentos__estudio">Canoa Digital</p>
+							<div class="secao-lancamentos__avaliacao">
+								<span class="secao-lancamentos__icone-estrela">★</span>
+								<span class="secao-lancamentos__nota">4.8</span>
+								<span class="secao-lancamentos__total-votos">(312)</span>
+							</div>
+							<div class="secao-lancamentos__bloco-preco">
+								<span class="secao-lancamentos__preco-novo">R$ 14,90</span>
+							</div>
+						</div>
+					</article>
+				</div>
+
+				<div class="secao-lancamentos__envolucro-cartao">
+					<article class="secao-lancamentos__cartao">
+						<div class="secao-lancamentos__imagem-envolucro">
+							<img src="https://static.wixstatic.com/media/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg/v1/fill/w_546,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg"
+								class="secao-lancamentos__imagem" loading="lazy"
+								alt="Capa do Jogo Iara: Cantos do Rio" />
+						</div>
+						<div class="secao-lancamentos__info">
+							<h3 class="secao-lancamentos__titulo-jogo">
+								Iara: Cantos do Rio
+							</h3>
+							<p class="secao-lancamentos__estudio">Iara Studio</p>
+							<div class="secao-lancamentos__avaliacao">
+								<span class="secao-lancamentos__icone-estrela">★</span>
+								<span class="secao-lancamentos__nota">4.9</span>
+								<span class="secao-lancamentos__total-votos">(567)</span>
+							</div>
+							<div class="secao-lancamentos__bloco-preco">
+								<span class="secao-lancamentos__preco-gratis">Gratuito</span>
+							</div>
+						</div>
+					</article>
+				</div>
+
+				<div class="secao-lancamentos__envolucro-cartao">
+					<article class="secao-lancamentos__cartao">
+						<div class="secao-lancamentos__selo-desconto">-25%</div>
+						<div class="secao-lancamentos__imagem-envolucro">
+							<img src="https://kolmeia.net/wp-content/uploads/2021/02/larissa-baroboskin-mula-sem-cabeca-03png.jpg"
+								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Mula Sem Cabeça" />
+						</div>
+						<div class="secao-lancamentos__info">
+							<h3 class="secao-lancamentos__titulo-jogo">
+								<a href="#" class="link-cobre-card">Mula Sem Cabeça</a>
+							</h3>
+							<p class="secao-lancamentos__estudio">Estúdio Lampião</p>
+							<div class="secao-lancamentos__avaliacao">
+								<span class="secao-lancamentos__icone-estrela">★</span>
+								<span class="secao-lancamentos__nota">4.3</span>
+								<span class="secao-lancamentos__total-votos">(134)</span>
+							</div>
+							<div class="secao-lancamentos__bloco-preco">
+								<span class="secao-lancamentos__preco-desconto">R$ 26,17</span>
+							</div>
+						</div>
+					</article>
 				</div>
 			</div>
-			<!-- Card 3 -->
-			<div class="card-wrap">
-				<div class="card">
-					<div class="card-img-wrap">
-						<img src="./assets/img/dandara.png" class="card-img" alt="Dandara"
-							style="object-position: center top;" />
-					</div>
-					<div class="card-info">
-						<p class="card-title">Dandara</p>
-						<p class="card-studio">Long Hat House</p>
-						<div class="card-rating">
-							<span class="star">★</span>
-							<span class="rating-number">4.8</span>
-							<span class="rating-count">(312)</span>
-						</div>
-						<div class="card-price">
-							<span class="price-new">R$ 14,90</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card 4 -->
-			<div class="card-wrap">
-				<div class="card">
-					<div class="card-img-wrap">
-						<div class="card-img-wrap">
-							<img src="./assets/img/iara.png" class="card-img" alt="iara" />
-						</div>
-					</div>
-					<div class="card-info">
-						<p class="card-title">Iara: Cantos do Rio</p>
-						<p class="card-studio">Iara Games Studio</p>
-						<div class="card-rating">
-							<span class="star">★</span>
-							<span class="rating-number">4.9</span>
-							<span class="rating-count">(567)</span>
-						</div>
-						<div class="card-price">
-							<span class="price-free">Gratuito</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Card 5 -->
-			<div class="card-wrap">
-				<div class="card">
-					<div class="badge-discount">-25%</div>
-					<div class="card-img-wrap">
-						<div class="card-img-wrap">
-							<img src="./assets/img/ruff.png" class="card-img" alt="Ruff"
-								style="object-position: left 5%;" />
-						</div>
-					</div>
-					<div class="card-info">
-						<p class="card-title">Ruff Ghanor</p>
-						<p class="card-studio">DX Gameworks</p>
-						<div class="card-rating">
-							<span class="star">★</span>
-							<span class="rating-number">4.3</span>
-							<span class="rating-count">(903)</span>
-						</div>
-						<div class="card-price">
-							<span class="price-old">R$ 34,90</span>
-							<span class="price-discounted">R$ 26,17</span>
-						</div>
-					</div>
-				</div>
-	</section>
+		</section>
 
-	<!-- ================================  SECTION :  DESTAQUES ================================  -->
+		<!-- ================================  SEÇÃO : CHAMADA PARA AÇÃO (LOGIN) ? ================================  -->
+		<!-- <section class="secao-cta" aria-labelledby="titulo-cta">
+        <div class="secao-cta__conteiner">
+          <h2 class="secao-cta__titulo" id="titulo-cta">
+            Sua Jornada <span>Começa Aqui</span>
+          </h2>
+          <p class="secao-cta__descricao">
+            Acesse o catálogo completo, adicione os melhores jogos indie aos
+            seus favoritos e gerencie sua biblioteca pessoal.
+          </p>
+          <div class="secao-cta__acoes">
+            <button class="secao-cta__botao secao-cta__botao--primario">
+              Entrar
+            </button>
+            <button class="secao-cta__botao secao-cta__botao--secundario">
+              Criar Conta
+            </button>
+          </div>
+        </div>
+      </section> -->
+	</main>
 
 
-	<section class="sessao-lancamentos">
-		<div class="header">
-			<div>
-				<span>Fresquinhos para você</span>
-				<h1>LANÇAMENTOS</h1>
-			</div>
-			<div class="ver-tudo">Ver tudo ></div>
-		</div>
-
-		<div class="carousel">
-
-			<div class="card">
-				<div class="badge">-20%</div>
-				<img src=https://i.pinimg.com/originals/b8/c7/b0/b8c7b06888d4e36b9a48d348415e48c6.png>
-				<div class="content">
-					<div class="title">Guardião do Curupira</div>
-					<div class="studio">Estúdio Amazônia</div>
-					<div class="rating"><span>★</span> 4.7 (234)</div>
-					<div class="price">R$ 39,90</div>
-				</div>
-			</div>
-
-			<div class="card">
-				<img src="https://t3.ftcdn.net/jpg/17/58/40/38/360_F_1758403884_CuAc7BxYBS6g6Roleu1Nl6nlgBvvj2Wc.jpg">
-				<div class="content">
-					<div class="title">Saci: Redemoinho</div>
-					<div class="studio">Pixel Caipira</div>
-					<div class="rating"><span>★</span> 4.5 (189)</div>
-					<div class="price">R$ 29,90</div>
-				</div>
-			</div>
-
-			<div class="card">
-				<img
-					src="https://img.freepik.com/fotos-gratis/papel-de-parede-digital-de-barco-a-vela-preto_395237-274.jpg?semt=ais_hybrid&w=740&q=80">
-				<div class="content">
-					<div class="title">Rio de Estrelas</div>
-					<div class="studio">Canoa Digital</div>
-					<div class="rating"><span>★</span> 4.8 (312)</div>
-					<div class="price">R$ 14,90</div>
-				</div>
-			</div>
-
-			<div class="card">
-				<img
-					src="https://static.wixstatic.com/media/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg/v1/fill/w_546,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg">
-				<div class="content">
-					<div class="title">Iara: Cantos do Rio</div>
-					<div class="studio">Iara Studio</div>
-					<div class="rating"><span>★</span> 4.9 (567)</div>
-					<div class="price">Gratuito</div>
-				</div>
-			</div>
-
-			<div class="card">
-				<div class="badge">-25%</div>
-				<img src="https://kolmeia.net/wp-content/uploads/2021/02/larissa-baroboskin-mula-sem-cabeca-03png.jpg">
-				<div class="content">
-					<div class="title">Mula Sem Cabeça</div>
-					<div class="studio">Estúdio Lampião</div>
-					<div class="rating"><span>★</span> 4.3 (134)</div>
-					<div class="price">R$ 26,17</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
+	<!-- ================================  SEÇÃO : RODAPE ================================  -->
 	<!-- <script src="assets/js/main.js"></script> -->
-</body>
-
-</html>
-<!-- <script src="assets/js/main.js"></script> -->
 </body>
 
 </html>

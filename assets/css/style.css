@@ -1,17 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 :root {
-  --color-primary: #E34A38;
-  --color-secondary: #FCA311;
+  --weight-regular: 400;
+  --weight-semibold: 600;
+  --weight-bold: 700;
 
-  --color-dark: #0F1714;
-  --color-light: #E8ECEB;
-  --color-gray: #2C2E30;
-  --color-gray-light: #E8ECEBB3;
+  /* Tipografia */
+  --text-xs: 0.75rem;
+  /* 12px */
+  --text-sm: 0.875rem;
+  /* 14px */
+  --text-base: 1rem;
+  /* 16px */
+  --text-lg: 1.125rem;
+  /* 18px */
+  --text-xl: 1.25rem;
+  /* 20px */
+  --text-2xl: 1.5rem;
+  /* 24px */
+  --text-3xl: 2rem;
+  /* 32px */
+  --text-4xl: 2.5rem;
+  /* 40px */
+  --text-5xl: 3rem;
+  /* 48px */
+
+  --color-primary: #e34a38;
+  --color-secondary: #fca311;
+
+  --color-dark: #0f1714;
+  --color-light: #e8eceb;
+  --color-gray: #2c2e30;
+  --color-gray-light: #e8ecebb3;
 
   --card-bg: #122018;
 
-  --font-inter: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-inter:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
 
 *,
@@ -30,8 +56,12 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
-  align-items: center;
   flex-direction: column;
+}
+
+main {
+  width: 100%;
+  flex: 1;
 }
 
 ::selection {
@@ -39,9 +69,32 @@ body {
   color: var(--color-dark);
 }
 
-/*  =============================== SECTION : HERO CAROUSEL =============================== */
+*:focus-visible {
+  outline: 0.1875rem
+    /* 3px */
+    solid var(--color-secondary);
+  outline-offset: 2px;
+  border-radius: 0.25rem
+    /* 4px */
+  ;
+}
 
-.hero-carousel {
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+  color: #fff;
+  background-color: var(--card-bg);
+}
+
+/*  =============================== SECTION : HERO CAROUSEL =============================== */
+.carrossel-principal {
   width: 100%;
   min-height: clamp(24rem, 45vw, 40.5rem);
   position: relative;
@@ -50,17 +103,26 @@ body {
 }
 
 input[type="radio"][name="carousel"] {
-  display: none;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }
 
-.hero-carousel__slides {
+.carrossel-principal__slides {
   display: flex;
   width: 400%;
-  height: 100%;
+  height: 80vh;
+  height: 80dvh;
   transition: transform 0.5s ease;
 }
 
-.hero-carousel__slide {
+.carrossel-principal__slide {
   width: 25%;
   display: flex;
   position: relative;
@@ -69,19 +131,25 @@ input[type="radio"][name="carousel"] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image:
+    linear-gradient(to right, var(--color-dark), rgba(0, 0, 0, 0)),
+    url("../img/banner-jogo-ruff-ghanor.jpg");
 }
 
-.hero-carousel__overlay {
+.carrossel-principal__overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, var(--color-dark) 0%, rgba(15, 23, 20, 0.8) 30%, transparent 100%);
+  background: linear-gradient(to right,
+      var(--color-dark) 0%,
+      rgba(15, 23, 20, 0.8) 30%,
+      transparent 100%);
   z-index: 1;
 }
 
-.hero-carousel__container {
+.carrossel-principal__conteiner {
   width: 100%;
   height: 100%;
   position: relative;
@@ -91,124 +159,119 @@ input[type="radio"][name="carousel"] {
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  transition: padding 0.5s ease, gap 0.5s ease;
+  transition:
+    padding 0.5s ease,
+    gap 0.5s ease;
 }
 
-.hero-carousel__dots {
+.carrossel-principal__indicadores {
   position: absolute;
-  left: 2rem;
-  top: 50%;
+  left: 5rem;
+  top: 13%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
-.hero-carousel__dots label {
-  width: 12px;
-  height: 12px;
+.carrossel-principal__indicadores label {
+  width: 0.75rem;
+  height: 0.75rem;
   background-color: var(--color-gray-light);
-  /* var(--color-light) with opacity */
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
 }
 
-.hero-carousel__dots label:hover {
+.carrossel-principal__indicadores label:hover {
   background-color: var(--color-light);
   transform: scale(1.2);
 }
 
-#carousel-1:checked~.hero-carousel__slides label[for="carousel-1"],
-#carousel-2:checked~.hero-carousel__slides label[for="carousel-2"],
-#carousel-3:checked~.hero-carousel__slides label[for="carousel-3"],
-#carousel-4:checked~.hero-carousel__slides label[for="carousel-4"] {
+#carousel-1:checked~.carrossel-principal__slides label[for="carousel-1"] {
   background-color: var(--color-primary);
   transform: scale(1.2);
 }
 
-#carousel-1:checked~.hero-carousel__slides {
+#carousel-1:checked~.carrossel-principal__slides {
   transform: translateX(0%);
 }
 
-#carousel-2:checked~.hero-carousel__slides {
-  transform: translateX(-25%);
-}
-
-#carousel-3:checked~.hero-carousel__slides {
-  transform: translateX(-50%);
-}
-
-#carousel-4:checked~.hero-carousel__slides {
-  transform: translateX(-75%);
-}
-
-.hero-carousel__title,
-.hero-carousel__description {
+.carrossel-principal__titulo,
+.carrossel-principal__descricao {
   color: var(--color-light);
   transition: font-size 0.5s ease;
 }
 
-.hero-carousel__title {
-  font-size: 3rem;
-  font-weight: 700;
+.carrossel-principal__titulo {
+  font-size: var(--text-5xl);
+  font-weight: var(--weight-bold);
   margin-bottom: 0.5rem;
 }
 
-.hero-carousel__description {
+.carrossel-principal__descricao {
   max-width: 45.625rem;
-  font-size: 1.125rem;
+  font-size: var(--text-lg);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
 
-.hero-carousel__buttons {
+.carrossel-principal__botoes {
   display: flex;
   gap: 1rem;
   transition: gap 0.5s ease;
 }
 
-.hero-carousel__button {
+.carrossel-principal__botao {
   height: 3.5rem;
   border: none;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   color: var(--color-dark);
-  font-weight: 600;
+  font-weight: var(--weight-semibold);
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--text-lg);
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.hero-carousel__button--primary {
+.carrossel-principal__botao--primario {
   background-color: var(--color-secondary);
   padding: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.hero-carousel__button--primary:hover {
-  background-color: #e5940e;
+.carrossel-principal__botao--primario span {
+  font-size: var(--text-xs);
+  text-align: left;
+}
+
+.carrossel-principal__botao--primario:hover {
+  background-color: var(--color-primary);
   transform: translateY(-2px);
 }
 
-.hero-carousel__button--icon {
+.carrossel-principal__botao--icone {
   width: 3.5rem;
   background-color: var(--color-gray);
   color: var(--color-light);
 }
 
-.hero-carousel__button--icon:hover {
-  background-color: #3f4245;
+.carrossel-principal__botao--icone:hover {
+  background-color: var(--color-gray-light);
   transform: translateY(-2px);
 }
 
-.hero-carousel__button--icon i {
-  font-size: 1.25rem;
+.carrossel-principal__botao--icone i {
+  font-size: var(--text-xl);
   color: var(--color-light);
 }
 
-.hero-carousel__age-rating {
+.carrossel-principal__classificacao-indicativa {
   position: absolute;
   bottom: 2rem;
   right: 5rem;
@@ -218,84 +281,92 @@ input[type="radio"][name="carousel"] {
   color: var(--color-light);
 }
 
-.hero-carousel__age-rating div {
+.carrossel-principal__classificacao-indicativa div {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
 }
 
-.hero-carousel__age-rating div p {
-  font-size: 0.85rem;
+.carrossel-principal__classificacao-indicativa div p {
+  font-size: var(--text-sm);
   margin-bottom: 0.2rem;
   opacity: 0.9;
 }
 
-.hero-carousel__age-rating-line {
+.carrossel-principal__linha-classificacao {
   width: 100%;
   height: 2px;
-  background-color: var(--color-primary);
+  background-color: var(--color-gray-light);
   margin-top: 0.4rem;
 }
 
-.hero-carousel__age-rating img {
+.carrossel-principal__classificacao-indicativa img {
   width: 3.5rem;
   height: 3.5rem;
-  border-radius: 8px;
+  border-radius: 0.5rem
+    /* 8px */
+  ;
 }
 
-/* RESPONSIVENESS */
-
 @media (max-width: 1024px) {
-  .hero-carousel__container {
+  .carrossel-principal__conteiner {
     padding: 3rem 4rem;
   }
 
-  .hero-carousel__age-rating {
+  .carrossel-principal__classificacao-indicativa {
     right: 4rem;
   }
 }
 
 @media (max-width: 768px) {
-  .hero-carousel {
+  .carrossel-principal {
     min-height: 100vh;
     min-height: 100dvh;
   }
 
-  .hero-carousel__overlay {
-    background: linear-gradient(to top, var(--color-dark) 10%, rgba(15, 23, 20, 0.8) 60%, transparent 100%);
+  .carrossel-principal__overlay {
+    background: linear-gradient(to top,
+        var(--color-dark) 10%,
+        rgba(15, 23, 20, 0.8) 60%,
+        transparent 100%);
   }
 
-  .hero-carousel__container {
+  .carrossel-principal__conteiner {
     padding: 2rem 1.5rem;
     justify-content: flex-end;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     padding-bottom: 6rem;
-    /* space for age rating or dots */
   }
 
-  .hero-carousel__title {
-    font-size: 2.5rem;
+  .carrossel-principal__titulo {
+    font-size: var(--text-4xl);
   }
 
-  .hero-carousel__description {
-    font-size: 1rem;
+  .carrossel-principal__descricao {
+    font-size: var(--text-base);
     max-width: 100%;
   }
 
-  .hero-carousel__buttons {
+  .carrossel-principal__botoes {
     width: 100%;
-    max-width: 400px;
-    flex-direction: column;
+    max-width: 25rem
+      /* 400px */
+    ;
+    flex-direction: row;
     gap: 0.75rem;
   }
 
-  .hero-carousel__button {
-    width: 100%;
+  .carrossel-principal__botao:first-child {
+    width: 66%;
   }
 
-  .hero-carousel__dots {
+  .carrossel-principal__botao:last-child {
+    width: 33%;
+  }
+
+  .carrossel-principal__indicadores {
     position: absolute;
     bottom: 1.5rem;
     left: 50%;
@@ -305,65 +376,59 @@ input[type="radio"][name="carousel"] {
     gap: 1rem;
   }
 
-  .hero-carousel__age-rating {
+  .carrossel-principal__classificacao-indicativa {
     position: relative;
     bottom: auto;
     right: auto;
     margin-top: 2rem;
-    justify-content: center;
+    justify-content: end;
     width: 100%;
   }
 
-  .hero-carousel__age-rating div {
+  .carrossel-principal__classificacao-indicativa div {
     align-items: center;
   }
 }
 
 @media (max-width: 480px) {
-  .hero-carousel__title {
-    font-size: 2rem;
+  .carrossel-principal__titulo {
+    font-size: var(--text-3xl);
   }
 
-  .hero-carousel__container {
+  .carrossel-principal__conteiner {
     padding: 1.5rem 1rem;
     padding-bottom: 5rem;
   }
 
-  .hero-carousel__age-rating img {
+  .carrossel-principal__classificacao-indicativa img {
     width: 3rem;
     height: 3rem;
   }
 }
 
-/*  =============================== SECTION : DIA DO CONSUMIDOR 1/2 =============================== */
+
+/*  =============================== SECTION : SEÇÃO DO CONSUMIDOR 1/2 =============================== */
 
 /* =========================================
    LAYOUT ÚNICO (Foco na Vitrine)
    ========================================= */
-.layout-unico {
+.secao-consumidor {
   width: 100%;
   margin: 0 auto;
   padding: 3rem 5rem;
 }
 
-/* =========================================
-   CABEÇALHO DA SEÇÃO E GLOW EFFECT
-   ========================================= */
-.cabecalho-sessao {
-  padding-bottom: 32px;
-}
-
-.subtitulo-sessao {
-  font-size: 1rem;
-  color: rgba(232, 236, 235, 0.6);
+.secao-consumidor__subtitulo {
+  font-size: var(--text-base);
+  color: var(--color-gray-light);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.titulo-campanha {
-  font-size: 2rem;
-  margin: 5px 0 0 0;
-  font-weight: 700;
+.secao-consumidor__titulo {
+  font-size: var(--text-3xl);
+  margin: 0.3125rem 0 0 0;
+  font-weight: var(--weight-bold);
   color: var(--color-secondary);
   text-transform: uppercase;
   animation: pulsar 1s infinite alternate;
@@ -379,41 +444,55 @@ input[type="radio"][name="carousel"] {
   }
 }
 
+*
+
 /* =========================================
    CARROSSEL NATIVO
    ========================================= */
-.carrossel-css {
+.secao-consumidor__carrossel {
   display: flex;
   flex-wrap: nowrap;
-  gap: 20px;
+  gap: 1.25rem
+    /* 20px */
+  ;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  padding-bottom: 24px;
+  padding: 1.5rem
+    /* 24px */
+    0;
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-dark);
 }
 
-.carrossel-css::-webkit-scrollbar {
-  height: 8px;
+.secao-consumidor__carrossel::-webkit-scrollbar {
+  height: 0.5rem
+    /* 8px */
+  ;
 }
 
-.carrossel-css::-webkit-scrollbar-track {
+.secao-consumidor__carrossel::-webkit-scrollbar-track {
   background: var(--color-dark);
-  border-radius: 8px;
+  border-radius: 0.5rem
+    /* 8px */
+  ;
 }
 
-.carrossel-css::-webkit-scrollbar-thumb {
+.secao-consumidor__carrossel::-webkit-scrollbar-thumb {
   background-color: var(--color-primary);
-  border-radius: 8px;
+  border-radius: 0.5rem
+    /* 8px */
+  ;
 }
 
 /* =========================================
    CARDS E INTERATIVIDADE
    ========================================= */
-.card {
+.secao-consumidor__card {
   position: relative;
-  border-radius: 8px;
+  border-radius: 0.5rem
+    /* 8px */
+  ;
   overflow: hidden;
   flex-shrink: 0;
   scroll-snap-align: start;
@@ -421,26 +500,41 @@ input[type="radio"][name="carousel"] {
   flex-direction: column;
   justify-content: flex-end;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(227, 74, 56, 0.25);
+.secao-consumidor__card:hover,
+.secao-consumidor__card:focus-within {
+  transform: translateY(-0.375rem
+      /* -6px */
+    );
+  outline: 0.1875rem solid var(--color-secondary);
+  outline-offset: 0.25rem;
 }
 
-.card-destaque {
+.secao-consumidor__card--destaque {
   width: 60%;
-  min-width: 340px;
-  height: 320px;
+  min-width: 21.25rem
+    /* 340px */
+  ;
+  min-height: 21.875rem
+    /* 320px */
+  ;
 }
 
-.card-normal {
-  width: 220px;
-  height: 320px;
+.secao-consumidor__card--normal {
+  width: 17.5rem
+    /* 280px */
+  ;
+  min-height: 21.875rem
+    /* 350px */
+  ;
+  height: 100%;
 }
 
-.img-bg {
+.secao-consumidor__imagem-fundo {
   position: absolute;
   top: 0;
   left: 0;
@@ -451,119 +545,144 @@ input[type="radio"][name="carousel"] {
   transition: transform 0.5s ease;
 }
 
-.card:hover .img-bg {
+.secao-consumidor__card:hover .secao-consumidor__imagem-fundo {
   transform: scale(1.05);
 }
 
-/* Gradiente escuro para garantir leitura em fundos claros */
-.overlay-gradiente {
+.secao-consumidor__overlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 75%;
-  background: linear-gradient(to top, rgba(15, 23, 20, 0.95) 0%, rgba(15, 23, 20, 0) 100%);
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, var(--color-dark));
   z-index: 1;
 }
 
 /* =========================================
    CONTEÚDO INTERNO, TIPOGRAFIA E PREÇOS
    ========================================= */
-.conteudo-card {
+.secao-consumidor__conteudo {
   position: relative;
   z-index: 2;
-  padding: 24px 20px;
+  padding: 1.5rem
+    /* 24px */
+    1.25rem
+    /* 20px */
+  ;
 }
 
-.categoria-jogo {
+.secao-consumidor__categoria {
   display: block;
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(232, 236, 235, 0.7);
-  margin-bottom: 6px;
+  color: var(--color-gray-light);
+  margin-bottom: 0.375rem
+    /* 6px */
+  ;
 }
 
-.conteudo-card h3 {
+.secao-consumidor__nome-jogo {
   margin: 0;
-  font-size: 1.3rem;
-  font-weight: 700;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
   text-transform: uppercase;
   color: var(--color-light);
   line-height: 1.1;
 }
 
-/* GATILHOS DE VENDA */
-.badge-desconto {
+.secao-consumidor__selo-desconto,
+.secao-lancamentos__selo-desconto {
   position: absolute;
-  top: 16px;
-  right: 16px;
+  top: 1rem
+    /* 16px */
+  ;
+  right: 1rem
+    /* 16px */
+  ;
   background-color: var(--color-secondary);
   color: var(--color-dark);
-  padding: 6px 14px;
-  border-radius: 8px;
+  padding: 0.375rem
+    /* 6px */
+    0.875rem
+    /* 14px */
+  ;
+  border-radius: 0.5rem
+    /* 8px */
+  ;
   font-weight: 800;
-  font-size: 0.95rem;
+  font-size: var(--text-sm);
   z-index: 2;
-
 }
 
-.bloco-compra {
+.secao-consumidor__bloco-compra {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 0.625rem
+    /* 10px */
+  ;
+  margin-top: 0.625rem
+    /* 10px */
+  ;
 }
 
-.preco-antigo {
-  font-size: 0.85rem;
-  color: var(--color-light);
+.secao-consumidor__preco-antigo {
+  font-size: var(--text-sm);
+  color: #aab0af;
   text-decoration: line-through;
-  opacity: 0.5;
 }
 
-.preco-novo {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-primary);
+.secao-consumidor__preco-novo {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: var(--color-secondary);
 }
 
 /* =========================================
-   RESPONSIVIDADE (MOBILE)
+   RESPONSIVIDADE (MOBILE) - SEÇÃO DO CONSUMIDOR
    ========================================= */
 @media (max-width: 900px) {
-  .titulo-campanha {
-    font-size: 1.8rem;
+  .secao-consumidor__titulo {
+    font-size: var(--text-2xl);
   }
 
-  .card-destaque {
+  .secao-consumidor__card--destaque {
     width: 85%;
-    min-width: 280px;
-    height: 280px;
+    min-width: 17.5rem
+      /* 280px */
+    ;
+    height: 17.5rem
+      /* 280px */
+    ;
   }
 
-  .card-normal {
-    width: 180px;
-    height: 280px;
+  .secao-consumidor__card--normal {
+    width: 85%;
+    ;
+    height: 17.5rem
+      /* 280px */
+    ;
   }
 
-  .conteudo-card h3 {
-    font-size: 1.1rem;
+  .secao-consumidor__nome-jogo {
+    font-size: var(--text-lg);
   }
 
-  .layout-unico {
+  .secao-consumidor {
     padding: 0 1rem;
   }
 }
-
 
 /*  =============================== SECTION : DIA DO CONSUMIDOR 2/2 =============================== */
 .section-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem
+    /* 24px */
+  ;
   position: relative;
 }
 
@@ -573,383 +692,474 @@ input[type="radio"][name="carousel"] {
 
 .section-title {
   font-family: var(--font-inter);
-  font-size: 2rem;
-  font-weight: 700;
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
   color: var(--color-secondary);
   position: relative;
   animation: pulsar 2.5s ease-in-out infinite alternate;
 }
 
-
-.section-subtitle {
-  font-size: 0.85rem;
+.secao-consumidor__subtitulo {
+  font-size: var(--text-sm);
   color: var(--color-gray-light);
   margin-top: 2px;
 }
 
-.ver-tudo {
+.secao-consumidor__link-ver-todos {
   color: var(--color-secondary);
-  font-weight: 700;
-  font-size: 0.9rem;
+  font-weight: var(--weight-bold);
+  font-size: var(--text-sm);
   text-decoration: none;
   display: flex;
   align-items: center;
-  gap: 4px;
-  transition: opacity .2s;
+  gap: 0.25rem
+    /* 4px */
+  ;
+  transition: opacity 0.2s;
 }
 
-.ver-tudo:hover {
-  opacity: .75;
+.secao-consumidor__link-ver-todos:hover {
+  opacity: 0.75;
 }
 
 /* grade de cards */
-.cards-grid {
+.secao-consumidor__grade-secundaria,
+.secao-lancamentos__grade {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  padding-top: 24px;
+  gap: 1.125rem
+    /* 18px */
+  ;
+  padding-top: 1.5rem
+    /* 24px */
+  ;
 }
 
 /* card */
-.card {
+.secao-consumidor__cartao-lista,
+.secao-lancamentos__cartao {
   background: var(--card-bg);
-  border-radius: 8px;
+  border-radius: 0.5rem
+    /* 8px */
+  ;
   overflow: hidden;
-  transition: transform .25s, box-shadow .25s;
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
   cursor: pointer;
   position: relative;
   display: flex;
   flex-direction: column;
 }
 
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, .55);
-  border: 1px solid var(--color-secondary);
+.secao-consumidor__cartao-lista:hover,
+.secao-consumidor__cartao-lista:focus-within,
+.secao-lancamentos__cartao:hover,
+.secao-lancamentos__cartao:focus-within {
+  transform: translateY(-0.375rem
+      /* -6px */
+    );
+  box-shadow: 0 1rem
+    /* 16px */
+    2.5rem
+    /* 40px */
+    rgba(0, 0, 0, 0.55);
+  outline: 0.1875rem solid var(--color-secondary);
+  outline-offset: 0.25rem;
 }
 
 /* imagem */
-.card-img-wrap {
+.secao-consumidor__imagem-envolucro,
+.secao-lancamentos__imagem-envolucro {
   position: relative;
 }
 
-.card-img-wrap::after {
-  content: '';
+.secao-consumidor__imagem-envolucro::after,
+.secao-lancamentos__imagem-envolucro::after {
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 60px;
+  height: 3.75rem
+    /* 60px */
+  ;
   background: linear-gradient(to bottom, transparent, var(--card-bg));
 }
 
-.card-img {
+.secao-consumidor__imagem-lista,
+.secao-lancamentos__imagem {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   display: block;
 }
 
-.card-img-placeholder {
+.secao-consumidor__imagem-placeholder,
+.secao-lancamentos__imagem-placeholder {
   width: 100%;
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3rem;
-}
-
-/* desconto */
-.badge-discount {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  background: var(--color-secondary);
-  color: var(--color-dark);
-  font-weight: 700;
-  font-size: 0.95rem;
-  padding: 3px 9px;
-  border-radius: 8px;
-  z-index: 2;
+  font-size: var(--text-5xl);
 }
 
 /* info */
-.card-info {
-  padding: 14px 14px 16px;
+.secao-consumidor__info-lista,
+.secao-lancamentos__info {
+  padding: 0.875rem
+    /* 14px */
+    0.875rem
+    /* 14px */
+    1rem
+    /* 16px */
+  ;
   display: flex;
   flex-direction: column;
   flex: 1;
 }
 
-.card-title {
+.secao-consumidor__titulo-lista,
+.secao-lancamentos__titulo-jogo {
   font-family: var(--font-inter);
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(-color-light);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-light);
   margin-bottom: 2px;
 }
 
-.card-studio {
-  font-size: 0.78rem;
+.secao-consumidor__estudio,
+.secao-lancamentos__estudio {
+  font-size: var(--text-sm);
   color: var(--color-gray-light);
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem
+    /* 8px */
+  ;
 }
 
-.card-rating {
+.secao-consumidor__avaliacao,
+.secao-lancamentos__avaliacao {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 0.82rem;
-  margin-bottom: 8px;
+  gap: 0.3125rem
+    /* 5px */
+  ;
+  font-size: var(--text-sm);
+  margin-bottom: 0.5rem
+    /* 8px */
+  ;
 }
 
-.star {
+.secao-consumidor__icone-estrela,
+.secao-lancamentos__icone-estrela {
   color: var(--color-secondary);
-  font-size: 0.85rem;
+  font-size: var(--text-sm);
 }
 
-.rating-number {
-  font-weight: 700;
+.secao-consumidor__nota,
+.secao-lancamentos__nota {
+  font-weight: var(--weight-bold);
   color: var(--color-secondary);
 }
 
-.rating-count {
+.secao-consumidor__total-votos,
+.secao-lancamentos__total-votos {
   color: var(--color-gray-light);
 }
 
-/* preço */
-.card-price {
-  font-size: 0.88rem;
+.secao-consumidor__bloco-preco,
+.secao-lancamentos__bloco-preco {
+  font-size: var(--text-sm);
   margin-bottom: auto;
 }
 
-.price-old {
-  color: var(--color-gray);
+.secao-consumidor__preco-antigo,
+.secao-lancamentos__preco-antigo {
+  color: #aab0af;
   text-decoration: line-through;
-  margin-right: 6px;
-  font-size: 0.85rem;
-  opacity: 0.5;
+  margin-right: 0.375rem
+    /* 6px */
+  ;
+  font-size: var(--text-sm);
 }
 
-.price-new {
-  color: var(--color-gray-light);
-  font-weight: 700;
-  font-size: 1.15rem;
-}
-
-.price-discounted {
+.secao-consumidor__preco-novo,
+.secao-lancamentos__preco-novo {
   color: var(--color-secondary);
-  font-weight: 700;
-  font-size: 1rem;
+  font-weight: var(--weight-bold);
+  font-size: var(--text-base);
 }
 
-.price-free {
+.secao-consumidor__preco-desconto,
+.secao-lancamentos__preco-desconto {
   color: var(--color-secondary);
-  font-weight: 700;
-  font-size: 1.15rem;
+  font-weight: var(--weight-bold);
+  font-size: var(--text-base);
+}
+
+.secao-consumidor__preco-gratis,
+.secao-lancamentos__preco-gratis {
+  color: var(--color-secondary);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-base);
 }
 
 @media (max-width: 1324px) {
 
-  .cards-grid,
-  .sessao-lancamentos .carousel {
+  .secao-consumidor__grade-secundaria,
+  .secao-lancamentos__grade {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 992px) {
 
-  .cards-grid,
-  .sessao-lancamentos .carousel {
+  .secao-consumidor__grade-secundaria,
+  .secao-lancamentos__grade {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (max-width: 768px) {
 
-  .cards-grid,
-  .sessao-lancamentos .carousel {
+  .secao-consumidor__grade-secundaria,
+  .secao-lancamentos__grade {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 576px) {
 
-  .cards-grid,
-  .sessao-lancamentos .carousel {
+  .secao-consumidor__grade-secundaria,
+  .secao-lancamentos__grade {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 1.5rem
+      /* 24px */
+    ;
   }
 
-  .card-img-wrap,
-  .sessao-lancamentos .card img {
-    height: 300px;
+  .secao-consumidor__imagem-envolucro,
+  .secao-lancamentos__imagem-envolucro {
+    height: 18.75rem
+      /* 300px */
+    ;
   }
 
-  .card-img {
+  .secao-consumidor__imagem-lista,
+  .secao-lancamentos__imagem {
     height: 100%;
   }
 }
 
-/*  =============================== SECTION : DIA DO CONSUMIDOR 2/2 =============================== */
-
-/* HEADER */
-.sessao-lancamentos .header {
+/*  =============================== SECTION : LANÇAMENTOS  =============================== */
+.secao-lancamentos__cabecalho {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 1.5625rem
+    /* 25px */
+  ;
 }
 
-.sessao-lancamentos .header h1 {
-  font-family: var(--font-inter);
-  font-size: 30px;
-  letter-spacing: 2px;
-}
-
-.sessao-lancamentos .header span {
-  font-size: 1rem;
-  color: rgba(232, 236, 235, 0.6);
+.secao-lancamentos__subtitulo {
+  font-size: var(--text-base);
+  color: var(--color-gray-light);
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-.sessao-lancamentos .ver-tudo {
+.secao-lancamentos__titulo {
+  font-size: var(--text-3xl);
+  margin: 0.3125rem
+    /* 5px */
+    0 0 0;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  /* animation: pulsar 1s infinite alternate; */
+}
+
+.secao-lancamentos__link-ver-todos {
   color: var(--color-secondary);
   cursor: pointer;
   transition: 0.2s;
 }
 
-.sessao-lancamentos .ver-tudo:hover {
+.secao-lancamentos__link-ver-todos:hover {
   color: var(--color-primary);
 }
 
-.sessao-lancamentos {
+.secao-lancamentos {
   width: 100%;
   margin: 0 auto;
   min-height: 50vh;
-  padding: 3rem 5rem 4rem;
+  padding: 0 5rem 4rem;
 }
 
 @media (max-width: 1024px) {
-  .sessao-lancamentos {
+  .secao-lancamentos {
     padding: 3rem 4rem 4rem;
   }
 }
 
 @media (max-width: 900px) {
-  .sessao-lancamentos {
+  .secao-lancamentos {
     padding: 2rem 1.5rem 4rem;
   }
 }
 
 @media (max-width: 768px) {
-  .sessao-lancamentos {
+  .secao-lancamentos {
     padding: 2rem 1rem 4rem;
   }
 }
 
-/* GRADE DE LANÇAMENTOS (antigo CARROSSEL) */
-.sessao-lancamentos .carousel {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 18px;
-  padding-top: 24px;
+/* =========================================
+   SEÇÃO : CHAMADA PARA AÇÃO (LOGIN)
+   ========================================= */
+.secao-cta {
+  width: 100%;
+  padding: 4.5rem 2rem;
+  background: var(--color-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* CARD */
-.sessao-lancamentos .card {
-  background: var(--card-bg);
-  border-radius: 8px;
-  overflow: hidden;
-  position: relative;
-  transition: transform .25s, box-shadow .25s;
-  cursor: pointer;
+.secao-cta__conteiner {
+  max-width: 40rem;
+  /* 640px */
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  /* 24px */
 }
 
-.sessao-lancamentos .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, .55);
-}
-
-/* IMAGEM */
-.sessao-lancamentos .card img {
-  width: 100%;
-  aspect-ratio: 1/1;
-  object-fit: cover;
-  display: block;
-}
-
-/* BADGE */
-.sessao-lancamentos .badge {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  background: var(--color-secondary);
-  color: var(--color-dark);
-  font-size: 12px;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-/* CONTEÚDO */
-.sessao-lancamentos .content {
-  padding: 14px;
-}
-
-.sessao-lancamentos .title {
+.secao-cta__titulo {
   font-family: var(--font-inter);
-  font-size: 17px;
-  margin-bottom: 6px;
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-dark);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
 }
 
-.sessao-lancamentos .studio {
-  font-size: 12px;
-  color: var(--color-gray-light);
-  margin-bottom: 8px;
+.secao-cta__titulo span {
+  color: var(--color-dark);
+  text-decoration: underline;
 }
 
-/* RATING */
-.sessao-lancamentos .rating {
-  font-size: 13px;
-  margin-bottom: 6px;
+.secao-cta__descricao {
+  font-size: var(--text-base);
+  /* 16px */
+  color: rgba(15, 23, 20, 0.8);
+  font-weight: var(--weight-semibold);
+  line-height: 1.6;
+  max-width: 32rem;
+  /* 512px */
+  margin: 0 auto;
 }
 
-.sessao-lancamentos .rating span {
-  color: var(--color-secondary);
-}
-
-/* PREÇO */
-.sessao-lancamentos .price {
-  font-weight: 600;
-  color: var(--color-secondary);
-}
-
-/* TAGS */
-.sessao-lancamentos .tags {
+.secao-cta__acoes {
   display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-top: 10px;
+  gap: 1rem;
+  /* 16px */
+  margin-top: 0.5rem;
+  /* 8px */
 }
 
-.sessao-lancamentos .tag {
-  background: var(--color-dark);
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 11px;
-  color: var(--color-gray);
+.secao-cta__botao {
+  padding: 0.875rem 2.5rem;
+  /* 14px 40px */
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  border-radius: 0.5rem;
+  /* 8px */
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+  border: none;
+  font-family: var(--font-inter);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
-.gradient-box {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(to bottom, transparent, var(--color-dark));
+.secao-cta__botao:hover {
+  transform: translateY(-0.1875rem);
+  /* -3px */
+}
+
+.secao-cta__botao--primario {
+  background-color: var(--color-dark);
+  color: var(--color-secondary);
+}
+
+
+.secao-cta__botao--primario:hover {
+  background-color: var(--card-bg);
+}
+
+.secao-cta__botao--secundario {
+  background-color: transparent;
+  color: var(--color-dark);
+  border: 2px solid var(--color-dark);
+}
+
+.secao-cta__botao--secundario:hover {
+  background-color: rgba(15, 23, 20, 0.1);
+  border-color: var(--color-dark);
+}
+
+@media (max-width: 576px) {
+  .secao-cta {
+    padding: 3rem 1.5rem;
+  }
+
+  .secao-cta__acoes {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .secao-cta__botao {
+    width: 100%;
+  }
+
+  .secao-cta__titulo {
+    font-size: var(--text-2xl);
+  }
+}
+
+/* A11Y - CARD COM PERFORMANCE */
+.secao-consumidor__card,
+.secao-consumidor__cartao-lista,
+.secao-lancamentos__cartao {
+  position: relative;
+}
+
+.link-cobre-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-cobre-card::after {
+  content: "";
   position: absolute;
-  left: 0;
-  z-index: 1;
-  bottom: 0;
+  inset: 0;
+  z-index: 10;
+}
+
+.link-cobre-card:focus-visible {
+  outline: none;
+}
+
+.secao-consumidor,
+.secao-lancamentos {
+  content-visibility: auto;
+  contain-intrinsic-size: 1000px;
 }
