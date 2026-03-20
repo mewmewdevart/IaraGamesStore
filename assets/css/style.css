@@ -93,6 +93,224 @@ main {
   background-color: var(--card-bg);
 }
 
+/* ================================  SEÇÃO : MENU ================================  */
+/* Header Principal */
+.main-header {
+  background-color: var(--color-dark);
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Logo  */
+.logo-placeholder {
+  width: 45px;
+  height: 45px;
+  background-image: url('/IMG/logoiara.jpg');
+  border-radius: 50%;
+  background-size: contain;
+  /* Ajusta a imagem para caber inteira no círculo sem cortar */
+  background-repeat: no-repeat;
+  /* Não repete a imagem */
+  background-position: center;
+  /* Centraliza a imagem no círculo */
+  cursor: pointer;
+}
+
+/* Link logo*/
+/* Estilo para o link do logo */
+.logo-link {
+  text-decoration: none;
+  /* Remove qualquer sublinhado */
+  display: inline-block;
+  /* Permite que o link tenha dimensões */
+  transition: transform 0.2s ease;
+  /* Efeito suave ao passar o mouse */
+}
+
+.logo-link:hover {
+  transform: scale(1.05);
+  /* Opcional: o logo aumenta levemente ao passar o mouse */
+  filter: brightness(1.1);
+  /* Opcional: o logo brilha levemente */
+}
+
+/* Mantendo sua classe original (ajuste apenas se necessário) */
+.logo-placeholder {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-image: url('../img/logo_1.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  /* Garante que o cursor de "mãozinha" apareça */
+}
+
+/* Menu de Navegação */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #b8b6b4;
+  font-size: 17px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: var(--color-primary);
+}
+
+/* Ícones e Perfil */
+.icon-btn {
+  background: none;
+  border: none;
+  color: #b8b6b4;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.icon-btn:hover {
+  color: var(--color-primary);
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.fa-chevron-down {
+  color: #b8b6b4;
+  font-size: 10px;
+}
+
+/* Esconde o checkbox real */
+.search-checkbox {
+  display: none;
+}
+
+/* Container do trigger para posicionamento */
+.search-trigger-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilização da barra de busca que aparece */
+.search-box-popup {
+  position: absolute;
+  right: 0;
+  top: 45px;
+  /* Aparece logo abaixo do ícone */
+  background-color: #313338;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 4px;
+  width: 0;
+  /* Começa com largura zero */
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  /* Animação suave */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
+/* QUANDO O CHECKBOX FOR CLICADO... */
+.search-checkbox:checked~.search-box-popup {
+  width: 250px;
+  /* Expande a largura */
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Ajustes internos da barra */
+.search-box-popup i {
+  color: var(--color-gray-light);
+  margin-right: 10px;
+}
+
+.search-box-popup input {
+  background: none;
+  border: none;
+  color: #fff;
+  outline: none;
+  width: 100%;
+}
+
+/* Barra de Busca (Abaixo da Nav) */
+.search-section {
+  padding: 15px 5%;
+  display: flex;
+  justify-content: left;
+}
+
+.search-box {
+  background-color: #313338;
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 3px;
+  width: 250px;
+}
+
+.search-box i {
+  color: var(--color-gray-light);
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.search-box input {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-size: 13px;
+  outline: none;
+  width: 100%;
+}
+
+.search-box input::placeholder {
+  color: var(--color-gray-light);
+  font-style: italic;
+}
+
 /*  =============================== SECTION : HERO CAROUSEL =============================== */
 .carrossel-principal {
   width: 100%;
@@ -100,6 +318,7 @@ main {
   position: relative;
   overflow: hidden;
   background-color: var(--color-dark);
+  margin-top: 4rem;
 }
 
 input[type="radio"][name="carousel"] {
@@ -1162,4 +1381,110 @@ input[type="radio"][name="carousel"] {
 .secao-lancamentos {
   content-visibility: auto;
   contain-intrinsic-size: 1000px;
+}
+
+/* =========================================
+   RODAPÉ (FOOTER)
+   ========================================= */
+
+/* Footer */
+.main-footer {
+  background-color: var(--color-dark);
+  color: var(--color-gray-light);
+  padding: 60px 5% 20px 5%;
+  margin-top: 50px;
+  border-top: 1px solid #1a1d21;
+}
+
+.footer-container {
+  width: 100%;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 150px;
+}
+
+.footer-column.branding {
+  flex: 2;
+  /* A primeira coluna é mais larga */
+  min-width: 250px;
+}
+
+/* Tipografia */
+.footer-logo {
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.footer-tagline {
+  color: #4a4d50;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.footer-description {
+  font-size: 13px;
+  line-height: 1.6;
+  max-width: 350px;
+  text-align: justify;
+}
+
+.footer-column h3 {
+  color: #ffffff;
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: var(--color-gray-light);
+  font-size: 13px;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #e34a38;
+}
+
+/* Barra inferior */
+.footer-bottom {
+  margin-top: 60px;
+  padding-top: 25px;
+  border-top: 1px solid #1a1d21;
+}
+
+.bottom-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: #4a4d50;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer-disclaimer {
+  text-transform: uppercase;
 }
