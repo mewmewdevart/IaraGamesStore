@@ -321,8 +321,21 @@ input[type="radio"][name="carrossel-principal"] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.carrossel-principal__slide--1 {
   background-image: linear-gradient(to right, var(--color-dark), rgba(0, 0, 0, 0)),
     url("../img/banner-jogo-ruff-ghanor.jpg");
+}
+
+.carrossel-principal__slide--2 {
+  background-image: linear-gradient(to right, var(--color-dark), rgba(0, 0, 0, 0)),
+    url("../img/banner-jogo-dandara.jpg");
+}
+
+.carrossel-principal__slide--3 {
+  background-image: linear-gradient(to right, var(--color-dark), rgba(0, 0, 0, 0)),
+    url("../img/banner-jogo-pixel-ripped.jpg");
 }
 
 .carrossel-principal__conteiner {
