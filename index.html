@@ -10,7 +10,6 @@
 		Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros
 	</title>
 
-	<!-- Favicon - Icone da Aba do Navegador-->
 	<link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico" />
 	<link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
 
@@ -24,10 +23,8 @@
 	<meta name="theme-color" content="#E34A38" />
 	<meta name="color-scheme" content="light dark" />
 
-	<!-- Canonical -->
 	<link rel="canonical" href="https://mewmewdevart.github.io/IaraGamesStore/" />
 
-	<!-- Open Graph -->
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros" />
 	<meta property="og:description"
@@ -41,7 +38,6 @@
 	<meta property="og:image:height" content="630" />
 	<meta property="og:image:alt" content="Iara Games - Plataforma brasileira de jogos indie" />
 
-	<!-- Twitter Card -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Iara Games | Plataforma de Jogos Indie Brasileiros" />
 	<meta name="twitter:description"
@@ -49,92 +45,96 @@
 	<meta name="twitter:image"
 		content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/iara-games-plataforma-jogos-indie-brasileiros-og.jpg" />
 
-	<!-- Icons -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
 
-	<!-- Structured Data -->
 	<script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Iara Games",
-        "url": "https://mewmewdevart.github.io/IaraGamesStore/",
-        "description": "Plataforma brasileira de distribuição digital de jogos indie.",
-        "inLanguage": "pt-BR",
-        "publisher": {
-          "@type": "Organization",
-          "name": "Iara Games",
-          "url": "https://mewmewdevart.github.io/IaraGamesStore/"
-        },
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://mewmewdevart.github.io/IaraGamesStore/?search={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      }
-    </script>
+	  {
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "Iara Games",
+		"url": "https://mewmewdevart.github.io/IaraGamesStore/",
+		"description": "Plataforma brasileira de distribuição digital de jogos indie.",
+		"inLanguage": "pt-BR",
+		"publisher": {
+		  "@type": "Organization",
+		  "name": "Iara Games",
+		  "url": "https://mewmewdevart.github.io/IaraGamesStore/"
+		},
+		"potentialAction": {
+		  "@type": "SearchAction",
+		  "target": "https://mewmewdevart.github.io/IaraGamesStore/?search={search_term_string}",
+		  "query-input": "required name=search_term_string"
+		}
+	  }
+	</script>
 </head>
 
 <body>
 	<main>
-		<h1 class="sr-only">Iara Games - Os melhores indies brasileiros</h1>
-		<!-- ================================  SEÇÃO : MENU ================================  -->
-		<header class="main-header">
-			<nav class="nav-container">
-				<div class="nav-left">
-					<a href="index.html" class="logo-link" aria-label="Ir para a página inicial">
-						<div class="logo-placeholder"></div>
+		<h1 class="apenas-leitor">Iara Games - Os melhores indies brasileiros</h1>
+		<header class="cabecalho-principal">
+			<nav class="cabecalho-principal__navegacao" aria-label="Navegação principal">
+				<div class="cabecalho-principal__lado-esquerdo">
+					<a href="index.html" class="cabecalho-principal__logo-link" aria-label="Ir para a página inicial">
+						<img src="./assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
 					</a>
-					<ul class="nav-menu">
-						<li><a href="#" class="active">LOJA</a></li>
-						<li><a href="#">JOGOS</a></li>
-						<li><a href="#">BIBLIOTECA</a></li>
-						<li><a href="#">COMUNIDADE</a></li>
+
+					<ul class="menu-navegacao">
+						<li><a href="#" class="menu-navegacao__link menu-navegacao__link--ativo">LOJA</a></li>
+						<li><a href="#" class="menu-navegacao__link">JOGOS</a></li>
+						<li><a href="#" class="menu-navegacao__link">BIBLIOTECA</a></li>
+						<li><a href="#" class="menu-navegacao__link">COMUNIDADE</a></li>
 					</ul>
 				</div>
 
-				<div class="nav-right">
-					<div class="search-trigger-container">
-						<input type="checkbox" id="search-toggle" class="search-checkbox">
+				<div class="cabecalho-principal__lado-direito">
+					<div class="busca">
+						<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
 
-						<label for="search-toggle" class="icon-btn">
+						<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
 							<i class="fa-solid fa-magnifying-glass"></i>
 						</label>
 
-						<div class="search-box-popup">
+						<div class="busca__janela">
 							<i class="fa-solid fa-magnifying-glass"></i>
-							<input type="text" placeholder="Jogos, categorias etc">
+							<input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
 						</div>
 					</div>
-					<button class="icon-btn"><i class="fa-solid fa-cart-shopping"></i></button>
-					<button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
-					<div class="user-profile">
-						<span class="user-avatar"></span>
+					<button class="botao-icone" aria-label="Carrinho de compras"><i
+							class="fa-solid fa-cart-shopping"></i></button>
+					<button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
+					<button class="perfil-usuario" aria-label="Menu de perfil do usuário">
+						<span class="perfil-usuario__avatar"></span>
 						<i class="fa-solid fa-chevron-down"></i>
-					</div>
+					</button>
 				</div>
 			</nav>
 		</header>
 
-
-		<!-- ================================  SEÇÃO : HERO CAROUSEL  ================================  -->
-		<section class="carrossel-principal" aria-label="Carrossel de Destaques" aria-roledescription="carousel">
+		<!-- ================================= HERO / CARROSSEL PRINCIPAL ================================= -->
+		<section class="carrossel-principal" aria-label="Carrossel de Destaques" aria-roledescription="carrossel">
 			<fieldset style="border: none; margin: 0; padding: 0">
-				<legend class="sr-only">Controles do Carrossel</legend>
-				<input type="radio" name="carousel" id="carousel-1" aria-label="Slide 1: Ruff Ghanor" checked />
-				<input type="radio" name="carousel" id="carousel-2" aria-label="Slide 2: Arida Backlands Awakening" />
-				<input type="radio" name="carousel" id="carousel-3" aria-label="Slide 3: Fobia St. Dinfna Hotel" />
+				<legend class="apenas-leitor">Controles do Carrossel</legend>
+				<input type="radio" name="carrossel-principal" id="carrossel-1" aria-label="Slide 1: Ruff Ghanor"
+					checked />
+				<input type="radio" name="carrossel-principal" id="carrossel-2"
+					aria-label="Slide 2: Arida Backlands Awakening" />
+				<input type="radio" name="carrossel-principal" id="carrossel-3"
+					aria-label="Slide 3: Fobia St. Dinfna Hotel" />
 
 				<div class="carrossel-principal__slides">
 					<div class="carrossel-principal__slide">
 						<div class="carrossel-principal__conteiner">
 							<div class="carrossel-principal__indicadores">
-								<label for="carousel-1" tabindex="0" role="button"><span class="sr-only">Exibir slide
+								<label for="carrossel-1" role="button"><span class="apenas-leitor">Exibir
+										slide
 										1</span></label>
-								<label for="carousel-2" tabindex="0" role="button"><span class="sr-only">Exibir slide
+								<label for="carrossel-2" role="button"><span class="apenas-leitor">Exibir
+										slide
 										2</span></label>
-								<label for="carousel-3" tabindex="0" role="button"><span class="sr-only">Exibir slide
+								<label for="carrossel-3" role="button"><span class="apenas-leitor">Exibir
+										slide
 										3</span></label>
 							</div>
 
@@ -174,7 +174,7 @@
 			</fieldset>
 		</section>
 
-		<!-- ================================  SEÇÃO : DIA DO CONSUMIDOR 1/2  ================================  -->
+		<!-- ================================= SEÇÃO : DIA DO CONSUMIDOR 1/2 ================================= -->
 		<section class="secao-consumidor" aria-labelledby="titulo-consumidor">
 			<header class="secao-consumidor__cabecalho">
 				<span class="secao-consumidor__subtitulo">Novidades no Rio</span>
@@ -262,17 +262,7 @@
 				</article>
 			</div>
 
-			<!-- ================================  SEÇÃO : DIA DO CONSUMIDOR 2/2  ================================  -->
-			<!-- @TODO
-		<div class="secao-consumidor__cabecalho-destaques">
-			<div class="secao-consumidor__titulo-envolucro">
-			<h2 class="secao-consumidor__titulo">Destaques</h2>
-			<p class="secao-consumidor__subtitulo">Escolhidos a dedo pela equipe Iara</p>
-			</div>
-			<a href="#" class="secao-consumidor__link-ver-todos" aria-label="Ver todos os Destaques">Ver tudo ›</a>
-		</div> 
-	-->
-
+			<!-- ================================= SEÇÃO : DIA DO CONSUMIDOR 2/2 ================================= -->
 			<div class="secao-consumidor__grade-secundaria">
 				<!-- Card 1 -->
 				<div class="secao-consumidor__envolucro-cartao">
@@ -398,165 +388,142 @@
 				</div>
 			</div>
 		</section>
-
-		<!-- ================================  SEÇÃO :  LANÇAMENTOS ================================  -->
-		<section class="secao-lancamentos" aria-labelledby="titulo-lancamentos">
-			<header class="secao-lancamentos__cabecalho">
-				<div>
-					<span class="secao-lancamentos__subtitulo">Fresquinhos para você</span>
-					<h2 class="secao-lancamentos__titulo" id="titulo-lancamentos">
-						Lançamentos
-					</h2>
-				</div>
-				<a href="#" class="secao-lancamentos__link-ver-todos" aria-label="Ver todos os Lançamentos">Ver tudo
-					></a>
-			</header>
-
-			<div class="secao-lancamentos__grade">
-				<div class="secao-lancamentos__envolucro-cartao">
-					<article class="secao-lancamentos__cartao">
-						<div class="secao-lancamentos__selo-desconto">-20%</div>
-						<div class="secao-lancamentos__imagem-envolucro">
-							<img src="https://i.pinimg.com/originals/b8/c7/b0/b8c7b06888d4e36b9a48d348415e48c6.png"
-								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Guardião do Curupira" />
-						</div>
-						<div class="secao-lancamentos__info">
-							<h3 class="secao-lancamentos__titulo-jogo">
-								Guardião do Curupira
-							</h3>
-							<p class="secao-lancamentos__estudio">Estúdio Amazônia</p>
-							<div class="secao-lancamentos__avaliacao">
-								<span class="secao-lancamentos__icone-estrela">★</span>
-								<span class="secao-lancamentos__nota">4.7</span>
-								<span class="secao-lancamentos__total-votos">(234)</span>
-							</div>
-							<div class="secao-lancamentos__bloco-preco">
-								<span class="secao-lancamentos__preco-desconto">R$ 39,90</span>
-							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="secao-lancamentos__envolucro-cartao">
-					<article class="secao-lancamentos__cartao">
-						<div class="secao-lancamentos__imagem-envolucro">
-							<img src="https://t3.ftcdn.net/jpg/17/58/40/38/360_F_1758403884_CuAc7BxYBS6g6Roleu1Nl6nlgBvvj2Wc.jpg"
-								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Saci: Redemoinho" />
-						</div>
-						<div class="secao-lancamentos__info">
-							<h3 class="secao-lancamentos__titulo-jogo">
-								<a href="#" class="link-cobre-card">Saci: Redemoinho</a>
-							</h3>
-							<p class="secao-lancamentos__estudio">Pixel Caipira</p>
-							<div class="secao-lancamentos__avaliacao">
-								<span class="secao-lancamentos__icone-estrela">★</span>
-								<span class="secao-lancamentos__nota">4.5</span>
-								<span class="secao-lancamentos__total-votos">(189)</span>
-							</div>
-							<div class="secao-lancamentos__bloco-preco">
-								<span class="secao-lancamentos__preco-novo">R$ 29,90</span>
-							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="secao-lancamentos__envolucro-cartao">
-					<article class="secao-lancamentos__cartao">
-						<div class="secao-lancamentos__imagem-envolucro">
-							<img src="https://img.freepik.com/fotos-gratis/papel-de-parede-digital-de-barco-a-vela-preto_395237-274.jpg?semt=ais_hybrid&w=740&q=80"
-								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Rio de Estrelas" />
-						</div>
-						<div class="secao-lancamentos__info">
-							<h3 class="secao-lancamentos__titulo-jogo">
-								<a href="#" class="link-cobre-card">Rio de Estrelas</a>
-							</h3>
-							<p class="secao-lancamentos__estudio">Canoa Digital</p>
-							<div class="secao-lancamentos__avaliacao">
-								<span class="secao-lancamentos__icone-estrela">★</span>
-								<span class="secao-lancamentos__nota">4.8</span>
-								<span class="secao-lancamentos__total-votos">(312)</span>
-							</div>
-							<div class="secao-lancamentos__bloco-preco">
-								<span class="secao-lancamentos__preco-novo">R$ 14,90</span>
-							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="secao-lancamentos__envolucro-cartao">
-					<article class="secao-lancamentos__cartao">
-						<div class="secao-lancamentos__imagem-envolucro">
-							<img src="https://static.wixstatic.com/media/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg/v1/fill/w_546,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg"
-								class="secao-lancamentos__imagem" loading="lazy"
-								alt="Capa do Jogo Iara: Cantos do Rio" />
-						</div>
-						<div class="secao-lancamentos__info">
-							<h3 class="secao-lancamentos__titulo-jogo">
-								Iara: Cantos do Rio
-							</h3>
-							<p class="secao-lancamentos__estudio">Iara Studio</p>
-							<div class="secao-lancamentos__avaliacao">
-								<span class="secao-lancamentos__icone-estrela">★</span>
-								<span class="secao-lancamentos__nota">4.9</span>
-								<span class="secao-lancamentos__total-votos">(567)</span>
-							</div>
-							<div class="secao-lancamentos__bloco-preco">
-								<span class="secao-lancamentos__preco-gratis">Gratuito</span>
-							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="secao-lancamentos__envolucro-cartao">
-					<article class="secao-lancamentos__cartao">
-						<div class="secao-lancamentos__selo-desconto">-25%</div>
-						<div class="secao-lancamentos__imagem-envolucro">
-							<img src="https://kolmeia.net/wp-content/uploads/2021/02/larissa-baroboskin-mula-sem-cabeca-03png.jpg"
-								class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Mula Sem Cabeça" />
-						</div>
-						<div class="secao-lancamentos__info">
-							<h3 class="secao-lancamentos__titulo-jogo">
-								<a href="#" class="link-cobre-card">Mula Sem Cabeça</a>
-							</h3>
-							<p class="secao-lancamentos__estudio">Estúdio Lampião</p>
-							<div class="secao-lancamentos__avaliacao">
-								<span class="secao-lancamentos__icone-estrela">★</span>
-								<span class="secao-lancamentos__nota">4.3</span>
-								<span class="secao-lancamentos__total-votos">(134)</span>
-							</div>
-							<div class="secao-lancamentos__bloco-preco">
-								<span class="secao-lancamentos__preco-desconto">R$ 26,17</span>
-							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-		</section>
-
-		<!-- ================================  SEÇÃO : CHAMADA PARA AÇÃO (LOGIN) ? ================================  -->
-		<!-- <section class="secao-cta" aria-labelledby="titulo-cta">
-        <div class="secao-cta__conteiner">
-          <h2 class="secao-cta__titulo" id="titulo-cta">
-            Sua Jornada <span>Começa Aqui</span>
-          </h2>
-          <p class="secao-cta__descricao">
-            Acesse o catálogo completo, adicione os melhores jogos indie aos
-            seus favoritos e gerencie sua biblioteca pessoal.
-          </p>
-          <div class="secao-cta__acoes">
-            <button class="secao-cta__botao secao-cta__botao--primario">
-              Entrar
-            </button>
-            <button class="secao-cta__botao secao-cta__botao--secundario">
-              Criar Conta
-            </button>
-          </div>
-        </div>
-      </section> -->
 	</main>
 
+	<!-- ================================= SEÇÃO : LANÇAMENTOS ================================= -->
+	<section class="secao-lancamentos" aria-labelledby="titulo-lancamentos">
+		<header class="secao-lancamentos__cabecalho">
+			<div>
+				<span class="secao-lancamentos__subtitulo">Fresquinhos para você</span>
+				<h2 class="secao-lancamentos__titulo" id="titulo-lancamentos">
+					Lançamentos
+				</h2>
+			</div>
+			<a href="#" class="secao-lancamentos__link-ver-todos" aria-label="Ver todos os Lançamentos">Ver tudo
+				></a>
+		</header>
 
-	<!-- ================================  SEÇÃO : RODAPE ================================  -->
+		<div class="secao-lancamentos__grade">
+			<div class="secao-lancamentos__envolucro-cartao">
+				<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__selo-desconto">-20%</div>
+					<div class="secao-lancamentos__imagem-envolucro">
+						<img src="https://i.pinimg.com/originals/b8/c7/b0/b8c7b06888d4e36b9a48d348415e48c6.png"
+							class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Guardião do Curupira" />
+					</div>
+					<div class="secao-lancamentos__info">
+						<h3 class="secao-lancamentos__titulo-jogo">
+							Guardião do Curupira
+						</h3>
+						<p class="secao-lancamentos__estudio">Estúdio Amazônia</p>
+						<div class="secao-lancamentos__avaliacao">
+							<span class="secao-lancamentos__icone-estrela">★</span>
+							<span class="secao-lancamentos__nota">4.7</span>
+							<span class="secao-lancamentos__total-votos">(234)</span>
+						</div>
+						<div class="secao-lancamentos__bloco-preco">
+							<span class="secao-lancamentos__preco-desconto">R$ 39,90</span>
+						</div>
+					</div>
+				</article>
+			</div>
+
+			<div class="secao-lancamentos__envolucro-cartao">
+				<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__imagem-envolucro">
+						<img src="https://t3.ftcdn.net/jpg/17/58/40/38/360_F_1758403884_CuAc7BxYBS6g6Roleu1Nl6nlgBvvj2Wc.jpg"
+							class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Saci: Redemoinho" />
+					</div>
+					<div class="secao-lancamentos__info">
+						<h3 class="secao-lancamentos__titulo-jogo">
+							<a href="#" class="link-cobre-card">Saci: Redemoinho</a>
+						</h3>
+						<p class="secao-lancamentos__estudio">Pixel Caipira</p>
+						<div class="secao-lancamentos__avaliacao">
+							<span class="secao-lancamentos__icone-estrela">★</span>
+							<span class="secao-lancamentos__nota">4.5</span>
+							<span class="secao-lancamentos__total-votos">(189)</span>
+						</div>
+						<div class="secao-lancamentos__bloco-preco">
+							<span class="secao-lancamentos__preco-novo">R$ 29,90</span>
+						</div>
+					</div>
+				</article>
+			</div>
+
+			<div class="secao-lancamentos__envolucro-cartao">
+				<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__imagem-envolucro">
+						<img src="https://img.freepik.com/fotos-gratis/papel-de-parede-digital-de-barco-a-vela-preto_395237-274.jpg?semt=ais_hybrid&w=740&q=80"
+							class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Rio de Estrelas" />
+					</div>
+					<div class="secao-lancamentos__info">
+						<h3 class="secao-lancamentos__titulo-jogo">
+							<a href="#" class="link-cobre-card">Rio de Estrelas</a>
+						</h3>
+						<p class="secao-lancamentos__estudio">Canoa Digital</p>
+						<div class="secao-lancamentos__avaliacao">
+							<span class="secao-lancamentos__icone-estrela">★</span>
+							<span class="secao-lancamentos__nota">4.8</span>
+							<span class="secao-lancamentos__total-votos">(312)</span>
+						</div>
+						<div class="secao-lancamentos__bloco-preco">
+							<span class="secao-lancamentos__preco-novo">R$ 14,90</span>
+						</div>
+					</div>
+				</article>
+			</div>
+
+			<div class="secao-lancamentos__envolucro-cartao">
+				<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__imagem-envolucro">
+						<img src="https://static.wixstatic.com/media/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg/v1/fill/w_546,h_360,al_c,lg_1,q_80,enc_avif,quality_auto/6fdf45_271ca0580142496ab6f41297d5dd6386~mv2.jpg"
+							class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Iara: Cantos do Rio" />
+					</div>
+					<div class="secao-lancamentos__info">
+						<h3 class="secao-lancamentos__titulo-jogo">
+							Iara: Cantos do Rio
+						</h3>
+						<p class="secao-lancamentos__estudio">Iara Studio</p>
+						<div class="secao-lancamentos__avaliacao">
+							<span class="secao-lancamentos__icone-estrela">★</span>
+							<span class="secao-lancamentos__nota">4.9</span>
+							<span class="secao-lancamentos__total-votos">(567)</span>
+						</div>
+						<div class="secao-lancamentos__bloco-preco">
+							<span class="secao-lancamentos__preco-gratis">Gratuito</span>
+						</div>
+					</div>
+				</article>
+			</div>
+
+			<div class="secao-lancamentos__envolucro-cartao">
+				<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__selo-desconto">-25%</div>
+					<div class="secao-lancamentos__imagem-envolucro">
+						<img src="https://kolmeia.net/wp-content/uploads/2021/02/larissa-baroboskin-mula-sem-cabeca-03png.jpg"
+							class="secao-lancamentos__imagem" loading="lazy" alt="Capa do Jogo Mula Sem Cabeça" />
+					</div>
+					<div class="secao-lancamentos__info">
+						<h3 class="secao-lancamentos__titulo-jogo">
+							<a href="#" class="link-cobre-card">Mula Sem Cabeça</a>
+						</h3>
+						<p class="secao-lancamentos__estudio">Estúdio Lampião</p>
+						<div class="secao-lancamentos__avaliacao">
+							<span class="secao-lancamentos__icone-estrela">★</span>
+							<span class="secao-lancamentos__nota">4.3</span>
+							<span class="secao-lancamentos__total-votos">(134)</span>
+						</div>
+						<div class="secao-lancamentos__bloco-preco">
+							<span class="secao-lancamentos__preco-desconto">R$ 26,17</span>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+
+	<!-- ================================= SEÇÃO : RODAPE ================================= -->
 	<footer class="main-footer">
 		<div class="footer-container">
 			<div class="footer-column branding">
@@ -606,8 +573,6 @@
 			</div>
 		</div>
 	</footer>
-
-	<!-- <script src="assets/js/main.js"></script> -->
 </body>
 
 </html>
