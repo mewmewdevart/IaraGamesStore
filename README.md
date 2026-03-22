@@ -102,5 +102,5 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 - @TODO
 
 <p align="right">
-  <a href="./docs/sprint_01.md">➡️ Iniciar leitura</a>
+  <a href="./docs/01_sprint.md">➡️ Iniciar leitura</a>
 </p>
