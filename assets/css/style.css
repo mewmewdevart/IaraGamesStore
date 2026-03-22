@@ -23,11 +23,11 @@
   --color-primary: #e34a38;
   --color-secondary: #fca311;
   --color-dark: #0f1714;
+  --color-dark-composition: #122018;
   --color-light: #e8eceb;
   --color-gray: #2c2e30;
   --color-gray-light: #e8ecebb3;
 
-  --card-bg: #122018;
 
   /* Fontes */
   --font-inter: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -146,6 +146,11 @@ main {
 .cabecalho-principal__logo-link:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
+}
+
+.menu-toggle-checkbox,
+.menu-toggle-label {
+  display: none;
 }
 
 .menu-navegacao {
@@ -317,6 +322,8 @@ main {
   padding: var(--section-padding-v) var(--section-padding-h);
   z-index: 1;
   height: 100%;
+  min-height: 80h;
+  min-height: 80vdh;
   transition: padding 0.5s ease;
 }
 
@@ -433,13 +440,12 @@ main {
   align-items: flex-end;
   justify-content: space-between;
   gap: 0.5rem;
-  height: 5.5vh;
+  height: 3.5rem;
 }
 
 .carrossel-principal__classificacao-indicativa p:first-child {
   font-size: var(--text-sm);
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
 }
 
 .carrossel-principal__classificacao-indicativa p:nth-child(2) {
@@ -482,6 +488,17 @@ main {
   transform: scale(1.4);
   background: var(--color-light);
 }
+
+.gradiente-border {
+  position: absolute;
+  width: 100%;
+  height: 3rem;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  background: linear-gradient(to bottom, transparent, var(--color-dark));
+}
+
 
 /* ==========================================================================
    SECAO: DIA DO CONSUMIDOR
@@ -600,8 +617,8 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, transparent, var(--color-dark));
+  height: 20rem;
+  background: linear-gradient(to bottom, transparent, var(--color-dark-composition));
   z-index: 1;
 }
 
@@ -662,7 +679,7 @@ main {
 
 .secao-consumidor__cartao-lista,
 .secao-lancamentos__cartao {
-  background: var(--card-bg);
+  background: var(--color-dark-composition);
   border-radius: 0.5rem;
   overflow: hidden;
   transition: transform 0.25s, box-shadow 0.25s;
@@ -694,8 +711,8 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 3.75rem;
-  background: linear-gradient(to bottom, transparent, var(--card-bg));
+  height: 10rem;
+  background: linear-gradient(to bottom, transparent, var(--color-dark-composition));
 }
 
 .secao-consumidor__imagem-lista,
@@ -924,7 +941,7 @@ main {
   white-space: nowrap;
   border-width: 0;
   color: var(--color-light);
-  background-color: var(--card-bg);
+  background-color: var(--color-dark-composition);
 }
 
 /* A11Y - CARD COM PERFORMANCE */
@@ -1134,16 +1151,61 @@ main {
   .secao-consumidor__nome-jogo {
     font-size: var(--text-lg);
   }
+
+  /* Menu Responsivo */
+  .menu-toggle-label {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--color-light);
+    order: -1;
+    transition: color 0.3s ease;
+  }
+
+  .menu-toggle-label:hover {
+    color: var(--color-primary);
+  }
+
+  .menu-navegacao {
+    display: none;
+    position: absolute;
+    top: 4.0625rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-dark);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-primary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .menu-toggle-checkbox:checked~.menu-navegacao {
+    display: flex;
+    animation: slideDown 0.3s ease-out forwards;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .menu-navegacao__link {
+    font-size: 1.25rem;
+    width: 100%;
+    padding: 0.5rem 0;
+  }
 }
 
 @media (max-width: 768px) {
-  .carrossel-principal__slide::after {
-    background: linear-gradient(to top,
-        var(--color-dark) 10%,
-        rgba(15, 23, 20, 0.8) 60%,
-        transparent 100%);
-  }
-
   .carrossel-principal__titulo {
     font-size: var(--text-4xl);
   }
