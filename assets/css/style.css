@@ -1154,16 +1154,26 @@ main {
 
   /* Menu Responsivo */
   .menu-toggle-label {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
     cursor: pointer;
     font-size: 1.5rem;
     color: var(--color-light);
     order: -1;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, transform 0.2s ease;
+    z-index: 1001;
   }
 
   .menu-toggle-label:hover {
     color: var(--color-primary);
+  }
+
+  .menu-toggle-checkbox:checked~.menu-toggle-label {
+    color: var(--color-secondary);
+    transform: rotate(90deg);
   }
 
   .menu-navegacao {
@@ -1172,36 +1182,60 @@ main {
     top: 4.0625rem;
     left: 0;
     width: 100%;
+    height: calc(100vh - 4.0625rem);
     background-color: var(--color-dark);
     flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-    z-index: 1000;
-    border-bottom: 2px solid var(--color-primary);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 3rem 2rem;
+    gap: 2rem;
+    z-index: 999;
+    border-top: 1px solid rgba(232, 236, 235, 0.1);
+    overflow-y: auto;
+  }
+
+  /* Ocultar "o resto" quando o menu estiver aberto */
+  .cabecalho-principal__navegacao:has(.menu-toggle-checkbox:checked) .cabecalho-principal__lado-direito {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 
   .menu-toggle-checkbox:checked~.menu-navegacao {
     display: flex;
-    animation: slideDown 0.3s ease-out forwards;
+    animation: slideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
   }
 
-  @keyframes slideDown {
+  @keyframes slideIn {
     from {
       opacity: 0;
-      transform: translateY(-10px);
+      transform: translateX(-20px);
     }
 
     to {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateX(0);
     }
   }
 
   .menu-navegacao__link {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
+    font-weight: var(--weight-bold);
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(232, 236, 235, 0.05);
+  }
+
+  .menu-navegacao__link:last-child {
+    border-bottom: none;
+  }
+
+  /* Ajuste do Logo no Mobile */
+  .cabecalho-principal__logo-link img {
+    width: 2.8rem;
+    height: 2.8rem;
+  }
+
+  .cabecalho-principal__lado-esquerdo {
+    gap: 0.75rem;
   }
 }
 
