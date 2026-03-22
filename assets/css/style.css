@@ -36,6 +36,12 @@
   /* Espaçamento de Seções - Padronizado */
   --section-padding-v: 4rem;
   --section-padding-h: 5rem;
+
+  /* Bordas e Sombras */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --shadow-card: 0 1rem 2.5rem rgba(0, 0, 0, 0.55);
 }
 
 /* ==========================================================================
@@ -47,6 +53,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -92,6 +102,13 @@ main {
 ::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   background: var(--color-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
 }
 
 /* ==========================================================================
@@ -240,7 +257,7 @@ main {
   overflow: hidden;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: width 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
   z-index: 100;
 }
 
@@ -341,19 +358,24 @@ input[type="radio"][name="carrossel-principal"] {
   background-repeat: no-repeat;
 }
 
+.carrossel-principal__slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, var(--color-dark), transparent);
+  z-index: 1;
+}
+
 .carrossel-principal__slide--1 {
-  background-image: linear-gradient(to right, var(--color-dark), rgba(0, 0, 0, 0)),
-    url("../img/banner-jogo-ruff-ghanor.jpg");
+  background-image: url("../img/banner-jogo-ruff-ghanor.jpg");
 }
 
 .carrossel-principal__slide--2 {
-  background-image: linear-gradient(to right, var(--color-dark), rgba(0, 0, 0, 0)),
-    url("../img/banner-jogo-dandara.jpg");
+  background-image: url("../img/banner-jogo-dandara.jpg");
 }
 
 .carrossel-principal__slide--3 {
-  background-image: linear-gradient(to right, var(--color-dark), rgba(0, 0, 0, 0)),
-    url("../img/banner-jogo-pixel-ripped.jpg");
+  background-image: url("../img/banner-jogo-pixel-ripped.jpg");
 }
 
 .carrossel-principal__conteiner {
@@ -427,7 +449,7 @@ input[type="radio"][name="carrossel-principal"] {
 }
 
 .carrossel-principal__titulo {
-  font-size: var(--text-5xl);
+  font-size: clamp(1.8rem, 4vw, 3rem);
   font-weight: var(--weight-bold);
   margin-bottom: 0.5rem;
 }
@@ -453,7 +475,7 @@ input[type="radio"][name="carrossel-principal"] {
   font-weight: var(--weight-semibold);
   cursor: pointer;
   font-size: var(--text-lg);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background-image 0.3s ease, background-color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -577,6 +599,7 @@ input[type="radio"][name="carrossel-principal"] {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
+  scroll-padding-left: var(--section-padding-h);
   padding: 1.5rem 0;
   scrollbar-width: thin;
   scrollbar-color: var(--color-primary) var(--color-dark);
@@ -699,8 +722,7 @@ input[type="radio"][name="carrossel-principal"] {
   margin-top: 0.625rem;
 }
 
-.secao-consumidor__preco-antigo {
-  font-size: var(--text-sm);
+.preco-antigo {
   color: #aab0af;
   text-decoration: line-through;
 }
@@ -999,14 +1021,14 @@ input[type="radio"][name="carrossel-principal"] {
 /* ==========================================================================
    RODAPE (FOOTER)
    ========================================================================== */
-.main-footer {
+.footer {
   background-color: transparent;
   color: var(--color-gray-light);
   padding: var(--section-padding-v) var(--section-padding-h) 2rem;
   border-top: 1px solid var(--color-gray);
 }
 
-.footer-container {
+.footer__container {
   width: 100%;
   padding: 0;
   margin: 0 auto;
@@ -1016,24 +1038,24 @@ input[type="radio"][name="carrossel-principal"] {
   gap: 2.5rem;
 }
 
-.footer-column {
+.footer__column {
   flex: 1;
   min-width: 9.375rem;
 }
 
-.footer-column.branding {
+.footer__column--branding {
   flex: 2;
   min-width: 15.625rem;
 }
 
-.footer-logo {
+.footer__logo {
   color: var(--color-light);
   font-size: 1.5rem;
   letter-spacing: 0.125rem;
   margin-bottom: 0.3125rem;
 }
 
-.footer-tagline {
+.footer__tagline {
   color: var(--color-gray-light);
   font-size: 0.6875rem;
   font-weight: bold;
@@ -1041,14 +1063,14 @@ input[type="radio"][name="carrossel-principal"] {
   margin-bottom: 1.25rem;
 }
 
-.footer-description {
+.footer__description {
   font-size: 0.8125rem;
   line-height: 1.6;
   max-width: 21.875rem;
   text-align: justify;
 }
 
-.footer-column h3 {
+.footer__column h3 {
   color: var(--color-light);
   font-size: 0.75rem;
   letter-spacing: 0.09375rem;
@@ -1056,32 +1078,32 @@ input[type="radio"][name="carrossel-principal"] {
   font-weight: 600;
 }
 
-.footer-column ul {
+.footer__column ul {
   list-style: none;
 }
 
-.footer-column ul li {
+.footer__column ul li {
   margin-bottom: 0.75rem;
 }
 
-.footer-column ul li a {
+.footer__column ul li a {
   text-decoration: none;
   color: var(--color-gray-light);
   font-size: 0.8125rem;
   transition: color 0.3s;
 }
 
-.footer-column ul li a:hover {
+.footer__column ul li a:hover {
   color: var(--color-primary);
 }
 
-.footer-bottom {
+.footer__bottom {
   margin-top: 3.75rem;
   padding-top: 1.5625rem;
   border-top: 1px solid var(--color-gray);
 }
 
-.bottom-content {
+.footer__bottom-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1092,7 +1114,7 @@ input[type="radio"][name="carrossel-principal"] {
   gap: 0.9375rem;
 }
 
-.footer-disclaimer {
+.footer__disclaimer {
   text-transform: uppercase;
 }
 
@@ -1222,7 +1244,7 @@ input[type="radio"][name="carrossel-principal"] {
   font-size: var(--text-lg);
   font-weight: var(--weight-semibold);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, background-image 0.3s ease, background-color 0.3s ease, color 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1258,26 +1280,7 @@ input[type="radio"][name="carrossel-principal"] {
 /* ==========================================================================
    MEDIA QUERIES (RESPONSIVIDADE)
    ========================================================================== */
-@media (max-width: 900px) {
-  :root {
-    --section-padding-v: 2.5rem;
-    --section-padding-h: 1.5rem;
-  }
 
-  .cabecalho-principal {
-    padding: 0 var(--section-padding-h);
-  }
-
-  .secao-consumidor,
-  .secao-lancamentos,
-  .secao-cta,
-  .main-footer {
-    padding-top: var(--section-padding-v);
-    padding-bottom: var(--section-padding-v);
-    padding-left: var(--section-padding-h);
-    padding-right: var(--section-padding-h);
-  }
-}
 
 @media (max-width: 1324px) {
 
@@ -1296,9 +1299,29 @@ input[type="radio"][name="carrossel-principal"] {
 }
 
 @media (max-width: 900px) {
-  .carrossel-principal__conteiner {
-    padding: 3rem var(--section-padding-h);
+  :root {
+    --section-padding-v: 2.5rem;
+    --section-padding-h: 1.5rem;
   }
+
+  .cabecalho-principal {
+    padding: 0 var(--section-padding-h);
+  }
+
+  .secao-consumidor,
+  .secao-lancamentos,
+  .secao-cta,
+  .footer {
+    padding-top: var(--section-padding-v);
+    padding-bottom: var(--section-padding-v);
+    padding-left: var(--section-padding-h);
+    padding-right: var(--section-padding-h);
+  }
+
+
+  /* .carrossel-principal__conteiner {
+    padding: 3rem var(--section-padding-h);
+  } */
 
   .carrossel-principal__indicadores {
     left: var(--section-padding-h);
@@ -1333,19 +1356,19 @@ input[type="radio"][name="carrossel-principal"] {
     min-height: 60dvh;
   }
 
-  .carrossel-principal__overlay {
+  .carrossel-principal__slide::after {
     background: linear-gradient(to top,
         var(--color-dark) 10%,
         rgba(15, 23, 20, 0.8) 60%,
         transparent 100%);
   }
 
-  .carrossel-principal__conteiner {
+  /* .carrossel-principal__conteiner {
     padding: 2rem var(--section-padding-h) 6rem;
     justify-content: flex-end;
     align-items: flex-start;
     text-align: left;
-  }
+  } */
 
   .carrossel-principal__titulo {
     font-size: var(--text-4xl);
@@ -1358,7 +1381,7 @@ input[type="radio"][name="carrossel-principal"] {
 
   .carrossel-principal__botoes {
     width: 100%;
-    max-width: 25rem;
+    max-width: 15rem;
     flex-direction: row;
     gap: 0.75rem;
   }
@@ -1440,9 +1463,9 @@ input[type="radio"][name="carrossel-principal"] {
     font-size: var(--text-3xl);
   }
 
-  .carrossel-principal__conteiner {
+  /* .carrossel-principal__conteiner {
     padding: 1.5rem var(--section-padding-h) 5rem;
-  }
+  } */
 
   .carrossel-principal__classificacao-indicativa img {
     width: 3rem;
