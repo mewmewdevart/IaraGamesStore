@@ -24,7 +24,8 @@
 Este repositório apresenta o desenvolvimento inicial da plataforma **Iara Games**, criado como parte da **Sprint 01** de um projeto acadêmico.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/95e80fd7-ae07-4967-bdcf-2ffe74f68a89" alt="Preview do projeto" />
+  <img width="839" height="380" alt="Preview do projeto" src="https://github.com/user-attachments/assets/fbfa8e67-c0fa-409f-b08f-f782e7f49813" />
+
 </p>
 
 # Navegação da Documentação
