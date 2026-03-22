@@ -1,15 +1,14 @@
 <div align="center">
-  <img src="https://github.com/user-attachments/assets/fe4828cc-49b5-474b-9ee3-36ae7f8f4a9e" width="200" alt="IaraGames Logo" />
+  <img src="https://github.com/user-attachments/assets/fe4828cc-49b5-474b-9ee3-36ae7f8f4a9e" width="200" alt="Iara Games Logo" />
   
   <h1>Iara Games 🌊</h1>
   
-  <p>
-    Protótipo inicial da plataforma <strong>Iara Games</strong>, desenvolvido durante a Sprint 01.<br/>
-    O projeto contempla decisões de design, experiência do usuário (UX) e a construção de uma homepage estática utilizando HTML e CSS.
-  </p>
-  
+<p>
+  🧜‍♀️ | Plataforma Iara Games desenvolvida como projeto acadêmico do Tecnólogo em Web Design da FIAP, com foco em UX, design e HTML, CSS e JavaScript (Em breve).
+</p>
+
   <p align="center">
-    <a href="#">🔗 Acesse o projeto</a>
+    <a href="https://mewmewdevart.github.io/IaraGamesStore/">🔗 Acesse o projeto</a>
   </p>
 
   <p align="center">
@@ -20,13 +19,18 @@
 </div>
 
 ## 📚 Sobre o Projeto
+  A Iara Games é uma plataforma web de distribuição de jogos indie brasileiros, criada como projeto acadêmico do Tecnólogo em Web Design da FIAP, com foco em experiência do usuário (UX), design e desenvolvimento web.
 
-Este repositório apresenta o desenvolvimento inicial da plataforma **Iara Games**, criado como parte da **Sprint 01** de um projeto acadêmico.
-
+### Desktop
 <p align="center">
-  <img width="839" height="380" alt="Preview do projeto" src="https://github.com/user-attachments/assets/fbfa8e67-c0fa-409f-b08f-f782e7f49813" />
-
+  <img width="839" alt="Preview do projeto" src="https://github.com/user-attachments/assets/712250e8-77b2-4672-85fb-283c7db1c00a" />
 </p>
+
+### Mobile
+<p align="center">
+  <img width="431" alt="Preview do projeto" src="https://github.com/user-attachments/assets/b192429e-fab9-4d6f-bed6-028dc15c4c57" />
+</p>
+
 
 # Navegação da Documentação
 
@@ -39,7 +43,8 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 
 **Acesse a documentação de cada sprint:**
 
-1. **[Sprint 01 - Visão Inicial da Plataforma](./docs/sprint_01.md)** *(Atual)*
+1. **[Sprint 01 - Visão Inicial da Plataforma](./docs/01_sprint.md)** *(Atual)*:  
+   Plataforma **Iara Games** desenvolvida na Sprint 01, com foco em design, experiência do usuário (UX) e construção de uma homepage em HTML e CSS.
 2. *Sprint 02 - (Em breve)*
 3. *Sprint 03 - (Em breve)*
 
