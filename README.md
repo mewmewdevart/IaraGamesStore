@@ -28,7 +28,7 @@
 
 ### Mobile
 <p align="center">
-  <img width="531" alt="Preview do projeto em formato mobile" src="https://github.com/user-attachments/assets/b3ec47d0-2650-4613-9ece-e83dbd29d400" />
+  <img width="331" alt="Preview do projeto em formato mobile" src="https://github.com/user-attachments/assets/b3ec47d0-2650-4613-9ece-e83dbd29d400" />
 </p>
 
 
