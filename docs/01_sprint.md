@@ -1,7 +1,13 @@
 # 📖 SPRINT 01 – VISÃO ESTRUTURADA: PLATAFORMA IARA GAMES
 
-Este documento formaliza a entrega da **Sprint 01** do projeto **Iara Games**, uma plataforma web de distribuição de jogos indie brasileiros.  
-Desenvolvido como projeto acadêmico do curso de **Tecnólogo em Web Design da FIAP**, esta etapa tem como foco a **fundação da experiência do usuário (UX)**, **design visual** e **arquitetura front-end**.
+Este documento apresenta uma visão estruturada da **Sprint 01** do projeto **Iara Games**.  
+Para especificações técnicas aprofundadas, diagramas de arquitetura e mapeamento completo de requisitos, consulte a documentação detalhada ao final deste material.
+
+A Iara Games é uma **plataforma digital de distribuição de jogos indie brasileiros**, desenvolvida como projeto acadêmico do curso de **Tecnólogo em Web Design da FIAP**.
+
+Nesta etapa, o foco está na **fundação da experiência do usuário (UX)**, **definição do design visual (GDW)** e na **estruturação da arquitetura de front-end estático**.
+
+
 
 ## 🔗 Acessos
 - 🌐 **Deploy:** https://mewmewdevart.github.io/IaraGamesStore/  
@@ -96,6 +102,12 @@ Alinhada à **ABNT NBR 17225:2025**, a plataforma implementa:
 - Desenvolvimento do **Marketplace** e **Carrinho de Compras**  
 - Criação de **Comunidade e Fóruns**  
 
+<p align="center">
+  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2001%20-%20Iara%20Games_2026%20-%20Grupo%208%20EAD.pdf">📝 Visualizar documentação completa</a>
+</p>
+
+
 <p align="left">
   <a href="../README.md">🏠 Voltar à Home</a>
 </p>
+
