@@ -103,7 +103,7 @@ Alinhada à **ABNT NBR 17225:2025**, a plataforma implementa:
 - Criação de **Comunidade e Fóruns**  
 
 <p align="center">
-  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2001%20-%20Iara%20Games_2026%20-%20Grupo%208%20EAD.pdf">📝 Visualizar documentação completa</a>
+  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2001%20-%20Iara%20Games_2026%20-%20EAD%20.pdf">📝 Visualizar documentação completa</a>
 </p>
 
 
