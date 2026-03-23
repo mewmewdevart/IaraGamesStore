@@ -102,7 +102,13 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 * **Mayla Mayumi Motobe** — [rm571213@fiap.com.br](mailto:rm571213@fiap.com.br)
 
 ## Referências
-- @TODO
+
+*  ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 17225:2025 - Acessibilidade em interfaces digitais. Rio de Janeiro: ABNT, 2025. 
+*  NIELSEN, Jakob. 10 Usability Heuristics for User Interface Design. Nielsen Norman Group, 1994. Disponível em: https://www.nngroup.com/articles/ten-usability-heuristics/. Acesso em: mar. 2026. 
+ITCH.IO. Top games. Disponível em: https://itch.io/games. Acesso em: mar. 2026. 
+*  STEAM. Steamworks Documentation: Distribuição de Jogos. Valve Corporation. Disponível em: https://partner.steamgames.com/. Acesso em: mar. 2026. 
+*  NUUVEM. Plataforma Nuuvem - Distribuição Digital Latino-Americana. Disponível em: https://www.nuuvem.com/br-pt/. Acesso em: mar. 2026. 
+*  GOOGLE DEVELOPERS. Web Vitals: Essential metrics for a healthy site. Disponível em: https://web.dev/vitals/. Acesso em: mar. 2026. 
 
 <p align="right">
   <a href="./docs/01_sprint.md">➡️ Iniciar leitura</a>
