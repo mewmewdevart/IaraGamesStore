@@ -1,59 +1,129 @@
-# 📖 Sprint 01 - Visão Inicial da Plataforma Iara Games
+# 📖 Sprint 01 — Visão Inicial da Plataforma Iara Games
 
-Este README formaliza a primeira etapa de concepção da **Iara Games**, uma plataforma digital de distribuição focada no ecossistema de jogos independentes brasileiros. O desenvolvimento é conduzido pela equipe da agência ficticia Master3.
+## 1. Introdução e Contexto
 
-Nesta Sprint 01, o escopo foca no levantamento de requisitos, definição do Design Visual (GDW), arquitetura de informação e entrega do protótipo estático (HTML/CSS) da Home Page.
+Este documento apresenta a primeira etapa de concepção da **Iara Games**, uma plataforma digital de distribuição de jogos brasileiros.
 
-## 1. Visão do Produto e Posicionamento
-A Iara Games visa suprir uma lacuna no mercado de distribuição digital, oferecendo infraestrutura de e-commerce e comunidade exclusivamente para estúdios emergentes do Brasil. O produto final atuará como um modelo de negócio B2C e B2B, conectando desenvolvedores locais diretamente ao consumidor final.
+O projeto foi desenvolvido pela equipe da agência simulada **Master3**, composta por:
 
-**O projeto baseia-se em três pilares operacionais:**
-- **Curadoria 100% Nacional**: Restrição de catálogo. Algoritmo de descoberta direcionado exclusivamente à indústria brasileira.
-- **Identidade Visual e Cultural**: Aplicação de diretrizes de design que remetem ao folclore nacional, traduzindo o conceito de "brasilidade" para o nicho gamer.
-- **Distribuição Digital (MVP)**: Versão focada na venda de licenças e distribuição de pacotes de dados para instalação local (download direto).
+- Ingrid Silva de Lima  
+- Julia Souza Gonçalves  
+- Larissa Cristina Benedito
+- Mateus Teixeira Ribeiro  
+- Mayla Mayumi Motobe  
 
-## 2. Pesquisa de Plataformas (Referências)
-Para fundamentar as decisões de arquitetura e usabilidade da Iara Games, conduzimos uma análise competitiva de três plataformas referenciais:
-- **Steam**: A maior plataforma para PC no mundo, excelente visibilidade estrutural. Focado em produtos premium.
-- **Itch.Io**: Foco em indies e experimentais, modelo "pay-what-you-want", ótimo para game jams e autores independentes.
-- **Nuuvem**: Referência nacional na América Latina, serve de inspiração pela comunicação localizada e integração com formas de pagamento brasileiras.
+A Sprint 01 tem como objetivo estruturar as bases do produto, incluindo entendimento do problema, definição visual, decisões de UX e a entrega de um protótipo inicial.
 
-## 3. Requisitos Funcionais e Módulos Principais
-A arquitetura do Produto Mínimo Viável (MVP) contempla cinco módulos principais (com a "Área Inicial" entregue nesta Sprint):
-- **Área Inicial (Sprint 01)**: Interface de conversão principal, com vitrine de destaque e navegação global.
-- **Área do Usuário**: Gestão de contas, privacidade (LGPD), histórico de transações e configurações da sessão.
-- **Módulo Loja (Marketplace)**: Catálogo com ordenação, volume de vendas, notas e categorização por gênero.
-- **Módulo Biblioteca**: Gestão de licenças adquiridas pelo consumidor, com filtros de ordenação.
-- **Módulo Fórum (Comunidade)**: Tópicos, indexação cronológica e por nível de engajamento da publicações.
-- **Módulo Central de Suporte**: Diretório de contatos técnicos e ticketing (sistema de chamados).
+## 2. Objetivo da Sprint
 
-## 4. Decisões de Design (GDW)
-A identidade visual adota uma postura **Dark-first**, essencial para o conforto visual de jogadores durante a imersão na plataforma:
-- **Padrão Dark Mode Nativo**: Fundo principal focado em reduzir a fadiga ocular.
-- **Paleta de Cores**:
-  - `Deep Moss (#0F1714)`: Fundo imersivo escuro sem ser preto absoluto.
-  - `Terracota Iara (#E34A38)`: Cor primária, usada em Call-to-actions principais ("Jogar", "Comprar").
-  - `Fogo Fátuo (#FCA311)`: Cor secundária (amarelo vibrante) usada em hovers, foco e alertas.
-  - `Off-White (#E8ECEB)` / `Gray (#2C2E30)`: Cores de leitura geral e elementos desativados.
-- **Tipografia**: `Inter`, selecionada por sua excelente legibilidade digital. Tipografia variando em pesos sistemáticos em títulos (Hero 700) e textos de interface (Medium 500 / Regular 400).
+O foco desta sprint não é a construção completa da plataforma, mas sim a definição de seus fundamentos.
 
-## 5. Usabilidade (UX) e Acessibilidade
-A interface foi projetada para otimizar a navegação, balancear a carga cognitiva e guiar o fluxo transacional:
-- **Hierarquia Visual (UX)**: Contraste rigoroso indicando *affordance* para conversão.
-- **Acessibilidade by Design**: Desenvolvimento universal conforme ABNT NBR 17225. A estrutura considera leitores de tela e navegação por teclado como primordiais.
-- **Microcopy**: Linguagem adequada à comunidade gamer BR, abandonando o jargão técnico excessivamente corporativo.
-- **Feedback Constante**: Respostas táteis ou visuais baseadas em modais de confirmação na deleção de dados, atendo às heurísticas de Nielsen.
+### Entregas principais:
 
-## 6. Diferencial Técnico: Arquitetura, SEO e Performance
-A estruturação fundamentou-se nos indicadores *Core Web Vitals* para garantir a qualidade de entrega:
-- **Technical SEO e AOM**: Aplicação rigorosa de *landmarks* semânticos HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`), facilitando o acesso da árvore de acessibilidade (AOM) e os crawlers do Google. Incorporação de Rich Snippets e Open Graph.
-- **Performance de Renderização**: Uso de `loading="lazy"` para o que fica de fora da primeira dobra (*below the fold*), priorizando a LCP. Link `preconnect` para font-faces visando prevenir *FOIT*.
-- **Estruturação CSS Escalonável**: Isolamento tático do CSS via metodologia de nomenclatura inspirada no BEM, com Design Tokens unificados usando varíaveis globais `:root`.
+- Definição da proposta da plataforma  
+- Pesquisa de referências de mercado (Benchmark)
+- Decisões de design (GDW)  
+- Aplicação de práticas de UX e acessibilidade  
+- Desenvolvimento da Home Page estática (HTML + CSS)  
+- Organização do projeto no GitHub  
 
-## 7. Roadmap e Visão de Futuro
-A infraestrutura proposta é a fundação tecnológica da Iara Games. A longo prazo, a plataforma escalará essa arquitetura para absorver volume expansivo de dados B2B/B2C, transformando algo concebido como "loja" na **comunidade definitiva e indispensável** dos estúdios locais.
+> ⚠️ Esta etapa não contempla uso de JavaScript ou back-end.
 
+## 3. Visão do Produto
 
-<p align="left"><a href="../README.md">🏠 Voltar à Home</a></p>
-<!-- <p align="right"><a href="#">➡️ Próxima Página</a></p> -->
+A **Iara Games** foi idealizada para atender uma demanda pouco explorada no mercado: uma plataforma dedicada exclusivamente à distribuição de jogos brasileiros independentes.
 
+A proposta conecta:
+
+- 🎮 **Desenvolvedores nacionais (B2B)**: Fomento e vitrine para estúdios locais.
+- 🧑‍💻 **Consumidores finais (B2C)**: Acesso direto e valorização da cultura nacional.
+
+Além da venda de jogos, a plataforma também busca fortalecer a comunidade e a identidade cultural brasileira no cenário gamer.
+
+## 4. Pesquisa de Mercado (Benchmark)
+
+Para embasar decisões de design e arquitetura, foram analisadas três plataformas:
+
+### Steam
+- Referência global em distribuição digital.
+- Destaque para organização de catálogo e visibilidade estrutural.
+
+### Itch.io
+- Foco em desenvolvedores independentes e experimentais.
+- Flexibilidade total de publicação e precificação ("pay-what-you-want").
+
+### Nuuvem
+- A maior plataforma brasileira na América Latina.
+- Comunicação localizada e integração nativa com meios de pagamento nacionais.
+
+## 5. Decisões de Design (GDW)
+
+### Paleta de Cores
+A escolha das cores foi baseada em identidade cultural e conforto visual (Dark Mode Nativo):
+
+- `#0F1714` (**Deep Moss**) — Fundo principal (reduz a emissão de luz azul e fadiga visual).
+- `#E34A38` (**Terracota Iara**) — Cor primária para ações principais e CTAs.
+- `#FCA311` (**Fogo Fátuo**) — Cor secundária para estados interativos (hover, foco).
+- `#E8ECEB` (**Off-White**) — Tipografia principal para alto contraste.
+- `#2C2E30` (**Gray**) — Superfícies secundárias, divisores e ícones neutros.
+
+### Tipografia
+Fonte escolhida: **Inter**
+- Alta legibilidade em diferentes resoluções.
+- Otimizada para interfaces digitais com pesos variando de 400 (Regular) a 700 (Bold).
+
+## 6. UX e Usabilidade
+
+O projeto foi estruturado seguindo as **Heurísticas de Nielsen** para oferecer uma experiência clara e intuitiva.
+
+- **Hierarquia Visual**: Uso de contraste cromático e tipográfico para guiar o olhar (*Eye Tracking*).
+- **Redução de Carga Cognitiva**: Interface limpa com caminhos de navegação previsíveis.
+- **Feedback Visual**: Respostas táteis imediatas em todos os elementos interativos.
+- **Linguagem (Microcopy)**: Tom de voz adaptado à comunidade gamer brasileira.
+
+## 7. Desenvolvimento da Interface (Home Page)
+
+A interface da Home Page foi projetada para ser imersiva e focada em conversão:
+
+- **Hero Carrossel**: Destaque principal para títulos de impacto (ex: *Ruff Ghanor*), com botões de compra rápida integrados.
+- **Grades de Conteúdo**: Seções como "Dia do Consumidor" e "Lançamentos" utilizam sistemas de grade flexíveis que se adaptam a diferentes tamanhos de tela.
+- **Layout Responsivo**: Implementação que varia de 5 colunas em desktops Ultra-Wide até 1 coluna em dispositivos móveis, garantindo usabilidade em qualquer device.
+- **Efeitos de Transição**: Uso de animações suaves e `cubic-bezier` para elevar a percepção de qualidade do produto.
+
+## 8. Estrutura HTML Semântica
+
+O projeto adota os padrões modernos de **HTML5 semântico**, facilitando a indexação e a acessibilidade:
+
+- **Marcos de Página (Landmarks)**: Uso correto de `<header>`, `<nav>`, `<main>`, `<section>`, `<article>` e `<footer>`.
+- **Títulos Ocultos**: Implementação de `<h1>` visualmente ocultos (via CSS) para estabelecer o contexto da página para tecnologias assistivas sem comprometer o design.
+- **Otimização Tech SEO**: Incorporação de marcação estruturada **JSON-LD (Schema.org)** e meta tags **Open Graph/Twitter Cards** para visibilidade em motores de busca e redes sociais.
+
+## 9. Práticas de Acessibilidade (A11Y)
+
+A acessibilidade é tratada como requisito primário (**Accessibility by Design**), alinhada à norma **ABNT NBR 17225**:
+
+- **Navegação Autônoma**: Suporte total a navegação por teclado com estados de `:focus-visible` destacados.
+- **Apoio a Leitores de Tela**: Classe `.apenas-leitor` para conteúdos contextuais invisíveis e uso de atributos `aria-label` em botões de ícone.
+- **Expansão de Alvos de Toque**: Técnica `.link-cobre-card` via pseudo-elementos (`::after`), garantindo que toda a área do card seja clicável, ideal para acessibilidade motora e mobile.
+- **Preferências de Movimento**: Media query `@prefers-reduced-motion` integrada para respeitar usuários com sensibilidade visual.
+
+## 10. Metodologia BEM no CSS
+
+Para um código CSS organizado, escalável e de fácil manutenção, aplicamos a metodologia **BEM** (Block-Element-Modifier):
+
+- **Encapsulamento**: Nomenclatura como `bloco__elemento--modificador` evita a "guerra de seletores" e garante que o estilo de um componente não vaze para outro.
+- **Design Tokens**: Uso de **CSS Custom Properties** (`:root`) para centralizar todas as decisões de design (cores, pesos, espaçamentos).
+- **CSS Avançado**: Uso de `clamp()` para fontes resilientes e `content-visibility: auto` para otimização de performance durante a renderização.
+
+## 11. Roadmap e Futuro
+
+Próximas etapas do projeto:
+
+- 🏗️ Implementação de Back-end e Banco de Dados.
+- 🔐 Sistema de Autenticação e Área do Usuário.
+- 🛒 Marketplace funcional e Carrinho de Compras.
+- 📚 Módulo de Biblioteca e Comunidade (Fóruns).
+
+<p align="left">
+  <a href="../README.md">🏠 Voltar à Home</a>
+</p>

@@ -34,17 +34,15 @@
 
 # Navegação da Documentação
 
-> **Como navegar:** Este repositório foi organizado em múltiplos arquivos para facilitar a leitura e manutenção.  
-> Utilize o **sumário** abaixo para acessar diretamente cada seção ou navegue pelos botões de paginação ao final dos documentos.
+> **Acompanhe a Evolução:** Este repositório está organizado para que você possa acompanhar o progresso e as decisões do projeto em cada etapa de seu desenvolvimento.  
+> Utilize o **sumário** abaixo para acessar a documentação detalhada de cada sprint e entender a evolução da plataforma.
 
 ## Sumário
 
-Para manter o repositório organizado e escalável, as entregas foram separadas em arquivos independentes.
+Para manter o repositório organizado e escalável, as entregas foram separadas em arquivos independentes:
 
-**Acesse a documentação de cada sprint:**
-
-1. **[Sprint 01 - Visão Inicial da Plataforma](./docs/01_sprint.md)** *(Atual)*:  
-   Plataforma **Iara Games** desenvolvida na Sprint 01, com foco em design, experiência do usuário (UX) e construção de uma homepage em HTML e CSS.
+1. **[Sprint 01 - Visão Inicial da Plataforma](./docs/01_sprint.md)** *(Fase Atual)*:  
+   Foco em design, experiência do usuário (UX) e construção da homepage utilizando HTML5 e CSS3.
 2. *Sprint 02 - (Em breve)*
 3. *Sprint 03 - (Em breve)*
 
@@ -54,14 +52,14 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 ```bash
 .
 ├── assets/
-│   ├── css/        # estilos da aplicação
-│   ├── img/        # imagens e ícones
-│   └── js/         # scripts JavaScript
+│   ├── css/        # Estilos da aplicação
+│   ├── img/        # Imagens e ícones
+│   └── js/         # Scripts JavaScript (Futuro)
 ├── docs/
-│   └── sprint_01.md  # documentação da sprint 01
-├── index.html        # página principal
-├── LICENSE           # licença do projeto
-└── README.md         # documentação principal
+│   └── 01_sprint.md   # Documentação detalhada da Sprint 01
+├── index.html        # Página principal (Home Page)
+├── LICENSE           # Licença do projeto
+└── README.md         # Documentação principal do repositório
 ````
 
 ## Instruções de Uso
