@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+	<meta charset="UTF-8" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>
+		Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros
+	</title>
+
+	<link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico" />
+	<link rel="manifest" href="./assets/favicon_io/site.webmanifest" />
+
+	<meta name="description"
+		content="A Iara Games é uma plataforma brasileira de distribuição digital de jogos indie. Descubra, jogue e apoie desenvolvedores independentes do Brasil." />
+
+	<meta name="author" content="Iara Games Fiap Team (Mayla, Julia, Ingrid, Matheus, Larissa)" />
+	<meta name="application-name" content="Iara Games" />
+	<meta name="robots" content="index, follow" />
+	<meta name="referrer" content="strict-origin-when-cross-origin" />
+	<meta name="theme-color" content="#E34A38" />
+	<meta name="color-scheme" content="light dark" />
+
+	<link rel="canonical" href="https://mewmewdevart.github.io/IaraGamesStore/" />
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Iara Games | Plataforma de Distribuição de Jogos Indie Brasileiros" />
+	<meta property="og:description"
+		content="Descubra e apoie jogos criados por desenvolvedores independentes do Brasil em uma plataforma dedicada à distribuição de jogos indie nacionais." />
+	<meta property="og:url" content="https://mewmewdevart.github.io/IaraGamesStore/" />
+	<meta property="og:site_name" content="Iara Games" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:image" content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/og-image.png" />
+	<meta property="og:image:width" content="1200" />
+	<meta property="og:image:height" content="630" />
+	<meta property="og:image:alt" content="Iara Games - Plataforma brasileira de jogos indie" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Iara Games | Plataforma de Jogos Indie Brasileiros" />
+	<meta name="twitter:description"
+		content="Descubra jogos indie brasileiros e apoie desenvolvedores independentes na plataforma Iara Games." />
+	<meta name="twitter:image"
+		content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/og-image.png" />
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<link rel="stylesheet" href="/assets/css/jogos.css" />
+
+	<script type="application/ld+json">
+	  {
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"name": "Iara Games",
+		"url": "https://mewmewdevart.github.io/IaraGamesStore/",
+		"description": "Plataforma brasileira de distribuição digital de jogos indie.",
+		"inLanguage": "pt-BR",
+		"publisher": {
+		  "@type": "Organization",
+		  "name": "Iara Games",
+		  "url": "https://mewmewdevart.github.io/IaraGamesStore/"
+		},
+		"potentialAction": {
+		  "@type": "SearchAction",
+		  "target": "https://mewmewdevart.github.io/IaraGamesStore/?search={search_term_string}",
+		  "query-input": "required name=search_term_string"
+		}
+	  }
+	</script>
+</head>
+
+<body>
+	<main>
+		<h1 class="apenas-leitor">Iara Games - Os melhores indies brasileiros</h1>
+        <!--=======MENU DE NAVEGAÇÃO=========-->
+		<header class="cabecalho-principal">
+			<nav class="cabecalho-principal__navegacao" aria-label="Navegação principal">
+				<div class="cabecalho-principal__lado-esquerdo">
+					<a href="/index.html" class="cabecalho-principal__logo-link" aria-label="Ir para a página inicial">
+						<img src="/assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
+					</a>
+
+					<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox apenas-leitor">
+
+					<label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu de navegação">
+						<i class="fa-solid fa-bars"></i>
+					</label>
+
+					<ul class="menu-navegacao">
+						<li><a href="#" class="menu-navegacao__link menu-navegacao__link--ativo">LOJA</a></li>
+						<li><a href="/jogos.html" class="menu-navegacao__link">JOGOS</a></li>
+						<li><a href="#" class="menu-navegacao__link">BIBLIOTECA</a></li>
+						<li><a href="#" class="menu-navegacao__link">COMUNIDADE</a></li>
+					</ul>
+				</div>
+
+				<div class="cabecalho-principal__lado-direito">
+					<div class="busca">
+						<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
+
+						<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</label>
+
+						<div class="busca__janela">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
+						</div>
+					</div>
+					<button class="botao-icone" aria-label="Carrinho de compras"><i
+							class="fa-solid fa-cart-shopping"></i></button>
+					<button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
+                        <!--BOTÃO DE LOGIN E CADASTRO-->
+						<div class="botoesloginecadastro">
+							<a href="/login.html" class="botao-login">LOGIN</a>
+							<a href="#" class="botao-cadastro">CADASTRAR</a>
+							</div>
+					<!-- BOTÃO QUANDO O USUÁRIO ESTIVER LOGADO
+						<button class="perfil-usuario" aria-label="Menu de perfil do usuário">
+						<span class="perfil-usuario__avatar"></span>
+						<i class="fa-solid fa-chevron-down"></i>
+					</button> 
+					-->
+				</div>
+			</nav>
+		</header>
+
+
+        <!-- ================================= SEÇÃO : RODAPE ================================= -->
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__column footer__column--branding">
+					<h2 class="footer__logo">IARA GAMES</h2>
+					<p class="footer__tagline">JOGOS DO BRASIL · PARA O BRASIL</p>
+					<p class="footer__description">
+						Plataforma dedicada exclusivamente a desenvolvedores independentes brasileiros.
+						Cada jogo aqui é uma expressão autêntica da nossa cultura e criatividade nacional.
+					</p>
+				</div>
+
+				<div class="footer__column">
+					<h3>PLATAFORMA</h3>
+					<ul>
+						<li><a href="#">Loja</a></li>
+						<li><a href="#">Mais Vendidos</a></li>
+						<li><a href="#">Lançamentos</a></li>
+						<li><a href="#">Promoções</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<h3>COMUNIDADE</h3>
+					<ul>
+						<li><a href="#">Fórum</a></li>
+						<li><a href="#">Desenvolvedores</a></li>
+						<li><a href="#">Publicar Jogo</a></li>
+						<li><a href="#">Blog</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<h3>SUPORTE</h3>
+					<ul>
+						<li><a href="#">Central de Ajuda</a></li>
+						<li><a href="#">Abrir Ticket</a></li>
+						<li><a href="#">Privacidade</a></li>
+						<li><a href="#">Termos de Uso</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<div class="footer__bottom-content">
+					<p>© 2026 IARA GAMES · TODOS OS DIREITOS RESERVADOS · MADE IN BRAZIL 🇧🇷</p>
+					<p class="footer__disclaimer">PLATAFORMA EXCLUSIVA PARA DESENVOLVEDORAS BRASILEIRAS INDEPENDENTES
+					</p>
+				</div>
+			</div>
+		</footer>
+	</div>
+</body>

@@ -192,7 +192,6 @@ main {
 .menu-navegacao__link:focus-visible {
   color: var(--color-primary);
 }
-
 .botao-icone {
   background: none;
   border: none;
@@ -220,6 +219,66 @@ main {
   height: 2rem;
   background-color: var(--color-primary);
   border-radius: 50%;
+}
+
+/*LOGIN E CADASTRO*/
+.botaojoginecadastro {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 15px;
+}
+
+/* Estilo geral dos links */
+.botaologinecadastros a {
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Botão Login*/
+.botao-login {
+    background-image: url("../img/pattern-secondary.svg");
+    background-size: cover;
+    background-blend-mode:overlay;
+    color:  var(--color-secondary); 
+    border: 1px solid  var(--color-secondary);
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.botao-login:hover {
+    background-image: url("../img/pattern-primary.svg");
+  background-color: var(--color-secondary);
+  color: var(--color-gray-light);
+  border: var(--color-secondary);
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Botão Cadastrar */
+.botao-cadastro {
+    background-image: url("../img/pattern-primary.svg");
+    background-size: cover;
+    background-blend-mode:overlay;
+    color:  var(--color-primary); 
+    border: 1px solid  var(--color-primary);
+    padding: 5px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    
+}
+
+.botao-cadastro:hover {
+    background-image: url("../img/pattern-primary.svg");
+    background-color: var(--color-primary);
+    color: var(--color-gray-light);
+    border: var(--color-primary);
+    transform: scale(0.5);
+    filter: brightness(1.1);
 }
 
 .fa-chevron-down {
@@ -278,6 +337,8 @@ main {
   outline: none;
   width: 100%;
 }
+
+
 
 /* ==========================================================================
    HERO / CARROSSEL PRINCIPAL
