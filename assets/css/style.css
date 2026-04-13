@@ -120,6 +120,7 @@ main {
   right: 0;
   z-index: 1000;
   transition: padding 0.5s ease;
+  border-bottom: 1px solid rgba(232, 236, 235, 0.1);
 }
 
 .cabecalho-principal__navegacao {
@@ -192,6 +193,7 @@ main {
 .menu-navegacao__link:focus-visible {
   color: var(--color-primary);
 }
+
 .botao-icone {
   background: none;
   border: none;
@@ -223,35 +225,35 @@ main {
 
 /*LOGIN E CADASTRO*/
 .botaojoginecadastro {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-left: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 15px;
 }
 
 /* Estilo geral dos links */
 .botaologinecadastros a {
-    text-decoration: none;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: bold;
-    transition: color 0.3s ease;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 /* Botão Login*/
 .botao-login {
-    background-image: url("../img/pattern-secondary.svg");
-    background-size: cover;
-    background-blend-mode:overlay;
-    color:  var(--color-secondary); 
-    border: 1px solid  var(--color-secondary);
-    padding: 5px 15px;
-    border-radius: 4px;
-    text-decoration: none;
+  background-image: url("../img/pattern-secondary.svg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-decoration: none;
 }
 
 .botao-login:hover {
-    background-image: url("../img/pattern-primary.svg");
+  background-image: url("../img/pattern-primary.svg");
   background-color: var(--color-secondary);
   color: var(--color-gray-light);
   border: var(--color-secondary);
@@ -261,24 +263,24 @@ main {
 
 /* Botão Cadastrar */
 .botao-cadastro {
-    background-image: url("../img/pattern-primary.svg");
-    background-size: cover;
-    background-blend-mode:overlay;
-    color:  var(--color-primary); 
-    border: 1px solid  var(--color-primary);
-    padding: 5px 15px;
-    border-radius: 4px;
-    text-decoration: none;
-    
+  background-image: url("../img/pattern-primary.svg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  padding: 5px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+
 }
 
 .botao-cadastro:hover {
-    background-image: url("../img/pattern-primary.svg");
-    background-color: var(--color-primary);
-    color: var(--color-gray-light);
-    border: var(--color-primary);
-    transform: scale(0.5);
-    filter: brightness(1.1);
+  background-image: url("../img/pattern-primary.svg");
+  background-color: var(--color-primary);
+  color: var(--color-gray-light);
+  border: var(--color-primary);
+  transform: scale(0.5);
+  filter: brightness(1.1);
 }
 
 .fa-chevron-down {
@@ -1502,6 +1504,7 @@ main {
     transition: none !important;
   }
 }
+
 /* ===== PÁGINA: JOGOS ===== */
 
 .pagina-jogos {
