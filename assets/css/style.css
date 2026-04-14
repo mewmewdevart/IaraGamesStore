@@ -597,6 +597,12 @@ main {
   position: relative;
   z-index: 1;
 }
+
+/* Limpeza de códigos antigos de blob */
+.card-momento--blob1, 
+.card-momento--blob2, 
+.card-momento--blob3, 
+.card-momento--blob4 {
   clip-path: none;
 }
 
@@ -670,17 +676,18 @@ main {
   }
 
   .card-momento {
-    min-height: auto; 
+    min-height: auto;
     padding: 1.25rem 0.5rem; 
-    border-radius: 1rem;
+    border-radius: 1rem; 
   }
 
   .card-momento__icone-svg {
-    width: 2.5rem;
+    width: 2.5rem; /* Ícone ajustado, mas ainda visível */
     height: 2.5rem;
     margin-bottom: 0.5rem;
   }
 
+  /* As fontes originais são herdadas (não diminuem), apenas ajustamos as margens */
   .card-momento__titulo {
     margin-bottom: 0.25rem;
   }
