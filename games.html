@@ -50,6 +50,8 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 	<link rel="stylesheet" href="assets/css/style.css" />
+	<link rel="stylesheet" href="assets/css/games.css" />
+
 
 	<script type="application/ld+json">
 	  {
@@ -81,7 +83,7 @@
 			<nav class="cabecalho-principal__navegacao" aria-label="Navegação principal">
 				<div class="cabecalho-principal__lado-esquerdo">
 					<a href="./index.html" class="cabecalho-principal__logo-link" aria-label="Ir para a página inicial">
-						<img src="../assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
+						<img src="/assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
 					</a>
 
 					<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox apenas-leitor">
@@ -132,307 +134,398 @@
 				</div>
 			</nav>
 		</header>
+	
+	<section class="busca-jogos">
+		<div class="busca-jogos__container">
+			<h3>BUSCAR JOGOS</h3>
+
+			<!-- Checkbox Oculto para o Toggle -->
+			<input type="checkbox" id="filtro-toggle" class="apenas-leitor">
+
+			<div class="busca-jogos__acoes">
+				<div class="busca-jogos__input-wrapper">
+					<input type="text" placeholder="Qual jogo você procura?" aria-label="Buscar jogos no catálogo">
+					<button type="submit" aria-label="Realizar busca"><i class="fa-solid fa-magnifying-glass"></i></button>
+				</div>
+				<label for="filtro-toggle" class="busca-jogos__btn-filtro" aria-label="Filtros e ordenação">
+					<i class="fa-solid fa-sliders"></i> Filtros
+				</label>
+			</div>
+
+			<!-- Painel de Filtros Expansível -->
+			<div class="busca-jogos__painel-filtros">
+				
+				<!-- Gêneros -->
+				<div class="filtro-grupo">
+					<h4>Gêneros</h4>
+					<label class="filtro-opcao"><input type="checkbox"> Estratégia</label>
+					<label class="filtro-opcao"><input type="checkbox"> Horror</label>
+					<label class="filtro-opcao"><input type="checkbox"> Indie</label>
+					<label class="filtro-opcao"><input type="checkbox"> Aventura</label>
+					<label class="filtro-opcao"><input type="checkbox"> Ação</label>
+				</div>
+
+				<!-- Preços -->
+				<div class="filtro-grupo">
+					<h4>Preço</h4>
+					<label class="filtro-opcao"><input type="radio" name="preco" checked> Todos os preços</label>
+					<label class="filtro-opcao"><input type="radio" name="preco"> Gratuito</label>
+					<label class="filtro-opcao"><input type="radio" name="preco"> Até R$ 20,00</label>
+					<label class="filtro-opcao"><input type="radio" name="preco"> R$ 20,00 a R$ 50,00</label>
+					<label class="filtro-opcao"><input type="radio" name="preco"> Acima de R$ 50,00</label>
+				</div>
+
+				<!-- Momentos -->
+				<div class="filtro-grupo">
+					<h4>Momentos</h4>
+					<label class="filtro-opcao"><input type="checkbox"> Na Pausa</label>
+					<label class="filtro-opcao"><input type="checkbox"> Calmaria</label>
+					<label class="filtro-opcao"><input type="checkbox"> Raízes</label>
+					<label class="filtro-opcao"><input type="checkbox"> Resenha</label>
+				</div>
+
+				<!-- Plataformas -->
+				<div class="filtro-grupo">
+					<h4>Plataforma</h4>
+					<label class="filtro-opcao"><input type="checkbox"> <i class="fa-brands fa-windows" style="width:16px;"></i> Windows</label>
+					<label class="filtro-opcao"><input type="checkbox"> <i class="fa-brands fa-apple" style="width:16px;"></i> Mac</label>
+					<label class="filtro-opcao"><input type="checkbox"> <i class="fa-brands fa-linux" style="width:16px;"></i> Linux</label>
+					<label class="filtro-opcao"><input type="checkbox"> <i class="fa-solid fa-mobile-screen" style="width:16px;"></i> Mobile</label>
+				</div>
+
+				<!-- Tags -->
+				<div class="filtro-grupo filtro-grupo--tags">
+					<h4>Tags</h4>
+					<div class="filtro-tags-wrapper">
+						<label class="filtro-chip"><input type="checkbox" class="apenas-leitor"><span>Aventura</span></label>
+						<label class="filtro-chip"><input type="checkbox" class="apenas-leitor"><span>Ação</span></label>
+						<label class="filtro-chip"><input type="checkbox" class="apenas-leitor"><span>Indie</span></label>
+						<label class="filtro-chip"><input type="checkbox" class="apenas-leitor"><span>Metroidvania</span></label>
+						<label class="filtro-chip"><input type="checkbox" class="apenas-leitor"><span>Pixel Art</span></label>
+						<label class="filtro-chip"><input type="checkbox" class="apenas-leitor"><span>RPG</span></label>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+
+	<section class="pagina-jogos" aria-labelledby="biblioteca-titulo">
+		<div class="biblioteca__cabecalho">
+			<div>
+				<p class="biblioteca__subtitulo">Catálogo completo</p>
+				<h1 class="biblioteca__titulo" id="biblioteca-titulo">Biblioteca de Jogos</h1>
+			</div>
+			
+			<div class="biblioteca__ordenacao-container">
+				<p class="biblioteca__total">15 jogos encontrados</p>
+				
+				<div class="biblioteca__ordenacao">
+					<label for="ordenacao">Ordenar por:</label>
+					<div class="select-wrapper">
+						<select id="ordenacao" class="ordenacao-select">
+							<option value="relevancia">Relevância</option>
+							<option value="menor-preco">Menor Preço</option>
+							<option value="maior-preco">Maior Preço</option>
+							<option value="a-z">A - Z</option>
+							<option value="z-a">Z - A</option>
+						</select>
+						<i class="fa-solid fa-chevron-down"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="biblioteca__grade">
+
+			<!-- Card 1 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver A Lenda do Herói"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-a-lenda-do-heroi.jpg" alt="A Lenda do Herói"
+						class="secao-lancamentos__imagem" loading="lazy" />
+					<span class="secao-lancamentos__selo-desconto">-20%</span>
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">A Lenda do Herói</h2>
+					<p class="secao-lancamentos__estudio">Dumativa</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">4.3</span>
+						<span class="secao-lancamentos__total-votos">(872)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="preco-antigo">R$ 52,14</span>
+						<span class="secao-lancamentos__preco-novo">R$ 41,71</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 2 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Dandara"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/dandara.jpg" alt="Dandara" class="secao-lancamentos__imagem"
+						loading="lazy" />
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Dandara</h2>
+					<p class="secao-lancamentos__estudio">Long Hat House</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">4.5</span>
+						<span class="secao-lancamentos__total-votos">(561)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="secao-lancamentos__preco-novo">R$ 78,25</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 3 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Dandy Ace"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-dandy.jpg" alt="Dandy Ace" class="secao-lancamentos__imagem"
+						loading="lazy" />
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Dandy Ace</h2>
+					<p class="secao-lancamentos__estudio">Mad Mimic</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">4.7</span>
+						<span class="secao-lancamentos__total-votos">(768)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="secao-lancamentos__preco-novo">R$ 29,99</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 4 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Dolmen"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-dolmen.png" alt="Dolmen" class="secao-lancamentos__imagem"
+						loading="lazy" />
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Dolmen</h2>
+					<p class="secao-lancamentos__estudio">Massive Work Studio</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">2.8</span>
+						<span class="secao-lancamentos__total-votos">(312)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="secao-lancamentos__preco-novo">R$ 208,70</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 5 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Gaúcho and the grassland"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-gaucho-and-the-grassland.png" alt="Gaúcho and the grassland"
+						class="secao-lancamentos__imagem" loading="lazy" />
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Gaúcho and the grassland</h2>
+					<p class="secao-lancamentos__estudio">Epopeia Games</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">3.6</span>
+						<span class="secao-lancamentos__total-votos">(84)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="secao-lancamentos__preco-novo">R$ 78,25</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 6 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Horizon Chase Turbo"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-horizon-chase-turbo.jpeg" alt="Horizon Chase Turbo"
+						class="secao-lancamentos__imagem" loading="lazy" />
+					<span class="secao-lancamentos__selo-desconto">-10%</span>
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Horizon Chase Turbo</h2>
+					<p class="secao-lancamentos__estudio">Aquiris Game Studio</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">3.8</span>
+						<span class="secao-lancamentos__total-votos">(412)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="preco-antigo">R$ 115,94</span>
+						<span class="secao-lancamentos__preco-novo">R$ 104,35</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 7 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Kaze and the wild masks"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-kaze-and-the-wild-masks.png" alt="Kaze and the wild masks"
+						class="secao-lancamentos__imagem" loading="lazy" />
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Kaze and the wild masks</h2>
+					<p class="secao-lancamentos__estudio">Pixel Hive</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">4.4</span>
+						<span class="secao-lancamentos__total-votos">(198)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="secao-lancamentos__preco-novo">R$ 156,55</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 8 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Mark of the Deep"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-mark-of-the-deep.jpg" alt="Mark of the Deep"
+						class="secao-lancamentos__imagem" loading="lazy" />
+					<span class="secao-lancamentos__selo-desconto">-15%</span>
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Mark of the Deep</h2>
+					<p class="secao-lancamentos__estudio">Mad Mimic</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">4.0</span>
+						<span class="secao-lancamentos__total-votos">(156)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="preco-antigo">R$ 122,70</span>
+						<span class="secao-lancamentos__preco-novo">R$ 104,30</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 9 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Pipistrello"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-pipistrello.png" alt="Pipistrello"
+						class="secao-lancamentos__imagem" loading="lazy" />
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Pipistrello and the Cursed Yoyo</h2>
+					<p class="secao-lancamentos__estudio">Pocket Trap</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">3.4</span>
+						<span class="secao-lancamentos__total-votos">(132)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="secao-lancamentos__preco-novo">R$ 52,99</span>
+					</div>
+				</div>
+			</article>
+
+			<!-- Card 10 -->
+			<article class="secao-lancamentos__cartao">
+				<a href="#" class="link-cobre-card" aria-label="Ver Pocket Bravery"></a>
+				<div class="secao-lancamentos__imagem-envolucro">
+					<img src="./assets/img/capa-jogo-pocket-bravery.jpg" alt="Pocket Bravery"
+						class="secao-lancamentos__imagem" loading="lazy" />
+				</div>
+				<div class="secao-lancamentos__info">
+					<h2 class="secao-lancamentos__titulo-jogo">Pocket Bravery</h2>
+					<p class="secao-lancamentos__estudio">Statera Studio</p>
+					<div class="secao-lancamentos__avaliacao">
+						<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
+						<span class="secao-lancamentos__nota">4.8</span>
+						<span class="secao-lancamentos__total-votos">(339)</span>
+					</div>
+					<div class="secao-lancamentos__bloco-preco">
+						<span class="secao-lancamentos__preco-novo">R$ 59,99</span>
+					</div>
+				</div>
+			</article>
+		</div>
+
+		<nav class="paginacao" aria-label="Paginação de jogos">
+			<a href="#" class="paginacao__item paginacao__item--seta" aria-label="Página anterior">
+				<i class="fa-solid fa-chevron-left"></i>
+			</a>
+			<a href="#" class="paginacao__item paginacao__item--ativo" aria-current="page">1</a>
+			<a href="#" class="paginacao__item">2</a>
+			<a href="#" class="paginacao__item">3</a>
+			<a href="#" class="paginacao__item">4</a>
+			<a href="#" class="paginacao__item">5</a>
+			<span class="paginacao__item paginacao__item--reticencias">...</span>
+			<a href="#" class="paginacao__item paginacao__item--seta" aria-label="Próxima página">
+				<i class="fa-solid fa-chevron-right"></i>
+			</a>
+		</nav>
+		
+	</section>
+
+	<!-- ================================= SEÇÃO : RODAPE ================================= -->
+	<footer class="footer">
+		<div class="footer__container">
+			<div class="footer__column footer__column--branding">
+				<h2 class="footer__logo">IARA GAMES</h2>
+				<p class="footer__tagline">JOGOS DO BRASIL · PARA O BRASIL</p>
+				<p class="footer__description">
+					Plataforma dedicada exclusivamente a desenvolvedores independentes brasileiros.
+					Cada jogo aqui é uma expressão autêntica da nossa cultura e criatividade nacional.
+				</p>
+			</div>
+
+			<div class="footer__column">
+				<h3>PLATAFORMA</h3>
+				<ul>
+					<li><a href="#">Loja</a></li>
+					<li><a href="#">Mais Vendidos</a></li>
+					<li><a href="#">Lançamentos</a></li>
+					<li><a href="#">Promoções</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__column">
+				<h3>COMUNIDADE</h3>
+				<ul>
+					<li><a href="#">Fórum</a></li>
+					<li><a href="#">Desenvolvedores</a></li>
+					<li><a href="#">Publicar Jogo</a></li>
+					<li><a href="#">Blog</a></li>
+				</ul>
+			</div>
+
+			<div class="footer__column">
+				<h3>SUPORTE</h3>
+				<ul>
+					<li><a href="#">Central de Ajuda</a></li>
+					<li><a href="#">Abrir Ticket</a></li>
+					<li><a href="#">Privacidade</a></li>
+					<li><a href="#">Termos de Uso</a></li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="footer__bottom">
+			<div class="footer__bottom-content">
+				<p>© 2026 IARA GAMES · TODOS OS DIREITOS RESERVADOS · MADE IN BRAZIL 🇧🇷</p>
+				<p class="footer__disclaimer">PLATAFORMA EXCLUSIVA PARA DESENVOLVEDORAS BRASILEIRAS INDEPENDENTES
+				</p>
+			</div>
+		</div>
+	</footer>
 	</main>
-
-	<div class="">
-
-		<section class="pagina-jogos" aria-labelledby="biblioteca-titulo">
-
-			<div class="biblioteca__cabecalho">
-				<div>
-					<p class="biblioteca__subtitulo">Catálogo completo</p>
-					<h1 class="biblioteca__titulo" id="biblioteca-titulo">Biblioteca de Jogos</h1>
-				</div>
-				<p class="biblioteca__total">50 jogos encontrados</p>
-			</div>
-
-			<div class="biblioteca__grade">
-
-				<!-- Card 1 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver A Lenda do Herói"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-a-lenda-do-heroi.jpg" alt="A Lenda do Herói"
-							class="secao-lancamentos__imagem" loading="lazy" />
-						<span class="secao-lancamentos__selo-desconto">-20%</span>
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">A Lenda do Herói</h2>
-						<p class="secao-lancamentos__estudio">Dumativa</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">4.3</span>
-							<span class="secao-lancamentos__total-votos">(872)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="preco-antigo">R$ 52,14</span>
-							<span class="secao-lancamentos__preco-novo">R$ 41,71</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 2 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Dandara"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/dandara.jpg" alt="Dandara" class="secao-lancamentos__imagem"
-							loading="lazy" />
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Dandara</h2>
-						<p class="secao-lancamentos__estudio">Long Hat House</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">4.5</span>
-							<span class="secao-lancamentos__total-votos">(561)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="secao-lancamentos__preco-novo">R$ 78,25</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 3 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Dandy Ace"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-dandy.jpg" alt="Dandy Ace" class="secao-lancamentos__imagem"
-							loading="lazy" />
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Dandy Ace</h2>
-						<p class="secao-lancamentos__estudio">Mad Mimic</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">4.7</span>
-							<span class="secao-lancamentos__total-votos">(768)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="secao-lancamentos__preco-novo">R$ 29,99</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 4 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Dolmen"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-dolmen.png" alt="Dolmen" class="secao-lancamentos__imagem"
-							loading="lazy" />
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Dolmen</h2>
-						<p class="secao-lancamentos__estudio">Massive Work Studio</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">2.8</span>
-							<span class="secao-lancamentos__total-votos">(312)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="secao-lancamentos__preco-novo">R$ 208,70</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 5 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Gaúcho and the grassland"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-gaucho-and-the-grassland.png" alt="Gaúcho and the grassland"
-							class="secao-lancamentos__imagem" loading="lazy" />
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Gaúcho and the grassland</h2>
-						<p class="secao-lancamentos__estudio">Epopeia Games</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">3.6</span>
-							<span class="secao-lancamentos__total-votos">(84)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="secao-lancamentos__preco-novo">R$ 78,25</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 6 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Horizon Chase Turbo"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-horizon-chase-turbo.jpeg" alt="Horizon Chase Turbo"
-							class="secao-lancamentos__imagem" loading="lazy" />
-						<span class="secao-lancamentos__selo-desconto">-10%</span>
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Horizon Chase Turbo</h2>
-						<p class="secao-lancamentos__estudio">Aquiris Game Studio</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">3.8</span>
-							<span class="secao-lancamentos__total-votos">(412)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="preco-antigo">R$ 115,94</span>
-							<span class="secao-lancamentos__preco-novo">R$ 104,35</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 7 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Kaze and the wild masks"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-kaze-and-the-wild-masks.png" alt="Kaze and the wild masks"
-							class="secao-lancamentos__imagem" loading="lazy" />
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Kaze and the wild masks</h2>
-						<p class="secao-lancamentos__estudio">Pixel Hive</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">4.4</span>
-							<span class="secao-lancamentos__total-votos">(198)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="secao-lancamentos__preco-novo">R$ 156,55</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 8 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Mark of the Deep"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-mark-of-the-deep.jpg" alt="Mark of the Deep"
-							class="secao-lancamentos__imagem" loading="lazy" />
-						<span class="secao-lancamentos__selo-desconto">-15%</span>
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Mark of the Deep</h2>
-						<p class="secao-lancamentos__estudio">Mad Mimic</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">4.0</span>
-							<span class="secao-lancamentos__total-votos">(156)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="preco-antigo">R$ 122,70</span>
-							<span class="secao-lancamentos__preco-novo">R$ 104,30</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 9 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Pipistrello"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-pipistrello.png" alt="Pipistrello"
-							class="secao-lancamentos__imagem" loading="lazy" />
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Pipistrello and the Cursed Yoyo</h2>
-						<p class="secao-lancamentos__estudio">Pocket Trap</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">3.4</span>
-							<span class="secao-lancamentos__total-votos">(132)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="secao-lancamentos__preco-novo">R$ 52,99</span>
-						</div>
-					</div>
-				</article>
-
-				<!-- Card 10 -->
-				<article class="secao-lancamentos__cartao">
-					<a href="#" class="link-cobre-card" aria-label="Ver Pocket Bravery"></a>
-					<div class="secao-lancamentos__imagem-envolucro">
-						<img src="./assets/img/capa-jogo-pocket-bravery.jpg" alt="Pocket Bravery"
-							class="secao-lancamentos__imagem" loading="lazy" />
-					</div>
-					<div class="secao-lancamentos__info">
-						<h2 class="secao-lancamentos__titulo-jogo">Pocket Bravery</h2>
-						<p class="secao-lancamentos__estudio">Statera Studio</p>
-						<div class="secao-lancamentos__avaliacao">
-							<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
-							<span class="secao-lancamentos__nota">4.8</span>
-							<span class="secao-lancamentos__total-votos">(339)</span>
-						</div>
-						<div class="secao-lancamentos__bloco-preco">
-							<span class="secao-lancamentos__preco-novo">R$ 59,99</span>
-						</div>
-					</div>
-				</article>
-			</div>
-
-			<nav class="paginacao" aria-label="Paginação de jogos">
-				<a href="#" class="paginacao__item paginacao__item--seta" aria-label="Página anterior">
-					<i class="fa-solid fa-chevron-left"></i>
-				</a>
-				<a href="#" class="paginacao__item paginacao__item--ativo" aria-current="page">1</a>
-				<a href="#" class="paginacao__item">2</a>
-				<a href="#" class="paginacao__item">3</a>
-				<a href="#" class="paginacao__item">4</a>
-				<a href="#" class="paginacao__item">5</a>
-				<span class="paginacao__item paginacao__item--reticencias">...</span>
-				<a href="#" class="paginacao__item paginacao__item--seta" aria-label="Próxima página">
-					<i class="fa-solid fa-chevron-right"></i>
-				</a>
-			</nav>
-		</section>
-
-		<!-- ================================= SEÇÃO : RODAPE ================================= -->
-		<footer class="footer">
-			<div class="footer__container">
-				<div class="footer__column footer__column--branding">
-					<h2 class="footer__logo">IARA GAMES</h2>
-					<p class="footer__tagline">JOGOS DO BRASIL · PARA O BRASIL</p>
-					<p class="footer__description">
-						Plataforma dedicada exclusivamente a desenvolvedores independentes brasileiros.
-						Cada jogo aqui é uma expressão autêntica da nossa cultura e criatividade nacional.
-					</p>
-				</div>
-
-				<div class="footer__column">
-					<h3>PLATAFORMA</h3>
-					<ul>
-						<li><a href="#">Loja</a></li>
-						<li><a href="#">Mais Vendidos</a></li>
-						<li><a href="#">Lançamentos</a></li>
-						<li><a href="#">Promoções</a></li>
-					</ul>
-				</div>
-
-				<div class="footer__column">
-					<h3>COMUNIDADE</h3>
-					<ul>
-						<li><a href="#">Fórum</a></li>
-						<li><a href="#">Desenvolvedores</a></li>
-						<li><a href="#">Publicar Jogo</a></li>
-						<li><a href="#">Blog</a></li>
-					</ul>
-				</div>
-
-				<div class="footer__column">
-					<h3>SUPORTE</h3>
-					<ul>
-						<li><a href="#">Central de Ajuda</a></li>
-						<li><a href="#">Abrir Ticket</a></li>
-						<li><a href="#">Privacidade</a></li>
-						<li><a href="#">Termos de Uso</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="footer__bottom">
-				<div class="footer__bottom-content">
-					<p>© 2026 IARA GAMES · TODOS OS DIREITOS RESERVADOS · MADE IN BRAZIL 🇧🇷</p>
-					<p class="footer__disclaimer">PLATAFORMA EXCLUSIVA PARA DESENVOLVEDORAS BRASILEIRAS INDEPENDENTES
-					</p>
-				</div>
-			</div>
-		</footer>
-	</div>
 </body>
 
 </html>
