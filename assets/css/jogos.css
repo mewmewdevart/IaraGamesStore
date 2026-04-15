@@ -450,6 +450,14 @@ main {
   border-top: 1px solid var(--color-gray);
 }
 
+/* ==========================================================================
+   FUNDO DE XILOGRAVURA PARA A PÁGINA DE JOGOS
+   ========================================================================== */
+body.pagina-xilogravura > main {
+  position: relative;
+  z-index: 1;
+}
+
 .footer__bottom-content {
   display: flex;
   justify-content: space-between;

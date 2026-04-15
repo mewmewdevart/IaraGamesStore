@@ -70,6 +70,13 @@ body {
   flex-direction: column;
 }
 
+body.pagina-xilogravura {
+  background-image: url("./assets/img/background-xilogravura.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 main {
   width: 100%;
   flex: 1;
