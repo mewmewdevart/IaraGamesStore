@@ -48,14 +48,14 @@
 	z-index: 1;
 }
 
-/* Lógica de Toggle Sem JavaScript (Checkbox Trick) */
-.autenticacao__toggle:checked~.autenticacao__forms .autenticacao__form--login {
+/* Lógica de Toggle Sem JavaScript (:target na URL) */
+#cadastro:target .autenticacao__form--login {
 	opacity: 0;
 	visibility: hidden;
 	z-index: 1;
 }
 
-.autenticacao__toggle:checked~.autenticacao__forms .autenticacao__form--cadastro {
+#cadastro:target .autenticacao__form--cadastro {
 	opacity: 1;
 	visibility: visible;
 	z-index: 2;
