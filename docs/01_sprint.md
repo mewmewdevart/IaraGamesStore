@@ -108,6 +108,6 @@ Alinhada à **ABNT NBR 17225:2025**, a plataforma implementa:
 
 
 <p align="left">
-  <a href="../README.md">🏠 Voltar à Home</a>
+  <a href="../README.md">🏠 Voltar à Home</a> | <a href="./02_sprint.md">➡️ Avançar para Sprint 02</a>
 </p>
 
