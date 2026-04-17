@@ -9,7 +9,7 @@ Este documento detalha as decisões da **Sprint 02** do projeto **Iara Games**, 
 ## 🔗 Acessos e Entregas
 - 🌐 **Deploy (Site Hospedado):** https://mewmewdevart.github.io/IaraGamesStore/
 - 💻 **Repositório GitHub:** [https://github.com/mewmewdevart/IaraGamesStore](https://github.com/mewmewdevart/IaraGamesStore)
-- 🎥 **Vídeo-Pitch (Evolução V1 para V2):** [COLE AQUI O LINK DO SEU VÍDEO]
+- 🎥 **Vídeo-Pitch (Evolução V1 para V2):** https://www.youtube.com/watch?v=LhesmyS9t1c
 
 ## 1. 📌 Evolução da Plataforma (Sprint 01 ➔ Sprint 02)
 
