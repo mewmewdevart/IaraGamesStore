@@ -112,5 +112,5 @@ ITCH.IO. Top games. Disponível em: https://itch.io/games. Acesso em: mar. 2026.
 *  GOOGLE DEVELOPERS. Web Vitals: Essential metrics for a healthy site. Disponível em: https://web.dev/vitals/. Acesso em: mar. 2026. 
 
 <p align="right">
-  <a href="./docs/02_sprint.md">➡️ Ir para documentação mais recente (Sprint 02)</a>
+  <a href="./docs/01_sprint.md">➡️ Ir para documentação mais recente (Sprint 02)</a>
 </p>
