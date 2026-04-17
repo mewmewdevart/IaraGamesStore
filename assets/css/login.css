@@ -7,7 +7,6 @@
 .autenticacao {
 	display: grid;
 	place-items: center;
-	min-height: calc(100vh - 4.0625rem);
 	padding: 4rem 1.25rem;
 	margin-top: 4.0625rem;
 }
@@ -48,7 +47,7 @@
 	z-index: 1;
 }
 
-/* Lógica de Toggle Sem JavaScript (:target na URL) */
+
 #cadastro:target .autenticacao__form--login {
 	opacity: 0;
 	visibility: hidden;
@@ -142,7 +141,6 @@
 	text-decoration: underline;
 }
 
-/* Estilização dos Botões (Sincronizados com index.html) */
 .autenticacao__botao {
 	height: 3.5rem;
 	padding: 0 2rem;
@@ -161,7 +159,6 @@
 	transform: scale(0.98);
 }
 
-/* Estilo do Botão Entrar (Secundário/Sóbrio) */
 .autenticacao__botao--primario {
 	background-color: var(--color-gray);
 	color: var(--color-light);
@@ -174,7 +171,7 @@
 	transform: translateY(-2px);
 }
 
-/* Estilo do Botão Cadastrar (Destaque/Laranja com Pattern) */
+
 .autenticacao__botao--destaque {
 	background-color: var(--color-secondary);
 	color: var(--color-dark);
