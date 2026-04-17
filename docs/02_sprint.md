@@ -76,7 +76,7 @@ O ambiente respira a base cromática **`Deep Moss`**, mas qualquer superfície e
 
 ---
 <p align="center">
-  <a href="[https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2002%20-%20Iara%20Games_2026%20-%20EAD.pdf]">📝 Visualizar documentação completa</a>
+  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2002%20-%20Iara%20Games_2026%20-%20EAD.pdf">📝 Visualizar documentação completa</a>
 </p>
 
 
