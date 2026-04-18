@@ -97,6 +97,8 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 * HTML5
 * CSS3
 * Git & GitHub
+* Figma
+* Miro
 
 ## Integrantes
 
