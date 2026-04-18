@@ -19,7 +19,7 @@ O desenvolvimento é conduzido pela agência simulada **Master3**, composta por:
 - Ingrid Silva de Lima  
 - Julia Souza Gonçalves  
 - Larissa Cristina Benedito  
-- Mateus Teixeira Ribeiro  
+-  ̶M̶a̶t̶e̶u̶s̶ ̶T̶e̶i̶x̶e̶i̶r̶a̶ ̶R̶i̶b̶e̶i̶r̶o̶  (O integrante participou da Sprint 01, porém desistiu do curso.)
 - Mayla Mayumi Motobe  
 
 Sob gestão da **Scrum Master fictícia Lu Easy**, o escopo desta sprint contempla:
@@ -107,7 +107,4 @@ Alinhada à **ABNT NBR 17225:2025**, a plataforma implementa:
 </p>
 
 
-<p align="left">
-  <a href="../README.md">🏠 Voltar à Home</a> | <a href="./02_sprint.md">➡️ Avançar para Sprint 02</a>
-</p>
-
+[🏠 Voltar à Home](../README.md) | [➡️ Avançar para Sprint 02](./02_sprint.md)
