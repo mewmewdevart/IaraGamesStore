@@ -107,4 +107,4 @@ Alinhada à **ABNT NBR 17225:2025**, a plataforma implementa:
 </p>
 
 
-[🏠 Voltar à Home](../README.md) | [➡️ Avançar para Sprint 02](./02_sprint.md)
+[🏠 Voltar à Home](../README.md) | [➡️ Avançar para (Sprint 02)](./02_sprint.md)
