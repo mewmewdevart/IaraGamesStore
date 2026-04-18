@@ -71,7 +71,7 @@ body {
 }
 
 body.pagina-xilogravura {
-  background-image: url("./assets/img/background-xilogravura.svg");
+  background-image: url("../img/background-xilogravura.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
