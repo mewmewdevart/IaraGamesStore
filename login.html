@@ -74,139 +74,140 @@
 </head>
 
 <body>
-	<main>
-		<h1 class="apenas-leitor">Acesse sua conta na Iara Games</h1>
-		<header class="cabecalho-principal">
-			<nav class="cabecalho-principal__navegacao" aria-label="Navegação principal">
-				<div class="cabecalho-principal__lado-esquerdo">
-					<a href="./index.html" class="cabecalho-principal__logo-link" aria-label="Ir para a página inicial">
-						<img src="./assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
-					</a>
+	<h1 class="apenas-leitor">Acesse sua conta na Iara Games</h1>
+	<header class="cabecalho-principal">
+		<nav class="cabecalho-principal__navegacao" aria-label="Navegação principal">
+			<div class="cabecalho-principal__lado-esquerdo">
+				<a href="./index.html" class="cabecalho-principal__logo-link" aria-label="Ir para a página inicial">
+					<img src="./assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
+				</a>
 
-					<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox apenas-leitor">
+				<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox apenas-leitor">
 
-					<label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu de navegação">
-						<i class="fa-solid fa-bars"></i>
-					</label>
+				<label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu de navegação">
+					<i class="fa-solid fa-bars"></i>
+				</label>
 
-					<ul class="menu-navegacao">
-						<li><a href="./index.html" class="menu-navegacao__link">LOJA</a>
-						</li>
-						<li><a href="./games.html" class="menu-navegacao__link">JOGOS</a>
-						</li>
-						<!-- @TODO: Exibir quando o usuário estiver autenticado
+				<ul class="menu-navegacao">
+					<li><a href="./index.html" class="menu-navegacao__link">LOJA</a>
+					</li>
+					<li><a href="./games.html" class="menu-navegacao__link">JOGOS</a>
+					</li>
+					<!-- @TODO: Exibir quando o usuário estiver autenticado
 							<li><a href="#" class="menu-navegacao__link">BIBLIOTECA</a></li>
 						-->
-						<li><a href="#" class="menu-navegacao__link">COMUNIDADE</a></li>
-						<li class="menu-navegacao__botoes-auth">
-							<a href="./login.html" class="botao-login">LOGIN</a>
-							<a href="./login.html#cadastro" class="botao-cadastro">CADASTRAR</a>
-						</li>
-					</ul>
-				</div>
-
-				<div class="cabecalho-principal__lado-direito">
-					<div class="busca">
-						<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
-
-						<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
-							<i class="fa-solid fa-magnifying-glass"></i>
-						</label>
-
-						<div class="busca__janela">
-							<i class="fa-solid fa-magnifying-glass"></i>
-							<input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
-						</div>
-					</div>
-					<button class="botao-icone" aria-label="Carrinho de compras"><i
-							class="fa-solid fa-cart-shopping"></i></button>
-					<button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
-					<!--@TODO: OCULTAR quando o usuário estiver autenticado-->
-					<div class="botoesloginecadastro cabecalho-auth">
+					<li><a href="#" class="menu-navegacao__link">COMUNIDADE</a></li>
+					<li class="menu-navegacao__botoes-auth">
 						<a href="./login.html" class="botao-login">LOGIN</a>
 						<a href="./login.html#cadastro" class="botao-cadastro">CADASTRAR</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="cabecalho-principal__lado-direito">
+				<div class="busca">
+					<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
+
+					<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
+						<i class="fa-solid fa-magnifying-glass"></i>
+					</label>
+
+					<div class="busca__janela">
+						<i class="fa-solid fa-magnifying-glass"></i>
+						<input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
 					</div>
-					<!-- @TODO: Exibir quando o usuário estiver autenticado
+				</div>
+				<button class="botao-icone" aria-label="Carrinho de compras"><i
+						class="fa-solid fa-cart-shopping"></i></button>
+				<button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
+				<!--@TODO: OCULTAR quando o usuário estiver autenticado-->
+				<div class="botoesloginecadastro cabecalho-auth">
+					<a href="./login.html" class="botao-login">LOGIN</a>
+					<a href="./login.html#cadastro" class="botao-cadastro">CADASTRAR</a>
+				</div>
+				<!-- @TODO: Exibir quando o usuário estiver autenticado
 						<button class="perfil-usuario" aria-label="Menu de perfil do usuário">
 						<span class="perfil-usuario__avatar"></span>
 						<i class="fa-solid fa-chevron-down"></i>
 					</button> 
 					-->
-				</div>
-			</nav>
-		</header>
+			</div>
+		</nav>
+	</header>
 
 	<div class="secao-banner-xilogravura secao-banner-xilogravura--full">
 		<main>
-		<!-- ================================= LOGIN / CADASTRO ================================= -->
-		<section class="autenticacao" id="cadastro" aria-label="Seção de Autenticação">
-			<div class="autenticacao__container">
-				<div class="autenticacao__forms">
-					<!-- Formulário de Login -->
-					<div class="autenticacao__form autenticacao__form--login">
-						<h2 class="autenticacao__titulo">Bem-vindo de volta</h2>
-						<p class="autenticacao__subtitulo">Entre para acessar sua biblioteca e apoiar a cena indie
-							nacional.</p>
+			<!-- ================================= LOGIN / CADASTRO ================================= -->
+			<section class="autenticacao" id="cadastro" aria-label="Seção de Autenticação">
+				<div class="autenticacao__container">
+					<div class="autenticacao__forms">
+						<!-- Formulário de Login -->
+						<div class="autenticacao__form autenticacao__form--login">
+							<h2 class="autenticacao__titulo">Bem-vindo de volta</h2>
+							<p class="autenticacao__subtitulo">Entre para acessar sua biblioteca e apoiar a cena indie
+								nacional.</p>
 
-						<form action="#" method="POST" class="autenticacao__corpo">
-							<div class="autenticacao__grupo">
-								<label for="login-email" class="autenticacao__label">E-mail</label>
-								<input type="email" id="login-email" name="email" class="autenticacao__input"
-									placeholder="seu@email.com" autocomplete="email" required>
-							</div>
-							<div class="autenticacao__grupo">
-								<label for="login-password" class="autenticacao__label">Senha</label>
-								<input type="password" id="login-password" name="password" class="autenticacao__input"
-									placeholder="Sua senha" autocomplete="current-password" required>
-							</div>
-							<div class="autenticacao__opcoes">
-								<label class="autenticacao__lembrar">
-									<input type="checkbox" name="remember">
-									Lembrar de mim
-								</label>
-								<a href="#" class="autenticacao__link-esqueci">Esqueceu a senha?</a>
-							</div>
-							<button type="submit"
-								class="autenticacao__botao autenticacao__botao--primario">Entrar</button>
-						</form>
+							<form action="#" method="POST" class="autenticacao__corpo">
+								<div class="autenticacao__grupo">
+									<label for="login-email" class="autenticacao__label">E-mail</label>
+									<input type="email" id="login-email" name="email" class="autenticacao__input"
+										placeholder="seu@email.com" autocomplete="email" required>
+								</div>
+								<div class="autenticacao__grupo">
+									<label for="login-password" class="autenticacao__label">Senha</label>
+									<input type="password" id="login-password" name="password"
+										class="autenticacao__input" placeholder="Sua senha"
+										autocomplete="current-password" required>
+								</div>
+								<div class="autenticacao__opcoes">
+									<label class="autenticacao__lembrar">
+										<input type="checkbox" name="remember">
+										Lembrar de mim
+									</label>
+									<a href="#" class="autenticacao__link-esqueci">Esqueceu a senha?</a>
+								</div>
+								<button type="submit"
+									class="autenticacao__botao autenticacao__botao--primario">Entrar</button>
+							</form>
 
-						<div class="autenticacao__alternar">
-							Não tem uma conta? <a href="#cadastro" class="autenticacao__link-toggle">Cadastre-se</a>
+							<div class="autenticacao__alternar">
+								Não tem uma conta? <a href="#cadastro" class="autenticacao__link-toggle">Cadastre-se</a>
+							</div>
 						</div>
-					</div>
 
-					<!-- Formulário de Cadastro -->
-					<div class="autenticacao__form autenticacao__form--cadastro">
-						<h2 class="autenticacao__titulo">Crie sua conta</h2>
-						<p class="autenticacao__subtitulo">Junte-se à maior comunidade de jogos indie brasileiros.</p>
+						<!-- Formulário de Cadastro -->
+						<div class="autenticacao__form autenticacao__form--cadastro">
+							<h2 class="autenticacao__titulo">Crie sua conta</h2>
+							<p class="autenticacao__subtitulo">Junte-se à maior comunidade de jogos indie brasileiros.
+							</p>
 
-						<form action="#" method="POST" class="autenticacao__corpo">
-							<div class="autenticacao__grupo">
-								<label for="reg-name" class="autenticacao__label">Nome de Usuário</label>
-								<input type="text" id="reg-name" name="name" class="autenticacao__input"
-									placeholder="Seu nickname" autocomplete="username" required>
-							</div>
-							<div class="autenticacao__grupo">
-								<label for="reg-email" class="autenticacao__label">E-mail</label>
-								<input type="email" id="reg-email" name="email" class="autenticacao__input"
-									placeholder="seu@email.com" autocomplete="email" required>
-							</div>
-							<div class="autenticacao__grupo">
-								<label for="reg-password" class="autenticacao__label">Senha</label>
-								<input type="password" id="reg-password" name="password" class="autenticacao__input"
-									placeholder="Sua senha" autocomplete="new-password" required>
-							</div>
-							<button type="submit"
-								class="autenticacao__botao autenticacao__botao--destaque">Cadastrar</button>
-						</form>
+							<form action="#" method="POST" class="autenticacao__corpo">
+								<div class="autenticacao__grupo">
+									<label for="reg-name" class="autenticacao__label">Nome de Usuário</label>
+									<input type="text" id="reg-name" name="name" class="autenticacao__input"
+										placeholder="Seu nickname" autocomplete="username" required>
+								</div>
+								<div class="autenticacao__grupo">
+									<label for="reg-email" class="autenticacao__label">E-mail</label>
+									<input type="email" id="reg-email" name="email" class="autenticacao__input"
+										placeholder="seu@email.com" autocomplete="email" required>
+								</div>
+								<div class="autenticacao__grupo">
+									<label for="reg-password" class="autenticacao__label">Senha</label>
+									<input type="password" id="reg-password" name="password" class="autenticacao__input"
+										placeholder="Sua senha" autocomplete="new-password" required>
+								</div>
+								<button type="submit"
+									class="autenticacao__botao autenticacao__botao--destaque">Cadastrar</button>
+							</form>
 
-						<div class="autenticacao__alternar">
-							Já tem uma conta? <a href="#" class="autenticacao__link-toggle">Fazer login</a>
+							<div class="autenticacao__alternar">
+								Já tem uma conta? <a href="#" class="autenticacao__link-toggle">Fazer login</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 		</main>
 
 		<!-- ================================= SEÇÃO : RODAPE ================================= -->

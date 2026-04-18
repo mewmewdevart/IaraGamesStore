@@ -7,8 +7,8 @@
 .autenticacao {
 	display: grid;
 	place-items: center;
-	padding: 4rem 1.25rem;
 	margin-top: 4.0625rem;
+	padding: 4rem;
 }
 
 .autenticacao__container {
