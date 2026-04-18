@@ -57,8 +57,10 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 │   ├── img/        # Imagens e ícones
 │   └── js/         # Scripts JavaScript (Futuro)
 ├── docs/
-│   ├── 01_sprint.md   # Documentação detalhada da Sprint 01
-│   └── 02_sprint.md   # Documentação detalhada da Sprint 02
+│   ├── 01_sprint.md   # Documentação resumida da Sprint 01
+│   ├── 02_sprint.md   # Documentação resumida da Sprint 02
+│   ├── Sprint 01 - Iara Games_2026 - EAD .pdf   # Documentação detalhada da Sprint 01
+│   └── Sprint 02 - Iara Games_2026 - EAD .pdf   # Documentação detalhada da Sprint 02
 ├── index.html        # Página principal (Home Page)
 ├── LICENSE           # Licença do projeto
 └── README.md         # Documentação principal do repositório
