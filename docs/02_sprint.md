@@ -4,8 +4,6 @@ Este documento detalha as decisões da **Sprint 02** do projeto **Iara Games**, 
 
 **Equipe Master3:** Ingrid Silva de Lima, Julia Souza Gonçalves, Larissa Cristina Benedito e Mayla Mayumi Motobe.
 
----
-
 ## 🔗 Acessos e Entregas
 - 🌐 **Deploy (Site Hospedado):** https://mewmewdevart.github.io/IaraGamesStore/
 - 💻 **Repositório GitHub:** [https://github.com/mewmewdevart/IaraGamesStore](https://github.com/mewmewdevart/IaraGamesStore)
@@ -74,13 +72,9 @@ Para compras definitivas, priorizamos o controle rígido (filtragem utilitária 
 
 O ambiente respira a base cromática **`Deep Moss`**, mas qualquer superfície engajante da tela dispara feedbacks luminosos utilizando sombreados com **`Terracota Iara`** e energia do **`Fogo Fátuo`**. 
 
----
 <p align="center">
   <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2002%20-%20Iara%20Games_2026%20-%20EAD.pdf">📝 Visualizar documentação completa</a>
 </p>
 
 
-<p align="left">
-<p align="center">
-  <a href="../README.md">🏠 Voltar à Home</a> | <a href="./01_sprint.md">🔙 Ver Sprint 01</a>
-</p>
+[🔙 Ver Sprint 01](./01_sprint.md)
