@@ -77,16 +77,6 @@
 	line-height: 1.5;
 }
 
-.autenticacao__corpo {
-	display: grid;
-	gap: 1.25rem;
-}
-
-.autenticacao__grupo {
-	display: grid;
-	gap: 0.5rem;
-}
-
 .autenticacao__label {
 	color: var(--color-light);
 	font-size: var(--text-sm);
@@ -122,10 +112,6 @@
 }
 
 .autenticacao__lembrar {
-	display: grid;
-	grid-template-columns: auto 1fr;
-	align-items: center;
-	gap: 0.5rem;
 	color: var(--color-gray-light);
 	cursor: pointer;
 }

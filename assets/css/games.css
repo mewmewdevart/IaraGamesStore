@@ -17,7 +17,7 @@
 
 .busca-jogos__container {
   width: 100%;
-  max-width: 50rem;
+  max-width: 60rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -25,7 +25,7 @@
 }
 
 .busca-jogos__titulo {
-  font-size: var(--text-2xl);
+  font-size: var(--text-4xl);
   font-weight: var(--weight-bold);
   color: var(--color-light);
   text-transform: uppercase;
@@ -34,8 +34,6 @@
 }
 
 .busca-jogos__acoes {
-  display: flex;
-  gap: 1rem;
   width: 100%;
 }
 
@@ -120,32 +118,24 @@
 }
 
 .busca-jogos__painel-filtros {
-  width: 100%;
-  display: none;
-  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-  gap: 2rem;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  margin-top: 0;
+  border-color: transparent;
+  display: flex;
   background-color: var(--color-gray);
-  border: 1px solid rgba(232, 236, 235, 0.1);
   border-radius: var(--radius-lg);
-  padding: 2rem;
-  margin-top: 1rem;
-  animation: fadeInDown 0.3s ease;
+  transition: all 0.4s ease-in-out;
 }
 
 .busca-jogos__filtro-toggle:checked~.busca-jogos__painel-filtros {
-  display: grid;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  max-height: 2000px;
+  opacity: 1;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border: 1px solid rgba(232, 236, 235, 0.1);
 }
 
 .busca-jogos__filtro-grupo {
@@ -226,16 +216,6 @@
   .busca-jogos__titulo {
     font-size: var(--text-xl);
   }
-
-  .busca-jogos__acoes {
-    flex-direction: column;
-  }
-
-  .busca-jogos__btn-filtro {
-    width: 100%;
-    justify-content: center;
-    padding: 0.75rem 1.5rem;
-  }
 }
 
 /* ==========================================================================
@@ -306,17 +286,7 @@
   align-items: center;
 }
 
-.biblioteca__select-icone {
-  position: absolute;
-  right: 1rem;
-  color: var(--color-secondary);
-  pointer-events: none;
-  font-size: 0.8rem;
-}
-
 .biblioteca__select {
-  appearance: none;
-  -webkit-appearance: none;
   background-color: var(--color-dark-composition);
   color: var(--color-light);
   border: 1px solid rgba(232, 236, 235, 0.2);
@@ -335,9 +305,6 @@
 }
 
 .biblioteca__grade {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.125rem;
   margin-bottom: 3rem;
 }
 
@@ -386,29 +353,4 @@
 .paginacao__item--reticencias:hover {
   background: none;
   transform: none;
-}
-
-@media (max-width: 1324px) {
-  .biblioteca__grade {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 992px) {
-  .biblioteca__grade {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .biblioteca__grade {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 576px) {
-  .biblioteca__grade {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
 }

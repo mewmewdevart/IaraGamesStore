@@ -564,31 +564,15 @@ main {
   transition: padding 0.5s ease;
 }
 
-.secao-momentos__grade {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-  width: 100%;
-}
-
 .card-momento {
   background-color: var(--color-dark-composition);
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 2rem 1.5rem;
-  width: 100%;
-  min-height: 12rem;
-
   border-radius: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.05);
-
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   position: relative;
   z-index: 1;
+  min-height: 12rem;
+  text-align: center;
 }
 
 
@@ -613,7 +597,6 @@ main {
 .card-momento__icone-svg {
   width: 3.5rem;
   height: 3.5rem;
-  margin-bottom: 1rem;
   filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.6));
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
@@ -622,7 +605,6 @@ main {
   font-size: var(--text-lg);
   font-weight: var(--weight-bold);
   color: var(--color-light);
-  margin-bottom: 0.25rem;
 }
 
 .card-momento__desc {
@@ -693,39 +675,19 @@ main {
 /* ==========================================================================
    MEDIA QUERIES (O AJUSTE CRÍTICO PARA O MOBILE)
    ========================================================================== */
-@media (max-width: 992px) {
-  .secao-momentos__grade {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-}
-
 @media (max-width: 576px) {
-  .secao-momentos__grade {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.75rem;
-  }
-
   .card-momento {
     min-height: auto;
-    padding: 1.25rem 0.5rem;
     border-radius: 1rem;
   }
 
   .card-momento__icone-svg {
     width: 2.5rem;
-
     height: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-
-  .card-momento__titulo {
-    margin-bottom: 0.25rem;
   }
 
   .card-momento__desc {
     line-height: 1.2;
-    padding: 0 0.25rem;
   }
 }
 
@@ -737,6 +699,10 @@ main {
   margin: 0 auto;
   padding: var(--section-padding-v) var(--section-padding-h) 0;
   transition: padding 0.5s ease;
+}
+
+.secao-consumidor__cabecalho {
+  margin-bottom: 1.5625rem;
 }
 
 .secao-consumidor__subtitulo {
@@ -767,42 +733,13 @@ main {
   }
 }
 
-.secao-consumidor__carrossel {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1.25rem;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-  scroll-padding-left: var(--section-padding-h);
-  padding: 1.5rem 0;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-primary) var(--color-dark);
-}
 
-.secao-consumidor__carrossel::-webkit-scrollbar {
-  height: 0.5rem;
-}
-
-.secao-consumidor__carrossel::-webkit-scrollbar-track {
-  background: var(--color-dark);
-  border-radius: 0.5rem;
-}
-
-.secao-consumidor__carrossel::-webkit-scrollbar-thumb {
-  background-color: var(--color-primary);
-  border-radius: 0.5rem;
-}
 
 .secao-consumidor__card {
-  position: relative;
   border-radius: 0.5rem;
   overflow: hidden;
   flex-shrink: 0;
   scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -815,13 +752,10 @@ main {
 }
 
 .secao-consumidor__card--destaque {
-  width: 60%;
-  min-width: 21.25rem;
   min-height: 21.875rem;
 }
 
 .secao-consumidor__card--normal {
-  width: 17.5rem;
   min-height: 21.875rem;
   height: 100%;
 }
@@ -852,7 +786,6 @@ main {
 }
 
 .secao-consumidor__conteudo {
-  position: relative;
   z-index: 2;
   padding: 1.5rem 1.25rem;
 }
@@ -868,16 +801,12 @@ main {
 
 .secao-consumidor__selo-desconto,
 .secao-lancamentos__selo-desconto {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   background-color: var(--color-secondary);
   color: var(--color-dark);
   padding: 0.375rem 0.875rem;
   border-radius: 0.5rem;
   font-weight: 800;
   font-size: var(--text-sm);
-  z-index: 2;
 }
 
 .secao-consumidor__bloco-compra {
@@ -898,11 +827,8 @@ main {
   color: var(--color-secondary);
 }
 
-.secao-consumidor__grade-secundaria,
+.secao-consumidor__grade,
 .secao-lancamentos__grade {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 1.125rem;
   padding: 1.5rem 0;
 }
 
@@ -913,9 +839,6 @@ main {
   overflow: hidden;
   transition: transform 0.25s, box-shadow 0.25s;
   cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
 .secao-consumidor__cartao-lista:hover,
@@ -955,8 +878,6 @@ main {
 .secao-consumidor__info-lista,
 .secao-lancamentos__info {
   padding: 0.875rem 0.875rem 1rem;
-  display: flex;
-  flex-direction: column;
   flex: 1;
 }
 
@@ -1333,21 +1254,9 @@ main {
 /* ==========================================================================
    MEDIA QUERIES (RESPONSIVIDADE)
    ========================================================================== */
-@media (max-width: 1324px) {
 
-  .secao-consumidor__grade-secundaria,
-  .secao-lancamentos__grade {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
-@media (max-width: 992px) {
 
-  .secao-consumidor__grade-secundaria,
-  .secao-lancamentos__grade {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
 
 @media (max-width: 900px) {
   :root {
@@ -1382,15 +1291,7 @@ main {
     font-size: var(--text-2xl);
   }
 
-  .secao-consumidor__card--destaque,
-  .secao-consumidor__card--normal {
-    width: 85%;
-    height: 17.5rem;
-  }
 
-  .secao-consumidor__card--destaque {
-    min-width: 17.5rem;
-  }
 
   .secao-consumidor__nome-jogo {
     font-size: var(--text-lg);
@@ -1563,19 +1464,12 @@ main {
     width: 33%;
   }
 
-  .secao-consumidor__grade-secundaria,
-  .secao-lancamentos__grade {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  
 }
 
 @media (max-width: 576px) {
 
-  .secao-consumidor__grade-secundaria,
-  .secao-lancamentos__grade {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
+  
 
   .secao-consumidor__imagem-envolucro,
   .secao-lancamentos__imagem-envolucro {

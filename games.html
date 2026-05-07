@@ -48,6 +48,7 @@
 		content="Descubra jogos indie brasileiros e apoie desenvolvedores independentes na plataforma Iara Games." />
 	<meta name="twitter:image" content="https://mewmewdevart.github.io/IaraGamesStore/assets/img/og-image.png" />
 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 	<link rel="stylesheet" href="assets/css/games.css" />
 
@@ -139,28 +140,28 @@
 		</header>
 
 		<section class="busca-jogos">
-			<div class="busca-jogos__container">
+			<div class="busca-jogos__container w-100">
 				<h3 class="busca-jogos__titulo">BUSCAR JOGOS</h3>
 
 				<input type="checkbox" id="filtro-toggle" class="busca-jogos__filtro-toggle apenas-leitor">
 
-				<div class="busca-jogos__acoes">
-					<div class="busca-jogos__input-wrapper">
+				<div class="busca-jogos__acoes d-flex flex-column flex-md-row gap-3 w-100">
+					<div class="busca-jogos__input-wrapper flex-grow-1">
 						<input type="text" placeholder="Qual jogo você procura?" aria-label="Buscar jogos no catálogo"
 							class="busca-jogos__input">
 						<button type="submit" aria-label="Realizar busca" class="busca-jogos__btn-pesquisa"><i
 								class="fa-solid fa-magnifying-glass"></i></button>
 					</div>
-					<label for="filtro-toggle" class="busca-jogos__btn-filtro" aria-label="Filtros e ordenação">
+					<label for="filtro-toggle" class="busca-jogos__btn-filtro d-flex justify-content-center align-items-center">
 						<i class="fa-solid fa-sliders"></i> Filtros
 					</label>
 				</div>
 
 				<!-- Painel de Filtros Expansível -->
-				<div class="busca-jogos__painel-filtros">
+				<div class="busca-jogos__painel-filtros row g-4 w-100 mx-0">
 
 					<!-- Gêneros -->
-					<div class="busca-jogos__filtro-grupo">
+					<div class="busca-jogos__filtro-grupo col-12 col-sm-6 col-lg-auto">
 						<h4 class="busca-jogos__filtro-titulo">Gêneros</h4>
 						<label class="busca-jogos__filtro-opcao"><input type="checkbox"> Estratégia</label>
 						<label class="busca-jogos__filtro-opcao"><input type="checkbox"> Horror</label>
@@ -170,7 +171,7 @@
 					</div>
 
 					<!-- Preços -->
-					<div class="busca-jogos__filtro-grupo">
+					<div class="busca-jogos__filtro-grupo col-12 col-sm-6 col-lg-auto">
 						<h4 class="busca-jogos__filtro-titulo">Preço</h4>
 						<label class="busca-jogos__filtro-opcao"><input type="radio" name="preco" checked> Todos os
 							preços</label>
@@ -183,7 +184,7 @@
 					</div>
 
 					<!-- Momentos -->
-					<div class="busca-jogos__filtro-grupo">
+					<div class="busca-jogos__filtro-grupo col-12 col-sm-6 col-lg-auto">
 						<h4 class="busca-jogos__filtro-titulo">Momentos</h4>
 						<label class="busca-jogos__filtro-opcao"><input type="checkbox"> Na Pausa</label>
 						<label class="busca-jogos__filtro-opcao"><input type="checkbox"> Calmaria</label>
@@ -192,7 +193,7 @@
 					</div>
 
 					<!-- Plataformas -->
-					<div class="busca-jogos__filtro-grupo">
+					<div class="busca-jogos__filtro-grupo col-12 col-sm-6 col-lg-auto">
 						<h4 class="busca-jogos__filtro-titulo">Plataforma</h4>
 						<label class="busca-jogos__filtro-opcao"><input type="checkbox"> <i class="fa-brands fa-windows"
 								style="width:16px;"></i> Windows</label>
@@ -205,7 +206,7 @@
 					</div>
 
 					<!-- Tags -->
-					<div class="busca-jogos__filtro-grupo busca-jogos__filtro-grupo--tags">
+					<div class="busca-jogos__filtro-grupo busca-jogos__filtro-grupo--tags col-12 col-lg">
 						<h4 class="busca-jogos__filtro-titulo">Tags</h4>
 						<div class="busca-jogos__filtro-tags-wrapper">
 							<label class="busca-jogos__filtro-chip"><input type="checkbox"
@@ -242,32 +243,32 @@
 						<div class="biblioteca__ordenacao">
 							<label for="ordenacao" class="biblioteca__ordenacao-label">Ordenar por:</label>
 							<div class="biblioteca__select-wrapper">
-								<select id="ordenacao" class="biblioteca__select">
+								<select id="ordenacao" class="form-select biblioteca__select" data-bs-theme="dark">
 									<option value="relevancia">Relevância</option>
 									<option value="menor-preco">Menor Preço</option>
 									<option value="maior-preco">Maior Preço</option>
 									<option value="a-z">A - Z</option>
 									<option value="z-a">Z - A</option>
 								</select>
-								<i class="fa-solid fa-chevron-down biblioteca__select-icone"></i>
 							</div>
 						</div>
 					</div>
 				</div>
 
-				<div class="biblioteca__grade">
+				<div class="biblioteca__grade row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 mx-0">
 
 					<!-- Card 1 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver A Lenda do Herói"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-a-lenda-do-heroi.jpg" alt="A Lenda do Herói"
-								class="secao-lancamentos__imagem" loading="lazy" />
-							<span class="secao-lancamentos__selo-desconto">-20%</span>
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
+							<span class="secao-lancamentos__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-20%</span>
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">A Lenda do Herói</h2>
-							<p class="secao-lancamentos__estudio">Dumativa</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">A Lenda do Herói</h2>
+							<p class="secao-lancamentos__estudio card-text">Dumativa</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.3</span>
@@ -279,17 +280,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 2 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Dandara"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
-							<img src="./assets/img/dandara.jpg" alt="Dandara" class="secao-lancamentos__imagem"
+							<img src="./assets/img/dandara.jpg" alt="Dandara" class="secao-lancamentos__imagem card-img-top"
 								loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Dandara</h2>
-							<p class="secao-lancamentos__estudio">Long Hat House</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Dandara</h2>
+							<p class="secao-lancamentos__estudio card-text">Long Hat House</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.5</span>
@@ -300,17 +303,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 3 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Dandy Ace"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-dandy.jpg" alt="Dandy Ace"
-								class="secao-lancamentos__imagem" loading="lazy" />
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Dandy Ace</h2>
-							<p class="secao-lancamentos__estudio">Mad Mimic</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Dandy Ace</h2>
+							<p class="secao-lancamentos__estudio card-text">Mad Mimic</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.7</span>
@@ -321,17 +326,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 4 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Dolmen"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
-							<img src="./assets/img/capa-jogo-dolmen.png" alt="Dolmen" class="secao-lancamentos__imagem"
+							<img src="./assets/img/capa-jogo-dolmen.png" alt="Dolmen" class="secao-lancamentos__imagem card-img-top"
 								loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Dolmen</h2>
-							<p class="secao-lancamentos__estudio">Massive Work Studio</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Dolmen</h2>
+							<p class="secao-lancamentos__estudio card-text">Massive Work Studio</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">2.8</span>
@@ -342,17 +349,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 5 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Gaúcho and the grassland"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-gaucho-and-the-grassland.png"
-								alt="Gaúcho and the grassland" class="secao-lancamentos__imagem" loading="lazy" />
+								alt="Gaúcho and the grassland" class="secao-lancamentos__imagem card-img-top" loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Gaúcho and the grassland</h2>
-							<p class="secao-lancamentos__estudio">Epopeia Games</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Gaúcho and the grassland</h2>
+							<p class="secao-lancamentos__estudio card-text">Epopeia Games</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">3.6</span>
@@ -363,18 +372,20 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 6 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Horizon Chase Turbo"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-horizon-chase-turbo.jpeg" alt="Horizon Chase Turbo"
-								class="secao-lancamentos__imagem" loading="lazy" />
-							<span class="secao-lancamentos__selo-desconto">-10%</span>
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
+							<span class="secao-lancamentos__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-10%</span>
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Horizon Chase Turbo</h2>
-							<p class="secao-lancamentos__estudio">Aquiris Game Studio</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Horizon Chase Turbo</h2>
+							<p class="secao-lancamentos__estudio card-text">Aquiris Game Studio</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">3.8</span>
@@ -386,17 +397,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 7 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Kaze and the wild masks"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-kaze-and-the-wild-masks.png" alt="Kaze and the wild masks"
-								class="secao-lancamentos__imagem" loading="lazy" />
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Kaze and the wild masks</h2>
-							<p class="secao-lancamentos__estudio">Pixel Hive</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Kaze and the wild masks</h2>
+							<p class="secao-lancamentos__estudio card-text">Pixel Hive</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.4</span>
@@ -407,18 +420,20 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 8 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Mark of the Deep"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-mark-of-the-deep.jpg" alt="Mark of the Deep"
-								class="secao-lancamentos__imagem" loading="lazy" />
-							<span class="secao-lancamentos__selo-desconto">-15%</span>
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
+							<span class="secao-lancamentos__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-15%</span>
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Mark of the Deep</h2>
-							<p class="secao-lancamentos__estudio">Mad Mimic</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Mark of the Deep</h2>
+							<p class="secao-lancamentos__estudio card-text">Mad Mimic</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.0</span>
@@ -430,17 +445,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 9 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Pipistrello"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-pipistrello.png" alt="Pipistrello"
-								class="secao-lancamentos__imagem" loading="lazy" />
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Pipistrello and the Cursed Yoyo</h2>
-							<p class="secao-lancamentos__estudio">Pocket Trap</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Pipistrello and the Cursed Yoyo</h2>
+							<p class="secao-lancamentos__estudio card-text">Pocket Trap</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">3.4</span>
@@ -451,17 +468,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 10 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Pocket Bravery"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-pocket-bravery.jpg" alt="Pocket Bravery"
-								class="secao-lancamentos__imagem" loading="lazy" />
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Pocket Bravery</h2>
-							<p class="secao-lancamentos__estudio">Statera Studio</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Pocket Bravery</h2>
+							<p class="secao-lancamentos__estudio card-text">Statera Studio</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.8</span>
@@ -472,17 +491,19 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 11 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Ruff Ghanor"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-ruff-ghanor.png" alt="Ruff Ghanor"
-								class="secao-lancamentos__imagem" loading="lazy" />
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Ruff Ghanor</h2>
-							<p class="secao-lancamentos__estudio">DX Gameworks LLC</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Ruff Ghanor</h2>
+							<p class="secao-lancamentos__estudio card-text">DX Gameworks LLC</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">3.9</span>
@@ -493,18 +514,20 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 12 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Arida: Backland's Awakening"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-arida.png" alt="Arida: Backland's Awakening"
-								class="secao-lancamentos__imagem" loading="lazy" />
-							<span class="secao-lancamentos__selo-desconto">-30%</span>
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
+							<span class="secao-lancamentos__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-30%</span>
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Arida: Backland's Awakening</h2>
-							<p class="secao-lancamentos__estudio">Aoca Game Lab</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Arida: Backland's Awakening</h2>
+							<p class="secao-lancamentos__estudio card-text">Aoca Game Lab</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.1</span>
@@ -516,18 +539,20 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 13 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Knights of Pen & Paper"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-knights-of-pen-paper.png" alt="Knights of Pen & Paper"
-								class="secao-lancamentos__imagem" loading="lazy" />
-							<span class="secao-lancamentos__selo-desconto">-20%</span>
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
+							<span class="secao-lancamentos__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-20%</span>
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Knights of Pen & Paper</h2>
-							<p class="secao-lancamentos__estudio">Behold Studios</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Knights of Pen & Paper</h2>
+							<p class="secao-lancamentos__estudio card-text">Behold Studios</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">3.7</span>
@@ -539,18 +564,20 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 14 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Odallus: The Dark Call"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-odallus-the-dark-call.jpg" alt="Odallus: The Dark Call"
-								class="secao-lancamentos__imagem" loading="lazy" />
-							<span class="secao-lancamentos__selo-desconto">-40%</span>
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
+							<span class="secao-lancamentos__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-40%</span>
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Odallus: The Dark Call</h2>
-							<p class="secao-lancamentos__estudio">JoyMasher</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Odallus: The Dark Call</h2>
+							<p class="secao-lancamentos__estudio card-text">JoyMasher</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">3.9</span>
@@ -562,18 +589,20 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 					<!-- Card 15 -->
-					<article class="secao-lancamentos__cartao">
+					<div class="secao-lancamentos__envolucro-cartao col">
+						<article class="secao-lancamentos__cartao card border-0 h-100 text-light">
 						<a href="#" class="link-cobre-card" aria-label="Ver Fobia – St. Dinfna Hotel"></a>
 						<div class="secao-lancamentos__imagem-envolucro">
 							<img src="./assets/img/capa-jogo-fobia-st-dinfna-hotel.jpg" alt="Fobia – St. Dinfna Hotel"
-								class="secao-lancamentos__imagem" loading="lazy" />
-							<span class="secao-lancamentos__selo-desconto">-50%</span>
+								class="secao-lancamentos__imagem card-img-top" loading="lazy" />
+							<span class="secao-lancamentos__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-50%</span>
 						</div>
-						<div class="secao-lancamentos__info">
-							<h2 class="secao-lancamentos__titulo-jogo">Fobia – St. Dinfna Hotel</h2>
-							<p class="secao-lancamentos__estudio">Pulsatrix Studios</p>
+						<div class="secao-lancamentos__info card-body d-flex flex-column">
+							<h2 class="secao-lancamentos__titulo-jogo card-title">Fobia – St. Dinfna Hotel</h2>
+							<p class="secao-lancamentos__estudio card-text">Pulsatrix Studios</p>
 							<div class="secao-lancamentos__avaliacao">
 								<i class="fa-solid fa-star secao-lancamentos__icone-estrela"></i>
 								<span class="secao-lancamentos__nota">4.5</span>
@@ -585,6 +614,7 @@
 							</div>
 						</div>
 					</article>
+					</div>
 
 				</div>
 
