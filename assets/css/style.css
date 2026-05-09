@@ -104,6 +104,92 @@ main {
   background: var(--color-primary);
 }
 
+/* Base Comum dos Botões */
+.btn-iara-login, .btn-iara-cadastro, .btn-iara-compra {
+  font-family: var(--font-inter);
+  font-weight: 800 !important;
+  transition: all 0.3s ease;
+  border-radius: var(--radius-md);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Estilo Amarelo Neon (Login, Entrar e Compra) */
+.btn-iara-login, .btn-iara-compra {
+  background-image: url("../img/pattern-secondary.svg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: var(--color-secondary) !important;
+  color: var(--color-dark) !important; /* FORÇA O TEXTO A FICAR PRETO */
+  border: none !important;
+}
+
+.btn-iara-login:hover, .btn-iara-compra:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(252, 163, 17, 0.4);
+  color: var(--color-dark) !important;
+}
+
+/* Estilo Terracota (Cadastro) */
+.btn-iara-cadastro {
+  background-image: url("../img/pattern-primary.svg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: var(--color-primary) !important;
+  color: var(--color-light) !important; /* FORÇA O TEXTO A FICAR BRANCO */
+  border: none !important;
+}
+
+.btn-iara-cadastro:hover {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-dark) !important;
+  box-shadow: 0 0 20px rgba(227, 74, 56, 0.4);
+}
+
+.btn-iara-cadastro:hover,
+.btn-iara-cadastro:focus-visible {
+  background-image: url("../img/pattern-primary.svg");
+  background-color: var(--color-secondary) !important;
+  color: var(--color-dark) !important;
+  border-color: var(--color-secondary) !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(227, 74, 56, 0.4);
+}
+
+/* Botão de Compra Principal (Hero) */
+.btn-iara-compra {
+  background-image: url("../img/pattern-secondary.svg");
+  background-size: cover;
+  background-blend-mode: overlay;
+  background-color: var(--color-secondary) !important;
+  color: var(--color-dark) !important;
+  border: none !important;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.btn-iara-compra:hover,
+.btn-iara-compra:focus-visible {
+  background-image: url("../img/pattern-primary.svg");
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(252, 163, 17, 0.4);
+}
+
+/* Botão de Carrinho (Hero) */
+.btn-iara-carrinho {
+  background-color: var(--color-gray) !important;
+  color: var(--color-light) !important;
+  border: none !important;
+  border-radius: var(--radius-md);
+  transition: all 0.3s ease;
+}
+
+.btn-iara-carrinho:hover,
+.btn-iara-carrinho:focus-visible {
+  background-color: var(--color-gray-light) !important;
+  color: var(--color-dark) !important;
+  transform: translateY(-2px);
+}
 
 /* ==========================================================================
    CABECALHO E NAVEGACAO
