@@ -77,67 +77,55 @@
 <body>
 	<h1 class="apenas-leitor">Acesse sua conta na Iara Games</h1>
 	<header class="cabecalho-principal">
-		<nav class="cabecalho-principal__navegacao" aria-label="Navegação principal">
-			<div class="cabecalho-principal__lado-esquerdo">
-				<a href="./index.html" class="cabecalho-principal__logo-link" aria-label="Ir para a página inicial">
-					<img src="./assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
-				</a>
+			<nav class="cabecalho-principal__navegacao" aria-label="Navegação principal">
+				<div class="cabecalho-principal__lado-esquerdo">
+					<a href="./index.html" class="cabecalho-principal__logo-link" aria-label="Ir para a página inicial">
+						<img src="./assets/img/logo_1.svg" alt="Logo Iara Games" class="cabecalho-principal__logo">
+					</a>
 
-				<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox apenas-leitor">
+					<input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox apenas-leitor">
 
-				<label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu de navegação">
-					<i class="fa-solid fa-bars"></i>
-				</label>
-
-				<ul class="menu-navegacao">
-					<li><a href="./index.html" class="menu-navegacao__link">LOJA</a>
-					</li>
-					<li><a href="./games.html" class="menu-navegacao__link">JOGOS</a>
-					</li>
-					<!-- @TODO: Exibir quando o usuário estiver autenticado
-							<li><a href="#" class="menu-navegacao__link">BIBLIOTECA</a></li>
-						-->
-					<li><a href="#" class="menu-navegacao__link">COMUNIDADE</a></li>
-					<li class="menu-navegacao__botoes-auth">
-						<a href="./login.html" class="botao-login">LOGIN</a>
-						<a href="./login.html#cadastro" class="botao-cadastro">CADASTRAR</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="cabecalho-principal__lado-direito">
-				<div class="busca">
-					<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
-
-					<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
-						<i class="fa-solid fa-magnifying-glass"></i>
+					<label for="menu-toggle" class="menu-toggle-label" aria-label="Abrir menu de navegação">
+						<i class="fa-solid fa-bars"></i>
 					</label>
 
-					<div class="busca__janela">
-						<i class="fa-solid fa-magnifying-glass"></i>
-						<input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
+					<ul class="menu-navegacao">
+						<li><a href="./index.html" class="menu-navegacao__link menu-navegacao__link--ativo">LOJA</a></li>
+						<li><a href="./games.html" class="menu-navegacao__link ">JOGOS</a></li>
+						<li><a href="#" class="menu-navegacao__link">COMUNIDADE</a></li>
+						
+                        <li class="menu-navegacao__botoes-auth d-flex d-lg-none flex-column gap-2 mt-3">
+							<a href="./login.html" class="btn btn-iara-login w-100">LOGIN</a>
+							<a href="./login.html#cadastro" class="btn btn-iara-cadastro w-100">CADASTRAR</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="cabecalho-principal__lado-direito">
+					<div class="busca">
+						<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
+						<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
+							<i class="fa-solid fa-magnifying-glass"></i>
+						</label>
+						<div class="busca__janela">
+							<i class="fa-solid fa-magnifying-glass"></i>
+							<input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
+						</div>
+					</div>
+					<button class="botao-icone" aria-label="Carrinho de compras"><i class="fa-solid fa-cart-shopping"></i></button>
+					<button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
+					
+                    <div class="botoesloginecadastro cabecalho-auth d-none d-lg-flex gap-2">
+						<a href="./login.html" class="btn btn-iara-login px-4">LOGIN</a>
+						<a href="./login.html#cadastro" class="btn btn-iara-cadastro px-4">CADASTRAR</a>
 					</div>
 				</div>
-				<button class="botao-icone" aria-label="Carrinho de compras"><i
-						class="fa-solid fa-cart-shopping"></i></button>
-				<button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
-				<!--@TODO: OCULTAR quando o usuário estiver autenticado-->
-				<div class="botoesloginecadastro cabecalho-auth">
-					<a href="./login.html" class="botao-login">LOGIN</a>
-					<a href="./login.html#cadastro" class="botao-cadastro">CADASTRAR</a>
-				</div>
-				<!-- @TODO: Exibir quando o usuário estiver autenticado
-						<button class="perfil-usuario" aria-label="Menu de perfil do usuário">
-						<span class="perfil-usuario__avatar"></span>
-						<i class="fa-solid fa-chevron-down"></i>
-					</button> 
-					-->
-			</div>
-		</nav>
-	</header>
+			</nav>
+		</header>
 
 	<div class="secao-banner-xilogravura secao-banner-xilogravura--full">
 		<main>
+			
 			<!-- ================================= LOGIN / CADASTRO ================================= -->
 			<section class="autenticacao" id="cadastro" aria-label="Seção de Autenticação">
 				<div class="autenticacao__container">
@@ -168,7 +156,7 @@
 									<a href="#" class="autenticacao__link-esqueci">Esqueceu a senha?</a>
 								</div>
 								<button type="submit"
-									class="autenticacao__botao autenticacao__botao--primario">Entrar</button>
+									class="btn btn-iara-login w-100 py-2 mt-3 fs-5">Entrar</button>
 							</form>
 
 							<div class="autenticacao__alternar">
