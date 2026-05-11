@@ -146,7 +146,9 @@ main {
 }
 
 /* Base Comum dos Botões */
-.btn-iara-login, .btn-iara-cadastro, .btn-iara-compra {
+.btn-iara-login,
+.btn-iara-cadastro,
+.btn-iara-compra {
   font-family: var(--font-inter);
   font-weight: 800 !important;
   transition: all 0.3s ease;
@@ -171,17 +173,20 @@ main {
 }
 
 /* Estilo Amarelo Neon (Login, Entrar e Compra) */
-.btn-iara-login, .btn-iara-compra {
+.btn-iara-login,
+.btn-iara-compra {
   background-image: url("../img/pattern-secondary.svg");
   background-size: cover;
   background-blend-mode: overlay;
-  background-color: var(--color-secondary) !important;
-  color: var(--color-dark) !important; /* FORÇA O TEXTO A FICAR PRETO */
+  background-color: var(--color-secondary-20) !important;
+  color: var(--color-dark) !important;
   border: none !important;
 }
 
-.btn-iara-login:hover, .btn-iara-compra:hover,
-.btn-iara-login:focus-visible, .btn-iara-compra:focus-visible {
+.btn-iara-login:hover,
+.btn-iara-compra:hover,
+.btn-iara-login:focus-visible,
+.btn-iara-compra:focus-visible {
   background-image: url("../img/pattern-primary.svg") !important;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px var(--color-secondary-40);
@@ -193,8 +198,8 @@ main {
   background-image: url("../img/pattern-primary.svg");
   background-size: cover;
   background-blend-mode: overlay;
-  background-color: var(--color-primary) !important;
-  color: var(--color-light) !important; /* FORÇA O TEXTO A FICAR BRANCO */
+  background-color: var(--color-primary-20) !important;
+  color: var(--color-dark) !important;
   border: none !important;
 }
 
@@ -224,48 +229,51 @@ main {
 }
 
 .navbar-nav .nav-link {
-    transition: all 0.3s ease-in-out;
-    border-bottom: 3px solid transparent; /* Cria uma borda invisível para evitar "pulos" */
+  transition: all 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+  /* Cria uma borda invisível para evitar "pulos" */
 }
 
 /* Efeito ao passar o mouse (Hover) */
 .navbar-nav .nav-link:hover {
-    color: var(--color-primary) !important; 
-    border-bottom: 3px solid var(--color-primary); 
+  color: var(--color-primary) !important;
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .nav-link.active {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 /* Transição para os ícones*/
 .d-flex a.text-light i {
-    transition: transform 0.2s ease, color 0.2s ease;
+  transition: transform 0.2s ease, color 0.2s ease;
 }
 
 .d-flex a.text-light:hover i {
-    color: var(--color-primary) !important;
-    transform: scale(1.2); /* O ícone cresce levemente */
+  color: var(--color-primary) !important;
+  transform: scale(1.2);
+  /* O ícone cresce levemente */
 }
-  
+
 
 /* ==========================================================================
    CABECALHO E NAVEGACAO
    ========================================================================== */
-.btn-danger, .btn-warning {
-    border-radius: 8px;
-    background-image: url(/assets/img/pattern-primary.svg);
+.btn-danger,
+.btn-warning {
+  border-radius: 8px;
+  background-image: url(/assets/img/pattern-primary.svg);
 }
 
 .nav-link.active {
-    color: var(--color-primary)  !important; 
+  color: var(--color-primary) !important;
 }
 
 .navbar-custom {
-    background-color: var(--color-dark) !important; 
+  background-color: var(--color-dark) !important;
 }
 
-   .cabecalho-principal {
+.cabecalho-principal {
   background-color: var(--color-dark);
   height: 4.0625rem;
   display: flex;
@@ -1083,29 +1091,29 @@ main {
    RODAPE (FOOTER)
    ========================================================================== */
 .footer-custom {
-    background-color: var(--color-) !important; 
+  background-color: var(--color-) !important;
 }
 
 
 .footer-custom h6 {
-    letter-spacing: 2px;
-    font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
 }
 
 /* Estilo para os links */
 .footer-link {
-    color: var(--color-gray-light); 
-    text-decoration: none;
-    font-size: 0.95rem;
-    display: block;
-    margin-bottom: 12px;
-    transition: all 0.3s ease;
+  color: var(--color-gray-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
 }
 
 /* Transição ao passar o mouse (Hover) */
 .footer-link:hover {
-    color: var(--color-primary); 
-    padding-left: 5px;
+  color: var(--color-primary);
+  padding-left: 5px;
 }
 
 /*
