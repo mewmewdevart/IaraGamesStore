@@ -7,12 +7,12 @@
 .busca-jogos {
   width: 100%;
   margin-top: 3.75rem;
-  padding: 4rem;
+  padding: var(--section-padding-v);
   background-color: var(--color-dark-composition);
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid rgba(232, 236, 235, 0.05);
+  border-bottom: 1px solid var(--color-light-5);
 }
 
 .busca-jogos__container {
@@ -46,8 +46,8 @@
   background-color: var(--color-gray);
   border-radius: var(--radius-md);
   padding: 0.25rem 0.5rem;
-  border: 1px solid rgba(232, 236, 235, 0.1);
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--color-light-10);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .busca-jogos__btn-filtro {
@@ -55,7 +55,7 @@
   background-size: cover;
   background-blend-mode: overlay;
   color: var(--color-dark-composition);
-  border: 1px solid rgba(232, 236, 235, 0.2);
+  border: 1px solid var(--color-light-20);
   padding: 0 1.5rem;
   border-radius: var(--radius-md);
   font-weight: var(--weight-bold);
@@ -64,7 +64,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
 }
 
 .busca-jogos__btn-filtro:hover {
@@ -75,7 +75,7 @@
 
 .busca-jogos__input-wrapper:focus-within {
   border-color: var(--color-secondary);
-  box-shadow: 0 0 0 0.25rem rgba(252, 163, 17, 0.15);
+  box-shadow: 0 0 0 0.25rem var(--color-secondary-20);
 }
 
 .busca-jogos__input {
@@ -98,7 +98,7 @@
   height: 3rem;
   border-radius: var(--radius-sm);
   cursor: pointer;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,9 +133,9 @@
 .busca-jogos__filtro-toggle:checked~.busca-jogos__painel-filtros {
   max-height: 2000px;
   opacity: 1;
-  padding: 1.5rem;
+  padding: var(--space-lg);
   margin-top: 1rem;
-  border: 1px solid rgba(232, 236, 235, 0.1);
+  border: 1px solid var(--color-light-10);
 }
 
 .busca-jogos__filtro-grupo {
@@ -151,7 +151,7 @@
   text-transform: uppercase;
   font-weight: var(--weight-bold);
   letter-spacing: 0.05rem;
-  border-bottom: 1px solid rgba(232, 236, 235, 0.1);
+  border-bottom: 1px solid var(--color-light-10);
   padding-bottom: 0.25rem;
 }
 
@@ -162,7 +162,7 @@
   font-size: var(--text-sm);
   color: var(--color-light);
   cursor: pointer;
-  transition: color 0.2s;
+  transition: color var(--transition-fast);
 }
 
 .busca-jogos__filtro-opcao:hover {
@@ -185,13 +185,13 @@
 
 .busca-jogos__filtro-chip {
   background: var(--color-gray);
-  border: 1px solid rgba(232, 236, 235, 0.1);
+  border: 1px solid var(--color-light-10);
   padding: 0.25rem 0.75rem;
-  border-radius: 1rem;
+  border-radius: var(--radius-lg);
   font-size: var(--text-xs);
   cursor: pointer;
   color: var(--color-light);
-  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
 }
 
 .busca-jogos__filtro-chip:hover {
@@ -289,13 +289,13 @@
 .biblioteca__select {
   background-color: var(--color-dark-composition);
   color: var(--color-light);
-  border: 1px solid rgba(232, 236, 235, 0.2);
+  border: 1px solid var(--color-light-20);
   padding: 0.5rem 2.5rem 0.5rem 1rem;
   border-radius: var(--radius-md);
   font-family: inherit;
   font-size: var(--text-sm);
   cursor: pointer;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
 }
 
 .biblioteca__select:focus,
@@ -329,7 +329,7 @@
   border: none;
   background-color: var(--color-gray);
   color: var(--color-gray-light);
-  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
   text-decoration: none;
 }
 
