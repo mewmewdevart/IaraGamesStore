@@ -897,7 +897,6 @@ main {
   margin: 0;
   font-size: var(--text-lg);
   font-weight: var(--weight-bold);
-  text-transform: uppercase;
   color: var(--color-light);
   line-height: 1.1;
 }
