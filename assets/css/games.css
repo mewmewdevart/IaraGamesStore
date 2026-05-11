@@ -4,9 +4,11 @@
    PAGINA JOGOS: SEÇÃO BUSCA
    ========================================================================== */
 
+   .nav-link.active {
+    color: var(--color-primary)  !important; /* Cor exata do sublinhado */
+}
 .busca-jogos {
   width: 100%;
-  margin-top: 3.75rem;
   padding: var(--section-padding-v);
   background-color: var(--color-dark-composition);
   display: flex;

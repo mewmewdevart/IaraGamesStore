@@ -231,10 +231,49 @@ main {
   transform: translateY(-2px);
 }
 
+.navbar-nav .nav-link {
+    transition: all 0.3s ease-in-out;
+    border-bottom: 3px solid transparent; /* Cria uma borda invisível para evitar "pulos" */
+}
+
+/* Efeito ao passar o mouse (Hover) */
+.navbar-nav .nav-link:hover {
+    color: var(--color-primary) !important; 
+    border-bottom: 3px solid var(--color-primary); 
+}
+
+.nav-link.active {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Transição para os ícones*/
+.d-flex a.text-light i {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.d-flex a.text-light:hover i {
+    color: var(--color-primary) !important;
+    transform: scale(1.2); /* O ícone cresce levemente */
+}
+  
+
 /* ==========================================================================
    CABECALHO E NAVEGACAO
    ========================================================================== */
-.cabecalho-principal {
+.btn-danger, .btn-warning {
+    border-radius: 8px;
+    background-image: url(/assets/img/pattern-primary.svg);
+}
+
+.nav-link.active {
+    color: var(--color-primary)  !important; 
+}
+
+.navbar-custom {
+    background-color: var(--color-dark) !important; 
+}
+
+   .cabecalho-principal {
   background-color: var(--color-dark);
   height: 4.0625rem;
   display: flex;
@@ -414,7 +453,6 @@ main {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin-top: 4.0625rem;
   transition: padding var(--transition-slow);
 }
 
@@ -1052,6 +1090,33 @@ main {
 /* ==========================================================================
    RODAPE (FOOTER)
    ========================================================================== */
+.footer-custom {
+    background-color: var(--color-) !important; 
+}
+
+
+.footer-custom h6 {
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+/* Estilo para os links */
+.footer-link {
+    color: var(--color-gray-light); 
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Transição ao passar o mouse (Hover) */
+.footer-link:hover {
+    color: var(--color-primary); 
+    padding-left: 5px;
+}
+
+/*
 .footer {
   background-color: transparent;
   color: var(--color-gray-light);
@@ -1147,7 +1212,7 @@ main {
 
 .footer__disclaimer {
   text-transform: uppercase;
-}
+} */
 
 /* ==========================================================================
    UTILITARIOS E ACESSIBILIDADE (A11Y)
