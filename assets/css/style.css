@@ -162,7 +162,9 @@ main {
 
 /* Exceção para botões do menu */
 .cabecalho-principal .btn-iara-login,
-.cabecalho-principal .btn-iara-cadastro {
+.cabecalho-principal .btn-iara-cadastro,
+.navbar-custom .btn-iara-login,
+.navbar-custom .btn-iara-cadastro {
   height: 2.5rem;
   font-size: var(--text-sm);
   padding: 0 1.5rem;
