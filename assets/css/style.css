@@ -41,6 +41,7 @@
 
   /* Cores com Transparência (Variações Secondary) */
   --color-secondary-20: rgba(252, 163, 17, 0.2);
+  --color-secondary-40: rgba(252, 163, 17, 0.4);
   --color-secondary-70: rgba(252, 163, 17, 0.7);
 
   /* Cores com Transparência (Variações Dark) */
@@ -152,6 +153,19 @@ main {
   border-radius: var(--radius-md);
   text-transform: uppercase;
   text-decoration: none;
+  height: 3.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+}
+
+/* Exceção para botões do menu */
+.cabecalho-principal .btn-iara-login,
+.cabecalho-principal .btn-iara-cadastro {
+  height: 2.5rem;
+  font-size: var(--text-sm);
+  padding: 0 1.5rem;
 }
 
 /* Estilo Amarelo Neon (Login, Entrar e Compra) */
@@ -164,9 +178,11 @@ main {
   border: none !important;
 }
 
-.btn-iara-login:hover, .btn-iara-compra:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(252, 163, 17, 0.4);
+.btn-iara-login:hover, .btn-iara-compra:hover,
+.btn-iara-login:focus-visible, .btn-iara-compra:focus-visible {
+  background-image: url("../img/pattern-primary.svg") !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px var(--color-secondary-40);
   color: var(--color-dark) !important;
 }
 
@@ -180,39 +196,13 @@ main {
   border: none !important;
 }
 
-.btn-iara-cadastro:hover {
-  background-color: var(--color-secondary) !important;
-  color: var(--color-dark) !important;
-  box-shadow: 0 0 20px rgba(227, 74, 56, 0.4);
-}
-
 .btn-iara-cadastro:hover,
 .btn-iara-cadastro:focus-visible {
-  background-image: url("../img/pattern-primary.svg");
+  background-image: url("../img/pattern-secondary.svg") !important;
   background-color: var(--color-secondary) !important;
   color: var(--color-dark) !important;
-  border-color: var(--color-secondary) !important;
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(227, 74, 56, 0.4);
-}
-
-/* Botão de Compra Principal (Hero) */
-.btn-iara-compra {
-  background-image: url("../img/pattern-secondary.svg");
-  background-size: cover;
-  background-blend-mode: overlay;
-  background-color: var(--color-secondary) !important;
-  color: var(--color-dark) !important;
-  border: none !important;
-  border-radius: var(--radius-md);
-  transition: all 0.3s ease;
-}
-
-.btn-iara-compra:hover,
-.btn-iara-compra:focus-visible {
-  background-image: url("../img/pattern-primary.svg");
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(252, 163, 17, 0.4);
+  box-shadow: 0 4px 15px var(--color-primary-40);
 }
 
 /* Botão de Carrinho (Hero) */
@@ -332,6 +322,7 @@ main {
   font-weight: var(--weight-semibold);
   transition: color var(--transition-base);
   position: relative;
+  text-transform: uppercase;
 }
 
 .menu-navegacao__link::after {
@@ -1651,24 +1642,7 @@ main {
 /* ==========================================================================
    MEDIA QUERIES (A SOLUÇÃO DA QUEBRA EM TELAS MENORES)
    ========================================================================== */
-@media (max-width: 992px) {
-  .secao-momentos__grade {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card-momento {
-    aspect-ratio: auto;
-    min-height: 14rem;
-
-  }
-}
-
 @media (max-width: 576px) {
-  .secao-momentos__grade {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
   .card-momento {
     min-height: 12rem;
   }

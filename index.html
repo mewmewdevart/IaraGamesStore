@@ -82,7 +82,6 @@
 <body>
 	<main>
 		<h1 class="apenas-leitor">Iara Games - Os melhores indies brasileiros</h1>
-		<!-- <header class="cabecalho-principal"> -->
 			<header>
 		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom mb-0">
 <div class="container-fluid px-5">
@@ -117,16 +116,25 @@
     <div class="d-flex flex-column flex-lg-row align-items-center gap-3 ms-auto mt-3 mt-lg-0">
         
         <!-- Grupo de Ícones -->
-        <div class="d-flex gap-3">
-        <a href="#" class="text-light fs-5"><i class="bi bi-search"></i></a>
-        <a href="#" class="text-light fs-5"><i class="bi bi-cart"></i></a>
-        <a href="#" class="text-light fs-5"><i class="bi bi-bell"></i></a>
+        <div class="d-flex align-items-center gap-3">
+          <div class="busca">
+            <input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
+            <label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </label>
+            <div class="busca__janela">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
+            </div>
+          </div>
+          <button class="botao-icone" aria-label="Carrinho de compras"><i class="fa-solid fa-cart-shopping"></i></button>
+          <button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
         </div>
 
         <!-- Botões de Ação -->
         <div class="d-flex flex-column flex-lg-row gap-2 w-100 w-lg-auto">
-        <a href="/login.html" class="btn btn-warning fw-bold px-4 text-dark">LOGIN</a>
-        <a href="/login.html#cadastro" class="btn btn-danger fw-bold px-4">CADASTRAR</a>
+        <a href="/login.html" class="btn btn-iara-login fw-bold px-4">Login</a>
+        <a href="/login.html#cadastro" class="btn btn-iara-cadastro fw-bold px-4">Cadastrar</a>
         </div>
 
     </div>
