@@ -103,7 +103,6 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 ## Integrantes
 
 * **Ingrid Silva de Lima** — [rm570149@fiap.com.br](mailto:rm570149@fiap.com.br)
-* **Julia Souza Gonçalves** — [rm571871@fiap.com.br](mailto:rm571871@fiap.com.br)
 * **Larissa Cristina Benedito** — [rm570970@fiap.com.br](mailto:rm570970@fiap.com.br)
 * **Mayla Mayumi Motobe** — [rm571213@fiap.com.br](mailto:rm571213@fiap.com.br)
 
