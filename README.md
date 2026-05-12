@@ -23,13 +23,13 @@
 
 ### Desktop
 <p align="center">
-  <img width="2696" alt="Preview do projeto em formato desktop" src="https://github.com/user-attachments/assets/080e46cf-cf57-4afd-a7be-d509993d8265" />
+  <img width="2696" alt="Preview do projeto em formato desktop" src="./assets/img/Tela Inicial_README.svg" />
 </p>
 
 
 ### Mobile
 <p align="center">
-  <img width="331" alt="Preview do projeto em formato mobile" src="https://github.com/user-attachments/assets/addf665b-747d-47e3-ab2b-f879722a99e9" />
+  <img width="331" alt="Preview do projeto em formato mobile" src="./assets/img/Tela Inicial Mobile_README.png" />
 </p>
 
 
