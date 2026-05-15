@@ -82,67 +82,72 @@
 <body>
 	<main>
 		<h1 class="apenas-leitor">Iara Games - Os melhores indies brasileiros</h1>
-			<header>
-				<!--NAVBAR COM O BOOTSTRAP-->
-		<nav class="navbar navbar-expand-lg navbar-dark navbar-custom mb-0">
-<div class="container-fluid px-5">
-    
-    <!-- Logo (Sempre visível) -->
-    <a class="navbar-brand me-4" href="./index.html">
-    <img src="./assets/img/logo_1.svg" alt="Iara Games" width="60">
-    </a>
+		<header>
+			<!--NAVBAR COM O BOOTSTRAP-->
+			<nav class="navbar navbar-expand-lg navbar-dark navbar-custom mb-0 fixed-top">
+				<div class="container-fluid px-5">
 
-    <!-- Botão Hamburguer (Mobile) -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
+					<!-- Logo (Sempre visível) -->
+					<a class="navbar-brand me-4" href="./index.html">
+						<img src="./assets/img/logo_1.svg" alt="Iara Games" width="60">
+					</a>
 
-    <!-- Área de Colapso -->
-    <div class="collapse navbar-collapse" id="navbarNav">
+					<!-- Botão Hamburguer (Mobile) -->
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
 
-<!-- Links Principais -->
-    <ul class="navbar-nav text-uppercase fw-bold">
-        <li class="nav-item">
-        <a class="nav-link active border-bottom border-danger border-3 mx-2" href="./index.html">Loja</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link mx-2" href="./games.html">Jogos</a>
-        </li>
-        <li class="nav-item">
-        <a class="nav-link mx-2" href="#">Comunidade</a>
-        </li>
-    </ul>
+					<!-- Área de Colapso -->
+					<div class="collapse navbar-collapse" id="navbarNav">
 
-<!-- Ícones e Botões (Ficam dentro do menu no mobile, e à direita no desktop) -->
-    <div class="d-flex flex-column flex-lg-row align-items-center gap-3 ms-auto mt-3 mt-lg-0">
-        
-        <!-- Grupo de Ícones -->
-        <div class="d-flex align-items-center gap-3">
-          <div class="busca">
-            <input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
-            <label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </label>
-            <div class="busca__janela">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
-            </div>
-          </div>
-          <button class="botao-icone" aria-label="Carrinho de compras"><i class="fa-solid fa-cart-shopping"></i></button>
-          <button class="botao-icone" aria-label="Notificações"><i class="fa-solid fa-bell"></i></button>
-        </div>
+						<!-- Links Principais -->
+						<ul class="navbar-nav text-uppercase fw-bold">
+							<li class="nav-item">
+								<a class="nav-link active border-bottom border-danger border-3 mx-2"
+									href="./index.html">Loja</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link mx-2" href="./games.html">Jogos</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link mx-2" href="#">Comunidade</a>
+							</li>
+						</ul>
 
-        <!-- Botões de Ação -->
-        <div class="d-flex flex-column flex-lg-row gap-2 w-100 w-lg-auto">
-        <a href="./login.html" class="btn btn-iara-login fw-bold px-4">Login</a>
-        <a href="./login.html#cadastro" class="btn btn-iara-cadastro fw-bold px-4">Cadastrar</a>
-        </div>
-    </div>
-    </div>
+						<!-- Ícones e Botões (Ficam dentro do menu no mobile, e à direita no desktop) -->
+						<div class="d-flex flex-column flex-lg-row align-items-center gap-3 ms-auto mt-3 mt-lg-0">
 
-</div>
-</nav>
-</header>
+							<!-- Grupo de Ícones -->
+							<div class="d-flex align-items-center gap-3">
+								<div class="busca">
+									<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
+									<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
+										<i class="fa-solid fa-magnifying-glass"></i>
+									</label>
+									<div class="busca__janela">
+										<i class="fa-solid fa-magnifying-glass"></i>
+										<input type="text" placeholder="Jogos, categorias etc"
+											aria-label="Pesquisar jogos">
+									</div>
+								</div>
+								<button class="botao-icone" aria-label="Carrinho de compras"><i
+										class="fa-solid fa-cart-shopping"></i></button>
+								<button class="botao-icone" aria-label="Notificações"><i
+										class="fa-solid fa-bell"></i></button>
+							</div>
+
+							<!-- Botões de Ação -->
+							<div class="d-flex flex-column flex-lg-row gap-2 w-100 w-lg-auto">
+								<a href="./login.html" class="btn btn-iara-login fw-bold px-4">Login</a>
+								<a href="./login.html#cadastro" class="btn btn-iara-cadastro fw-bold px-4">Cadastrar</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</nav>
+		</header>
 		<!-- ================================= HERO / CARROSSEL PRINCIPAL ================================= -->
 		<section class="carrossel-principal" aria-label="Destaque Principal">
 			<div class="carrossel-principal__slide">
@@ -162,18 +167,21 @@
 
 						<div class="row g-2 mt-3" style="max-width: 18rem;">
 							<div class="col-8">
-								<button onclick="window.location.href = '#'" class="btn btn-iara-compra w-100 h-100 d-flex flex-column justify-content-center align-items-start px-3 py-2">
+								<button onclick="window.location.href = '#'"
+									class="btn btn-iara-compra w-100 h-100 d-flex flex-column justify-content-center align-items-start px-3 py-2">
 									<span style="font-size: 0.75rem;">Comprar</span>
 									<span class="fw-bold fs-5 text-nowrap">R$ 55,99</span>
 								</button>
 							</div>
 							<div class="col-4">
-								<button onclick="window.location.href = '#'" class="btn btn-iara-carrinho w-100 h-100 d-flex justify-content-center align-items-center" aria-label="Adicionar ao carrinho">
+								<button onclick="window.location.href = '#'"
+									class="btn btn-iara-carrinho w-100 h-100 d-flex justify-content-center align-items-center"
+									aria-label="Adicionar ao carrinho">
 									<i class="fa-solid fa-cart-shopping fs-5"></i>
 								</button>
 							</div>
 						</div>
-					</div> 
+					</div>
 
 					<div class="carrossel-principal__classificacao-indicativa">
 						<div>
@@ -287,254 +295,265 @@
 
 			<div class="secao-consumidor__grade">
 				<div class="row g-3 mx-0 mb-3">
-				<div class="col-12 col-lg-6">
-					<article class="secao-consumidor__card card border-0 text-light secao-consumidor__card--destaque w-100">
-						<div class="secao-consumidor__overlay"></div>
-						<img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1062110/header.jpg?t=1773699619"
-							alt="Capa: Unsighted" class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
+					<div class="col-12 col-lg-6">
+						<article
+							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--destaque w-100">
+							<div class="secao-consumidor__overlay"></div>
+							<img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1062110/header.jpg?t=1773699619"
+								alt="Capa: Unsighted"
+								class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
 
-						<span
-							class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-25%</span>
+							<span
+								class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-25%</span>
 
-						<div
-							class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
-							<h3 class="secao-consumidor__nome-jogo card-title">
-								<a href="#" class="link-cobre-card">Unsighted</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Studio Pixel Punk</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">4.2</span>
-								<span class="secao-consumidor__total-votos">(412)</span>
+							<div
+								class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
+								<h3 class="secao-consumidor__nome-jogo card-title">
+									<a href="#" class="link-cobre-card">Unsighted</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Studio Pixel Punk</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">4.2</span>
+									<span class="secao-consumidor__total-votos">(412)</span>
+								</div>
+
+								<div class="secao-consumidor__bloco-compra">
+									<span class="preco-antigo">R$ 139,07</span>
+									<span class="secao-consumidor__preco-novo">R$ 104,30</span>
+								</div>
 							</div>
+						</article>
+					</div>
 
-							<div class="secao-consumidor__bloco-compra">
-								<span class="preco-antigo">R$ 139,07</span>
-								<span class="secao-consumidor__preco-novo">R$ 104,30</span>
+					<div class="col-12 col-md-4 col-lg-2">
+						<article
+							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
+							<div class="secao-consumidor__overlay"></div>
+							<img src="./assets/img/capa-jogo-arida.png" alt="Capa: Árida Backlands Awakening"
+								class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
+
+							<span
+								class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-30%</span>
+
+							<div
+								class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
+								<h3 class="secao-consumidor__nome-jogo card-title">
+									<a href="#" class="link-cobre-card">Árida: Backlands Awakening</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Aoca Game Lab</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">4.1</span>
+									<span class="secao-consumidor__total-votos">(324)</span>
+								</div>
+								<div class="secao-consumidor__bloco-compra">
+									<span class="preco-antigo">R$ 19,98</span>
+									<span class="secao-consumidor__preco-novo">R$ 13,99</span>
+								</div>
 							</div>
-						</div>
-					</article>
+						</article>
+					</div>
+
+					<div class="col-12 col-md-4 col-lg-2">
+						<article
+							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
+							<div class="secao-consumidor__overlay"></div>
+							<img src="./assets/img/capa-jogo-odallus-the-dark-call.jpg"
+								alt="Capa: Odallus The Dark Call"
+								class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
+
+							<span
+								class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-40%</span>
+
+							<div
+								class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
+								<h3 class="secao-consumidor__nome-jogo card-title">
+									<a href="#" class="link-cobre-card">Odallus: The Dark Call</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">JoyMasher</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">3.9</span>
+									<span class="secao-consumidor__total-votos">(215)</span>
+								</div>
+								<div class="secao-consumidor__bloco-compra">
+									<span class="preco-antigo">R$ 86,92</span>
+									<span class="secao-consumidor__preco-novo">R$ 52,15</span>
+								</div>
+							</div>
+						</article>
+					</div>
+
+					<div class="col-12 col-md-4 col-lg-2">
+						<article
+							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
+							<div class="secao-consumidor__overlay"></div>
+							<img src="./assets/img/capa-jogo-fobia-st-dinfna-hotel.jpg"
+								alt="Capa: Fobia St. Dinfna Hotel"
+								class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
+
+							<span
+								class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-50%</span>
+
+							<div
+								class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
+
+								<h3 class="secao-consumidor__nome-jogo card-title">
+									<a href="#" class="link-cobre-card">Fobia - St. Dinfna Hotel</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Pulsatrix Studios</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">4.5</span>
+									<span class="secao-consumidor__total-votos">(512)</span>
+								</div>
+								<div class="secao-consumidor__bloco-compra">
+									<span class="preco-antigo">R$ 52,10</span>
+									<span class="secao-consumidor__preco-novo">R$ 26,05</span>
+								</div>
+							</div>
+						</article>
+					</div>
 				</div>
 
-				<div class="col-12 col-md-4 col-lg-2">
-					<article class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
-						<div class="secao-consumidor__overlay"></div>
-						<img src="./assets/img/capa-jogo-arida.png" alt="Capa: Árida Backlands Awakening"
-							class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
-
-						<span
-							class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-30%</span>
-
-						<div
-							class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
-							<h3 class="secao-consumidor__nome-jogo card-title">
-								<a href="#" class="link-cobre-card">Árida: Backlands Awakening</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Aoca Game Lab</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">4.1</span>
-								<span class="secao-consumidor__total-votos">(324)</span>
+				<!-- ================================= SEÇÃO : DIA DO CONSUMIDOR 2/2 ================================= -->
+				<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 mx-0">
+					<!-- Card 1: Horizon Chase Turbo -->
+					<div class="secao-consumidor__envolucro-cartao col">
+						<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
+							<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">
+								-10%
 							</div>
-							<div class="secao-consumidor__bloco-compra">
-								<span class="preco-antigo">R$ 19,98</span>
-								<span class="secao-consumidor__preco-novo">R$ 13,99</span>
+							<div class="secao-consumidor__imagem-envolucro">
+								<img src="./assets/img/capa-jogo-horizon-chase-turbo.jpeg"
+									class="secao-consumidor__imagem-lista" alt="Horizon Chase Turbo" />
 							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="col-12 col-md-4 col-lg-2">
-					<article class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
-						<div class="secao-consumidor__overlay"></div>
-						<img src="./assets/img/capa-jogo-odallus-the-dark-call.jpg" alt="Capa: Odallus The Dark Call"
-							class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
-
-						<span
-							class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-40%</span>
-
-						<div
-							class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
-							<h3 class="secao-consumidor__nome-jogo card-title">
-								<a href="#" class="link-cobre-card">Odallus: The Dark Call</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">JoyMasher</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">3.9</span>
-								<span class="secao-consumidor__total-votos">(215)</span>
+							<div class="secao-consumidor__info-lista card-body d-flex flex-column">
+								<h3 class="secao-consumidor__titulo-lista card-title">
+									<a href="#" class="link-cobre-card">Horizon Chase Turbo</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Aquiris Game Studio</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">3.8</span>
+									<span class="secao-consumidor__total-votos">(412)</span>
+								</div>
+								<div class="secao-consumidor__bloco-preco">
+									<span class="preco-antigo">R$ 115,94</span>
+									<span class="secao-consumidor__preco-desconto">R$ 104,35</span>
+								</div>
 							</div>
-							<div class="secao-consumidor__bloco-compra">
-								<span class="preco-antigo">R$ 86,92</span>
-								<span class="secao-consumidor__preco-novo">R$ 52,15</span>
+						</article>
+					</div>
+					<!-- Card 2: Knights of Pen & Paper -->
+					<div class="secao-consumidor__envolucro-cartao col">
+						<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
+							<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">
+								-20%
 							</div>
-						</div>
-					</article>
-				</div>
-
-				<div class="col-12 col-md-4 col-lg-2">
-					<article class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
-						<div class="secao-consumidor__overlay"></div>
-						<img src="./assets/img/capa-jogo-fobia-st-dinfna-hotel.jpg" alt="Capa: Fobia St. Dinfna Hotel"
-							class="secao-consumidor__imagem-fundo card-img h-100 object-fit-cover" />
-
-						<span
-							class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-50%</span>
-
-						<div
-							class="secao-consumidor__conteudo card-img-overlay d-flex flex-column justify-content-end border-0 z-2 h-100">
-
-							<h3 class="secao-consumidor__nome-jogo card-title">
-								<a href="#" class="link-cobre-card">Fobia - St. Dinfna Hotel</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Pulsatrix Studios</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">4.5</span>
-								<span class="secao-consumidor__total-votos">(512)</span>
+							<div class="secao-consumidor__imagem-envolucro">
+								<img src="./assets/img/capa-jogo-knights-of-pen-paper.png"
+									class="secao-consumidor__imagem-lista" alt="Knights of Pen & Paper" />
 							</div>
-							<div class="secao-consumidor__bloco-compra">
-								<span class="preco-antigo">R$ 52,10</span>
-								<span class="secao-consumidor__preco-novo">R$ 26,05</span>
+							<div class="secao-consumidor__info-lista card-body d-flex flex-column">
+								<h3 class="secao-consumidor__titulo-lista card-title">
+									<a href="#" class="link-cobre-card">Knights of Pen & Paper</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Behold Studios</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">3.7</span>
+									<span class="secao-consumidor__total-votos">(289)</span>
+								</div>
+								<div class="secao-consumidor__bloco-preco">
+									<span class="preco-antigo">R$ 32,56</span>
+									<span class="secao-consumidor__preco-desconto">R$ 26,05</span>
+								</div>
 							</div>
-						</div>
-					</article>
-				</div>
-			</div>
-
-			<!-- ================================= SEÇÃO : DIA DO CONSUMIDOR 2/2 ================================= -->
-			<div
-				class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-3 mx-0">
-				<!-- Card 1: Horizon Chase Turbo -->
-				<div class="secao-consumidor__envolucro-cartao col">
-					<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
-						<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-10%
-						</div>
-						<div class="secao-consumidor__imagem-envolucro">
-							<img src="./assets/img/capa-jogo-horizon-chase-turbo.jpeg"
-								class="secao-consumidor__imagem-lista" alt="Horizon Chase Turbo" />
-						</div>
-						<div class="secao-consumidor__info-lista card-body d-flex flex-column">
-							<h3 class="secao-consumidor__titulo-lista card-title">
-								<a href="#" class="link-cobre-card">Horizon Chase Turbo</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Aquiris Game Studio</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">3.8</span>
-								<span class="secao-consumidor__total-votos">(412)</span>
+						</article>
+					</div>
+					<!-- Card 3: Mark of the Deep -->
+					<div class="secao-consumidor__envolucro-cartao col">
+						<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
+							<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">
+								-15%
 							</div>
-							<div class="secao-consumidor__bloco-preco">
-								<span class="preco-antigo">R$ 115,94</span>
-								<span class="secao-consumidor__preco-desconto">R$ 104,35</span>
+							<div class="secao-consumidor__imagem-envolucro">
+								<img src="./assets/img/capa-jogo-mark-of-the-deep.jpg"
+									class="secao-consumidor__imagem-lista" alt="Mark of the Deep" />
 							</div>
-						</div>
-					</article>
-				</div>
-				<!-- Card 2: Knights of Pen & Paper -->
-				<div class="secao-consumidor__envolucro-cartao col">
-					<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
-						<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-20%
-						</div>
-						<div class="secao-consumidor__imagem-envolucro">
-							<img src="./assets/img/capa-jogo-knights-of-pen-paper.png"
-								class="secao-consumidor__imagem-lista" alt="Knights of Pen & Paper" />
-						</div>
-						<div class="secao-consumidor__info-lista card-body d-flex flex-column">
-							<h3 class="secao-consumidor__titulo-lista card-title">
-								<a href="#" class="link-cobre-card">Knights of Pen & Paper</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Behold Studios</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">3.7</span>
-								<span class="secao-consumidor__total-votos">(289)</span>
+							<div class="secao-consumidor__info-lista card-body d-flex flex-column">
+								<h3 class="secao-consumidor__titulo-lista card-title">
+									<a href="#" class="link-cobre-card">Mark of the Deep</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Mad Mimic</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">4.0</span>
+									<span class="secao-consumidor__total-votos">(156)</span>
+								</div>
+								<div class="secao-consumidor__bloco-preco">
+									<span class="preco-antigo">R$ 122,70</span>
+									<span class="secao-consumidor__preco-desconto">R$ 104,30</span>
+								</div>
 							</div>
-							<div class="secao-consumidor__bloco-preco">
-								<span class="preco-antigo">R$ 32,56</span>
-								<span class="secao-consumidor__preco-desconto">R$ 26,05</span>
+						</article>
+					</div>
+					<!-- Card 4: A Lenda do Herói -->
+					<div class="secao-consumidor__envolucro-cartao col">
+						<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
+							<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">
+								-20%
 							</div>
-						</div>
-					</article>
-				</div>
-				<!-- Card 3: Mark of the Deep -->
-				<div class="secao-consumidor__envolucro-cartao col">
-					<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
-						<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-15%
-						</div>
-						<div class="secao-consumidor__imagem-envolucro">
-							<img src="./assets/img/capa-jogo-mark-of-the-deep.jpg"
-								class="secao-consumidor__imagem-lista" alt="Mark of the Deep" />
-						</div>
-						<div class="secao-consumidor__info-lista card-body d-flex flex-column">
-							<h3 class="secao-consumidor__titulo-lista card-title">
-								<a href="#" class="link-cobre-card">Mark of the Deep</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Mad Mimic</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">4.0</span>
-								<span class="secao-consumidor__total-votos">(156)</span>
+							<div class="secao-consumidor__imagem-envolucro">
+								<img src="./assets/img/capa-jogo-a-lenda-do-heroi.jpg"
+									class="secao-consumidor__imagem-lista" alt="A Lenda do Herói" />
 							</div>
-							<div class="secao-consumidor__bloco-preco">
-								<span class="preco-antigo">R$ 122,70</span>
-								<span class="secao-consumidor__preco-desconto">R$ 104,30</span>
+							<div class="secao-consumidor__info-lista card-body d-flex flex-column">
+								<h3 class="secao-consumidor__titulo-lista card-title">
+									<a href="#" class="link-cobre-card">A Lenda do Herói</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Dumativa</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">4.3</span>
+									<span class="secao-consumidor__total-votos">(872)</span>
+								</div>
+								<div class="secao-consumidor__bloco-preco">
+									<span class="preco-antigo">R$ 52,14</span>
+									<span class="secao-consumidor__preco-desconto">R$ 41,71</span>
+								</div>
 							</div>
-						</div>
-					</article>
-				</div>
-				<!-- Card 4: A Lenda do Herói -->
-				<div class="secao-consumidor__envolucro-cartao col">
-					<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
-						<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-20%
-						</div>
-						<div class="secao-consumidor__imagem-envolucro">
-							<img src="./assets/img/capa-jogo-a-lenda-do-heroi.jpg"
-								class="secao-consumidor__imagem-lista" alt="A Lenda do Herói" />
-						</div>
-						<div class="secao-consumidor__info-lista card-body d-flex flex-column">
-							<h3 class="secao-consumidor__titulo-lista card-title">
-								<a href="#" class="link-cobre-card">A Lenda do Herói</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Dumativa</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">4.3</span>
-								<span class="secao-consumidor__total-votos">(872)</span>
+						</article>
+					</div>
+					<!-- Card 5: Enigma do Medo -->
+					<div class="secao-consumidor__envolucro-cartao col">
+						<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
+							<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">
+								-15%
 							</div>
-							<div class="secao-consumidor__bloco-preco">
-								<span class="preco-antigo">R$ 52,14</span>
-								<span class="secao-consumidor__preco-desconto">R$ 41,71</span>
+							<div class="secao-consumidor__imagem-envolucro">
+								<img src="./assets/img/capa-jogo-enigma-do-medo.jpg"
+									class="secao-consumidor__imagem-lista" alt="Enigma do Medo" />
 							</div>
-						</div>
-					</article>
-				</div>
-				<!-- Card 5: Enigma do Medo -->
-				<div class="secao-consumidor__envolucro-cartao col">
-					<article class="secao-consumidor__cartao-lista card border-0 h-100 text-light">
-						<div class="secao-consumidor__selo-desconto badge position-absolute top-0 end-0 m-3 z-2">-15%
-						</div>
-						<div class="secao-consumidor__imagem-envolucro">
-							<img src="./assets/img/capa-jogo-enigma-do-medo.jpg" class="secao-consumidor__imagem-lista"
-								alt="Enigma do Medo" />
-						</div>
-						<div class="secao-consumidor__info-lista card-body d-flex flex-column">
-							<h3 class="secao-consumidor__titulo-lista card-title">
-								<a href="#" class="link-cobre-card">Enigma do Medo</a>
-							</h3>
-							<p class="secao-consumidor__estudio card-text">Pulsatrix Studios</p>
-							<div class="secao-consumidor__avaliacao">
-								<span class="secao-consumidor__icone-estrela">★</span>
-								<span class="secao-consumidor__nota">4.4</span>
-								<span class="secao-consumidor__total-votos">(1204)</span>
+							<div class="secao-consumidor__info-lista card-body d-flex flex-column">
+								<h3 class="secao-consumidor__titulo-lista card-title">
+									<a href="#" class="link-cobre-card">Enigma do Medo</a>
+								</h3>
+								<p class="secao-consumidor__estudio card-text">Pulsatrix Studios</p>
+								<div class="secao-consumidor__avaliacao">
+									<span class="secao-consumidor__icone-estrela">★</span>
+									<span class="secao-consumidor__nota">4.4</span>
+									<span class="secao-consumidor__total-votos">(1204)</span>
+								</div>
+								<div class="secao-consumidor__bloco-preco">
+									<span class="preco-antigo">R$ 61,35</span>
+									<span class="secao-consumidor__preco-desconto">R$ 52,15</span>
+								</div>
 							</div>
-							<div class="secao-consumidor__bloco-preco">
-								<span class="preco-antigo">R$ 61,35</span>
-								<span class="secao-consumidor__preco-desconto">R$ 52,15</span>
-							</div>
-						</div>
-					</article>
-				</div>
+						</article>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -702,72 +721,75 @@
 				</div>
 			</div>
 		</section>
-		
+
 		<!-- ================================= SEÇÃO : RODAPE ================================= -->
 		<footer class="footer-custom bg-dark text-light pt-5 pb-3">
-<div class="container-fluid px-5">
-    <div class="row justify-content-between">
+			<div class="container-fluid px-5">
+				<div class="row justify-content-between">
 
-    <div class="col-lg-4 mb-4 mb-lg-0">
-        <h4 class="fw-bold text-uppercase mb-3">Iara Games</h4>
-        <p class="small fw-bold text-warning mb-4">JOGOS DO BRASIL • PARA O BRASIL</p>
-        <p class="text-secondary pe-lg-5" style="font-size: 0.9rem; line-height: 1.6;">
-        Plataforma dedicada exclusivamente a desenvolvedores independentes brasileiros. 
-        Cada jogo aqui é uma expressão autêntica da nossa cultura e criatividade nacional.
-        </p>
-    </div>
+					<div class="col-lg-4 mb-4 mb-lg-0">
+						<h4 class="fw-bold text-uppercase mb-3">Iara Games</h4>
+						<p class="small fw-bold text-warning mb-4">JOGOS DO BRASIL • PARA O BRASIL</p>
+						<p class="text-secondary pe-lg-5" style="font-size: 0.9rem; line-height: 1.6;">
+							Plataforma dedicada exclusivamente a desenvolvedores independentes brasileiros.
+							Cada jogo aqui é uma expressão autêntica da nossa cultura e criatividade nacional.
+						</p>
+					</div>
 
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-        <h6 class="fw-bold text-uppercase mb-4">Plataforma</h6>
-        <ul class="list-unstyled">
-        <li><a href="#" class="footer-link">Loja</a></li>
-        <li><a href="#" class="footer-link">Mais Vendidos</a></li>
-        <li><a href="#" class="footer-link">Lançamentos</a></li>
-        <li><a href="#" class="footer-link">Promoções</a></li>
-        </ul>
-    </div>
+					<div class="col-6 col-md-3 col-lg-2 mb-4">
+						<h6 class="fw-bold text-uppercase mb-4">Plataforma</h6>
+						<ul class="list-unstyled">
+							<li><a href="#" class="footer-link">Loja</a></li>
+							<li><a href="#" class="footer-link">Mais Vendidos</a></li>
+							<li><a href="#" class="footer-link">Lançamentos</a></li>
+							<li><a href="#" class="footer-link">Promoções</a></li>
+						</ul>
+					</div>
 
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-        <h6 class="fw-bold text-uppercase mb-4">Comunidade</h6>
-        <ul class="list-unstyled">
-        <li><a href="#" class="footer-link">Fórum</a></li>
-        <li><a href="#" class="footer-link">Desenvolvedores</a></li>
-        <li><a href="#" class="footer-link">Publicar Jogo</a></li>
-        <li><a href="#" class="footer-link">Blog</a></li>
-        </ul>
-    </div>
+					<div class="col-6 col-md-3 col-lg-2 mb-4">
+						<h6 class="fw-bold text-uppercase mb-4">Comunidade</h6>
+						<ul class="list-unstyled">
+							<li><a href="#" class="footer-link">Fórum</a></li>
+							<li><a href="#" class="footer-link">Desenvolvedores</a></li>
+							<li><a href="#" class="footer-link">Publicar Jogo</a></li>
+							<li><a href="#" class="footer-link">Blog</a></li>
+						</ul>
+					</div>
 
-    <div class="col-6 col-md-3 col-lg-2 mb-4">
-        <h6 class="fw-bold text-uppercase mb-4">Suporte</h6>
-        <ul class="list-unstyled">
-        <li><a href="#" class="footer-link">Central de Ajuda</a></li>
-        <li><a href="#" class="footer-link">Abrir Ticket</a></li>
-        <li><a href="#" class="footer-link">Privacidade</a></li>
-        <li><a href="#" class="footer-link">Termos de Uso</a></li>
-        </ul>
-    </div>
+					<div class="col-6 col-md-3 col-lg-2 mb-4">
+						<h6 class="fw-bold text-uppercase mb-4">Suporte</h6>
+						<ul class="list-unstyled">
+							<li><a href="#" class="footer-link">Central de Ajuda</a></li>
+							<li><a href="#" class="footer-link">Abrir Ticket</a></li>
+							<li><a href="#" class="footer-link">Privacidade</a></li>
+							<li><a href="#" class="footer-link">Termos de Uso</a></li>
+						</ul>
+					</div>
 
-    </div>
+				</div>
 
-    <hr class="border-secondary my-4 opacity-25">
+				<hr class="border-secondary my-4 opacity-25">
 
-    <div class="row align-items-center">
-    <div class="col-md-6 mb-3 mb-md-0">
-        <p class="small text-secondary mb-0 text-uppercase">&copy; 2026 Iara Games • Todos os direitos reservados • Made in Brazil <small class="fw-bold">BR</small></p>
-    </div>
-    <div class="col-md-6 text-md-end">
-        <p class="small text-secondary mb-0 text-uppercase" style="font-size: 0.75rem; letter-spacing: 1px;">Plataforma exclusiva para desenvolvedoras brasileiras independentes</p>
-	</div>
-    </div>
-	</div>
-</footer>
-	
-	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-		integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-		crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-		integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-		crossorigin="anonymous"></script>
+				<div class="row align-items-center">
+					<div class="col-md-6 mb-3 mb-md-0">
+						<p class="small text-secondary mb-0 text-uppercase">&copy; 2026 Iara Games • Todos os direitos
+							reservados • Made in Brazil <small class="fw-bold">BR</small></p>
+					</div>
+					<div class="col-md-6 text-md-end">
+						<p class="small text-secondary mb-0 text-uppercase"
+							style="font-size: 0.75rem; letter-spacing: 1px;">Plataforma exclusiva para desenvolvedoras
+							brasileiras independentes</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+			integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+			crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+			integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+			crossorigin="anonymous"></script>
 
 </body>
 

@@ -20,14 +20,22 @@
   --text-5xl: 3rem;
 
   /* Cores Base */
-  --color-primary: rgb(227, 74, 56); /* #e34a38 */
-  --color-secondary: rgb(252, 163, 17); /* #fca311 */
-  --color-dark: rgb(15, 23, 20); /* #0f1714 */
-  --color-dark-composition: rgb(18, 32, 24); /* #122018 */
-  --color-light: rgb(232, 236, 235); /* #e8eceb */
-  --color-gray: rgb(44, 46, 48); /* #2c2e30 */
-  --color-gray-light: rgba(232, 236, 235, 0.7); /* #e8ecebb3 */
-  --color-success: rgb(76, 175, 80); /* #4caf50 */
+  --color-primary: rgb(227, 74, 56);
+  /* #e34a38 */
+  --color-secondary: rgb(252, 163, 17);
+  /* #fca311 */
+  --color-dark: rgb(15, 23, 20);
+  /* #0f1714 */
+  --color-dark-composition: rgb(18, 32, 24);
+  /* #122018 */
+  --color-light: rgb(232, 236, 235);
+  /* #e8eceb */
+  --color-gray: rgb(44, 46, 48);
+  /* #2c2e30 */
+  --color-gray-light: rgba(232, 236, 235, 0.7);
+  /* #e8ecebb3 */
+  --color-success: rgb(76, 175, 80);
+  /* #4caf50 */
 
   /* Cores com Transparência (Variações Light) */
   --color-light-5: rgba(232, 236, 235, 0.05);
@@ -455,6 +463,7 @@ main {
   width: 100%;
   overflow: hidden;
   transition: padding var(--transition-slow);
+  margin-top: 4.0625rem;
 }
 
 .carrossel-principal__slide {
@@ -589,7 +598,7 @@ main {
 
 @media (max-width: 900px) {
   .carrossel-principal__conteudo {
-    padding-top: 2rem;
+    padding-top: 1.2rem;
     max-width: 100%;
   }
 
@@ -633,7 +642,7 @@ main {
 .carrossel-principal__indicadores {
   position: absolute;
   left: 5rem;
-  top: 20%;
+  top: 17%;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;

@@ -4,9 +4,11 @@
    PAGINA JOGOS: SEÇÃO BUSCA
    ========================================================================== */
 
-   .nav-link.active {
-    color: var(--color-primary)  !important; /* Cor exata do sublinhado */
+.nav-link.active {
+  color: var(--color-primary) !important;
+  /* Cor exata do sublinhado */
 }
+
 .busca-jogos {
   width: 100%;
   padding: var(--section-padding-v);
@@ -24,6 +26,7 @@
   flex-direction: column;
   gap: 1.5rem;
   align-items: center;
+  margin-top: 4.0625rem;
 }
 
 .busca-jogos__titulo {
@@ -210,9 +213,13 @@
 
 @media (max-width: 900px) {
   .busca-jogos {
-    padding-top: calc(4.0625rem + 2.5rem);
+    padding-top: 4.0625rem;
     padding-left: var(--section-padding-h);
     padding-right: var(--section-padding-h);
+  }
+
+  .busca-jogos__btn-filtro {
+    padding: 1rem;
   }
 
   .busca-jogos__titulo {
