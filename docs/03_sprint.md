@@ -1,4 +1,4 @@
-# 🎨 SPRINT 03 – IDENTIDADE VISUAL E FRONT-END: PLATAFORMA IARA GAMES
+# 🎨 SPRINT 03 – IDENTIDADE VISUAL E IMPLEMENTAÇÃO DO BOOTSTRAP: PLATAFORMA IARA GAMES
 
 Este documento detalha as decisões da **Sprint 03** do projeto **Iara Games**, com foco na concepção da identidade visual, integração do Design System e construção de uma interface imersiva e acessível utilizando Bootstrap.
 
