@@ -2,7 +2,7 @@
 
 Este documento detalha as decisões da **Sprint 02** do projeto **Iara Games**, com foco na maturação da jornada do usuário, nas personas e na usabilidade técnica das páginas, estruturando o ecossistema e rotas essenciais da plataforma.
 
-**Equipe Master3:** Ingrid Silva de Lima, Julia Souza Gonçalves, Larissa Cristina Benedito e Mayla Mayumi Motobe.
+**Equipe Master3:** Ingrid Silva de Lima,  ̶J̶u̶l̶i̶a̶ ̶S̶o̶u̶z̶a̶ ̶G̶o̶n̶ç̶a̶l̶v̶e̶s̶ (A integrante participou da Sprint 02, porém desistiu do curso.), Larissa Cristina Benedito e Mayla Mayumi Motobe.
 
 ## 🔗 Acessos e Entregas
 - 🌐 **Deploy (Site Hospedado):** https://mewmewdevart.github.io/IaraGamesStore/
