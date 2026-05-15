@@ -46,7 +46,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco em design, experiência do usuário (UX) e construção da homepage utilizando HTML5 e CSS3.
 2. **[Sprint 02 - Evolução e UX](./docs/02_sprint.md)**:
    Foco na jornada do usuário, personas, acessibilidade (no-JS) e estrutura arquitetural das páginas adicionais.
-3. **[Sprint 03 - Identidade Visual e Front-End](./docs/03_sprint.md)** *(Fase Atual)*:
+3. **[Sprint 03 - Identidade Visual e Implementação do Bootstrap](./docs/03_sprint.md)** *(Fase Atual)*:
    Foco na concepção do Brandbook, Design System, e integração com recursos avançados de CSS e Bootstrap.
 
 
