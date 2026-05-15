@@ -103,6 +103,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 * Git & GitHub
 * Figma
 * Miro
+* Canva
 
 ## Integrantes
 
