@@ -837,6 +837,10 @@ main {
 }
 
 .carrossel-principal__dot {
+  appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
   width: 8px;
   height: 8px;
   background: var(--color-gray-light);
@@ -1912,3 +1916,124 @@ main {
     min-height: 12rem;
   }
 }
+/* ── Transição nas colunas da linha de destaque ── */
+[data-destaque-linha] > [data-destaque-item] {
+  transition: flex 0.35s ease, max-width 0.35s ease, opacity 0.25s ease;
+  will-change: flex, max-width;
+}
+ 
+/* ── Item em destaque ocupa ~50% (equivale ao col-lg-6 original) ── */
+[data-destaque-linha] > .secao-consumidor__card--destaque-ativo {
+  flex: 0 0 50% !important;
+  max-width: 50% !important;
+}
+ 
+/* ── Miniaturas dividem o restante igualmente ── */
+[data-destaque-linha] > .secao-consumidor__card--miniatura {
+  flex: 1 1 0% !important;
+  max-width: none !important;
+  min-width: 0;
+}
+ 
+/* Miniatura indica que é clicável com escurecimento suave */
+[data-destaque-linha] > .secao-consumidor__card--miniatura .secao-consumidor__card {
+  opacity: 0.7;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+ 
+[data-destaque-linha] > .secao-consumidor__card--miniatura:hover .secao-consumidor__card,
+[data-destaque-linha] > .secao-consumidor__card--miniatura:focus-within .secao-consumidor__card {
+  opacity: 1;
+  transform: translateY(-4px);
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+ 
+/* ── Fade de entrada/saída ── */
+[data-destaque-linha] > .secao-consumidor__card--saindo  { opacity: 0.45; }
+[data-destaque-linha] > .secao-consumidor__card--entrando { opacity: 0.8; }
+ 
+/* ── Em tablets/mobile tudo volta a empilhar ── */
+@media (max-width: 991px) {
+  [data-destaque-linha] > .secao-consumidor__card--destaque-ativo,
+  [data-destaque-linha] > .secao-consumidor__card--miniatura {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+  }
+}
+ 
+/* ── Botões ‹ › injetados pelo JS no cabeçalho ── */
+.carrossel-secao__controles {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+ 
+.carrossel-secao__btn {
+  background: rgba(44, 46, 48, 0.9);
+  border: 1px solid rgba(232, 236, 235, 0.12);
+  color: var(--color-light);
+  border-radius: 50%;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+ 
+.carrossel-secao__btn:hover:not(:disabled) {
+  background: var(--color-primary);
+  color: var(--color-light);
+  transform: scale(1.08);
+}
+ 
+.carrossel-secao__btn:focus-visible {
+  outline: 0.1875rem solid var(--color-secondary);
+  outline-offset: 0.125rem;
+}
+ 
+.carrossel-secao__btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+ 
+/* ── Dots injetados entre os botões ── */
+.destaque-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+ 
+.destaque-dot {
+  appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-gray-light);
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+ 
+.destaque-dot--ativo {
+  opacity: 1;
+  transform: scale(1.45);
+  background: var(--color-secondary);
+}
+ 
+.destaque-dot:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+ 
+@media (max-width: 576px) {
+  .carrossel-secao__btn { width: 2rem; height: 2rem; }
+  .destaque-dot { width: 6px; height: 6px; }
+}
+ 
