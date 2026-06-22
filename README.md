@@ -23,13 +23,13 @@
 
 ### Desktop
 <p align="center">
-  <img width="2696" alt="Preview do projeto em formato desktop" src="./assets/img/Tela Inicial_README.svg" />
+  <img width="2696" alt="Preview do projeto em formato desktop" src="./assets/img/telainicial_fase04.png" />
 </p>
 
 
 ### Mobile
 <p align="center">
-  <img width="331" alt="Preview do projeto em formato mobile" src="./assets/img/Tela Inicial Mobile_README.png" />
+  <img width="331" alt="Preview do projeto em formato mobile" src="./assets/img/telainicialmobile_fase04.png" />
 </p>
 
 
