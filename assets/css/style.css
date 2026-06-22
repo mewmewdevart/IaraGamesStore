@@ -630,12 +630,9 @@ main {
 }
 
 .carrossel-principal__classificacao-indicativa-idade {
-  min-width: 3.5rem;
-  min-height: 3.5rem;
-  background-image: url(../img/icone-classificacao-indicativa-12-anos.png);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
 }
 
 /* DOTS DO CARROSEL  */
@@ -1329,71 +1326,101 @@ main {
   text-align: center;
 }
 
-.cta-login-container {
-  max-width: 50rem;
+.cta-login-card {
+  width: 100%;
+  max-width: 60rem;
+  background: linear-gradient(135deg, var(--color-dark-composition) 0%, rgba(18, 32, 24, 0.6) 100%);
+  border: 1px solid var(--color-light-10);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cta-login-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top left, rgba(252, 163, 17, 0.08), transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-login-card:hover {
+  border-color: var(--color-secondary-70);
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.8), 0 0 15px rgba(252, 163, 17, 0.15);
+  transform: translateY(-2px);
+}
+
+.cta-login-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
+  z-index: 2;
 }
 
 .cta-login-title {
-  font-size: var(--text-4xl);
+  font-size: var(--text-2xl);
   font-weight: var(--weight-bold);
   color: var(--color-light);
+  margin-bottom: 0;
   line-height: 1.2;
 }
 
 .cta-login-description {
-  font-size: var(--text-lg);
+  font-size: var(--text-base);
   color: var(--color-gray-light);
-  max-width: 35rem;
+  margin-bottom: 0;
+  max-width: 38rem;
+  line-height: 1.5;
 }
 
-.cta-login-botoes {
-  display: flex;
-  gap: 1.25rem;
-  margin-top: 1rem;
+.cta-login-botao-wrapper {
+  z-index: 2;
+  flex-shrink: 0;
 }
 
-.cta-login-botao {
+.cta-login-card .btn-iara-login {
+  min-width: 12rem;
   height: 3.5rem;
-  padding: 0 2.5rem;
-  border: none;
-  border-radius: var(--radius-md);
-  font-size: var(--text-lg);
-  font-weight: var(--weight-semibold);
-  cursor: pointer;
-  transition: transform var(--transition-base), background-image var(--transition-base), background-color var(--transition-base), color var(--transition-base);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
+  font-size: var(--text-base);
+  font-weight: 800 !important;
 }
 
-.cta-login-botao:last-child {
-  background-color: var(--color-secondary);
-  color: var(--color-dark);
-  background-image: url("../img/pattern-secondary.svg");
-  background-size: cover;
-  background-blend-mode: overlay;
+@media (max-width: 992px) {
+  .cta-login-card {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .cta-login-title {
+    font-size: var(--text-xl);
+  }
 }
 
-.cta-login-botao:last-child:hover {
-  background-image: url("../img/pattern-primary.svg");
-  transform: translateY(-0.1875rem);
-}
-
-.cta-login-botao:first-child {
-  background-color: var(--color-gray);
-  color: var(--color-light);
-  border: 1px solid var(--color-light-10);
-}
-
-.cta-login-botao:first-child:hover {
-  background-color: var(--color-gray-light);
-  color: var(--color-dark);
-  transform: translateY(-0.1875rem);
+@media (max-width: 768px) {
+  .cta-login-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .cta-login-description {
+    max-width: 100%;
+  }
+  .cta-login-card .btn-iara-login {
+    width: 100%;
+    min-width: 15rem;
+  }
 }
 
 
@@ -1628,16 +1655,6 @@ main {
   }
 
 
-  .cta-login-botoes {
-    flex-direction: column;
-    width: 100%;
-    max-width: 20rem;
-    gap: 1rem;
-  }
-
-  .cta-login-botao {
-    width: 100%;
-  }
 }
 
 @media (max-width: 480px) {
