@@ -157,10 +157,25 @@
 				<div class="carrossel-principal__conteiner">
 					<div class="carrossel-principal__conteudo">
 						<!-- DOTS VISUAIS -->
-						<div class="carrossel-principal__indicadores">
-							<span class="carrossel-principal__dot carrossel-principal__dot--ativo"></span>
-							<span class="carrossel-principal__dot"></span>
-							<span class="carrossel-principal__dot"></span>
+						<!-- DOTS VISUAIS -->
+							<div class="carrossel-principal__indicadores" role="tablist" aria-label="Navegar entre ofertas">
+								<button class="carrossel-principal__dot carrossel-principal__dot--ativo"
+									type="button"
+									aria-label="Oferta 1 de 3"		
+									aria-selected="true">
+								</button>
+								<button class="carrossel-principal__dot"
+									type="button"
+									aria-label="Oferta 2 de 3"
+									aria-selected="false"
+									tabindex="-1">
+								</button>
+								<button class="carrossel-principal__dot"
+									type="button"
+									aria-label="Oferta 3 de 3"
+									aria-selected="false"
+									tabindex="-1">
+							</button>
 						</div>
 
 						<h1 class="carrossel-principal__titulo">Ruff Ghanor</h1>
@@ -278,7 +293,7 @@
 		</section>
 
 		<!-- ================================= SEÇÃO : DIA DO CONSUMIDOR 1/2 ================================= -->
-		<section class="secao-consumidor" aria-labelledby="titulo-consumidor">
+		<section class="secao-consumidor" aria-labelledby="titulo-consumidor" data-carrossel-destaque>
 			<header class="secao-consumidor__cabecalho">
 				<span class="secao-consumidor__subtitulo">Novidades no Rio</span>
 				<h2 class="secao-consumidor__titulo" id="titulo-consumidor">
@@ -287,8 +302,8 @@
 			</header>
 
 			<div class="secao-consumidor__grade">
-				<div class="row g-3 mx-0 mb-3">
-					<div class="col-12 col-lg-6">
+				<div class="row g-3 mx-0 mb-3" data-destaque-linha>
+					<div class="col-12 col-lg-6" data-destaque-item="0">
 						<article
 							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--destaque w-100">
 							<div class="secao-consumidor__overlay"></div>
@@ -319,7 +334,7 @@
 						</article>
 					</div>
 
-					<div class="col-12 col-md-4 col-lg-2">
+					<div class="col-12 col-md-4 col-lg-2" data-destaque-item="1">
 						<article
 							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
 							<div class="secao-consumidor__overlay"></div>
@@ -348,7 +363,7 @@
 						</article>
 					</div>
 
-					<div class="col-12 col-md-4 col-lg-2">
+					<div class="col-12 col-md-4 col-lg-2" data-destaque-item="2">
 						<article
 							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
 							<div class="secao-consumidor__overlay"></div>
@@ -378,7 +393,7 @@
 						</article>
 					</div>
 
-					<div class="col-12 col-md-4 col-lg-2">
+					<div class="col-12 col-md-4 col-lg-2" data-destaque-item="3">
 						<article
 							class="secao-consumidor__card card border-0 text-light secao-consumidor__card--normal w-100">
 							<div class="secao-consumidor__overlay"></div>
@@ -784,6 +799,9 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
 			integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
 			crossorigin="anonymous"></script>
+		<script src="assets/js/carousel.js"></script>    </body>
+
+</html>
 
 </body>
 
