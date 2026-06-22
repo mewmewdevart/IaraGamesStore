@@ -120,15 +120,15 @@
 
 							<!-- Grupo de Ícones -->
 							<div class="d-flex align-items-center gap-3">
-								<div class="busca">
-									<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
-									<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
+								<div class="funil-busca">
+									<input type="checkbox" id="funil-busca-toggle" class="funil-busca__controle apenas-leitor">
+									<label for="funil-busca-toggle" class="funil-busca__botao botao-icone" aria-label="Abrir barra de busca">
 										<i class="fa-solid fa-magnifying-glass"></i>
 									</label>
-									<div class="busca__janela">
+									<label for="funil-busca-toggle" class="funil-busca__backdrop"></label>
+									<div class="funil-busca__container" id="funil-busca-entrada">
 										<i class="fa-solid fa-magnifying-glass"></i>
-										<input type="text" placeholder="Jogos, categorias etc"
-											aria-label="Pesquisar jogos">
+										<input type="text" class="funil-busca__entrada" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
 									</div>
 								</div>
 								<button class="botao-icone" aria-label="Carrinho de compras"><i
@@ -171,21 +171,15 @@
 							enfrentar o tirano Dragão Vermelho Zamir...
 						</p>
 
-						<div class="row g-2 mt-3" style="max-width: 18rem;">
-							<div class="col-8">
-								<button onclick="window.location.href = '#'"
-									class="btn btn-iara-compra w-100 h-100 d-flex flex-column justify-content-center align-items-start px-3 py-2">
-									<span style="font-size: 0.75rem;">Comprar</span>
-									<span class="fw-bold fs-5 text-nowrap">R$ 55,99</span>
-								</button>
-							</div>
-							<div class="col-4">
-								<button onclick="window.location.href = '#'"
-									class="btn btn-iara-carrinho w-100 h-100 d-flex justify-content-center align-items-center"
-									aria-label="Adicionar ao carrinho">
-									<i class="fa-solid fa-cart-shopping fs-5"></i>
-								</button>
-							</div>
+						<div class="carrossel-principal__botoes-grupo mt-3">
+							<button class="carrossel-principal__botao-comprar d-flex flex-column justify-content-center align-items-start px-3 py-2">
+								<span class="carrossel-principal__rotulo-compra">Comprar</span>
+								<span class="carrossel-principal__preco-destaque">R$ 55,99</span>
+							</button>
+							<button class="carrossel-principal__botao-carrinho d-flex justify-content-center align-items-center" aria-label="Adicionar ao carrinho">
+								<i class="fa-solid fa-cart-shopping"></i>
+								<span class="carrossel-principal__feedback-carrinho"></span>
+							</button>
 						</div>
 					</div>
 

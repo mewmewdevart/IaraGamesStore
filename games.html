@@ -119,15 +119,15 @@
 
 							<!-- Grupo de Ícones -->
 							<div class="d-flex align-items-center gap-3">
-								<div class="busca">
-									<input type="checkbox" id="busca-toggle" class="busca__checkbox apenas-leitor">
-									<label for="busca-toggle" class="botao-icone" aria-label="Abrir busca">
+								<div class="funil-busca">
+									<input type="checkbox" id="funil-busca-toggle" class="funil-busca__controle apenas-leitor">
+									<label for="funil-busca-toggle" class="funil-busca__botao botao-icone" aria-label="Abrir barra de busca">
 										<i class="fa-solid fa-magnifying-glass"></i>
 									</label>
-									<div class="busca__janela">
+									<label for="funil-busca-toggle" class="funil-busca__backdrop"></label>
+									<div class="funil-busca__container" id="funil-busca-entrada">
 										<i class="fa-solid fa-magnifying-glass"></i>
-										<input type="text" placeholder="Jogos, categorias etc"
-											aria-label="Pesquisar jogos">
+										<input type="text" class="funil-busca__entrada" placeholder="Jogos, categorias etc" aria-label="Pesquisar jogos">
 									</div>
 								</div>
 								<button class="botao-icone" aria-label="Carrinho de compras"><i
