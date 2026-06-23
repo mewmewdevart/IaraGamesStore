@@ -29,7 +29,7 @@
 
 ### Mobile
 <p align="center">
-  <img width="331" alt="Preview do projeto em formato mobile" src="./assets/img/telainicialmobile_fase04.png" />
+  <img width="331" alt="Preview do projeto em formato mobile" src="./assets/img/1.telainicialmobile_fase04.png" />
 </p>
 
 
