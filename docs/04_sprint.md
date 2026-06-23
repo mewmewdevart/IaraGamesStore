@@ -82,7 +82,7 @@ A reformulação reafirma o compromisso da Iara Games com a inclusão digital:
 
 <p align="center">
 
-  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2003%20-%20Iara%20Games_2026%20-%20EAD.pdf">📝 Visualizar documentação completa da Sprint 04</a>
+  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint 04 - Iara Games_2026 - EAD.pdf">📝 Visualizar documentação completa da Sprint 04</a>
 
 </p>
 
