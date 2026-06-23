@@ -59,7 +59,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 ├── assets/
 │   ├── css/        # Estilos da aplicação
 │   ├── img/        # Imagens e ícones
-│   └── js/         # Scripts JavaScript (Futuro)
+│   └── js/         # Scripts JavaScript
 ├── docs/
 │   ├── 01_sprint.md   # Documentação resumida da Sprint 01
 │   ├── 02_sprint.md   # Documentação resumida da Sprint 02
@@ -103,6 +103,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 
 * HTML5
 * CSS3
+* JavaScript
 * Git & GitHub
 * Figma
 * Miro
