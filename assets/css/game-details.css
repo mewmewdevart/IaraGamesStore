@@ -1,0 +1,126 @@
+body {
+  background: var(--color-dark);
+}
+
+.detalhes-jogo {
+  min-height: 100vh;
+  padding: 7rem clamp(1rem, 5vw, 5rem) 4rem;
+  background: radial-gradient(circle at 50% 0%, var(--color-secondary-20), transparent 42%), var(--color-dark);
+}
+
+.detalhes-jogo__carregando,
+.detalhes-jogo__erro {
+  max-width: 70rem;
+  margin: 4rem auto;
+  color: var(--color-light);
+  text-align: center;
+}
+
+.detalhes-jogo__container {
+  max-width: 74rem;
+  margin: 0 auto;
+}
+
+.detalhes-jogo__voltar {
+  display: inline-flex;
+  gap: .5rem;
+  align-items: center;
+  color: var(--color-gray-light);
+  text-decoration: none;
+  margin-bottom: 1rem;
+}
+
+.detalhes-jogo__voltar:hover { color: var(--color-secondary); }
+
+.detalhes-jogo__hero {
+  position: relative;
+  min-height: 27rem;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  border: 1px solid rgba(252, 163, 17, .12);
+  border-radius: var(--radius-md);
+  background: var(--color-gray);
+  isolation: isolate;
+}
+
+.detalhes-jogo__hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background-image: var(--jogo-imagem);
+  background-position: center;
+  background-size: cover;
+  filter: blur(2px) saturate(.8);
+  transform: scale(1.04);
+}
+
+.detalhes-jogo__hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(90deg, var(--color-dark-95) 0%, var(--color-dark-75) 42%, var(--color-dark-30) 100%), linear-gradient(0deg, var(--color-dark-95), transparent 55%);
+}
+
+.detalhes-jogo__hero-conteudo {
+  width: 100%;
+  max-width: 48rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.detalhes-jogo__titulo {
+  color: var(--color-light);
+  font-size: clamp(2rem, 5vw, 4.25rem);
+  line-height: 1;
+  margin-bottom: .75rem;
+}
+
+.detalhes-jogo__estudio { color: var(--color-secondary); font-weight: var(--weight-semibold); }
+.detalhes-jogo__descricao { color: rgba(232, 236, 235, .82); line-height: 1.6; max-width: 42rem; }
+
+.detalhes-jogo__conteudo {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 19rem;
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.detalhes-jogo__coluna { display: grid; gap: 1.25rem; }
+.detalhes-jogo__painel { background: var(--color-dark-composition); border: 1px solid var(--color-light-10); border-radius: var(--radius-md); padding: 1.35rem; }
+.detalhes-jogo__painel h2 { color: var(--color-light); font-size: 1.05rem; margin-bottom: 1rem; }
+.detalhes-jogo__painel p { color: var(--color-gray-light); line-height: 1.6; font-size: .9rem; }
+
+.detalhes-jogo__compra { align-self: start; position: sticky; top: 6rem; }
+.detalhes-jogo__precos { display: flex; align-items: baseline; gap: .65rem; margin-bottom: 1rem; }
+.detalhes-jogo__preco { color: var(--color-secondary); font-size: 1.6rem; font-weight: var(--weight-bold); }
+.detalhes-jogo__preco-antigo { color: var(--color-gray-light); text-decoration: line-through; font-size: .8rem; }
+.detalhes-jogo__desconto { color: var(--color-dark); background: var(--color-secondary); padding: .25rem .45rem; border-radius: .2rem; font-size: .75rem; font-weight: var(--weight-bold); }
+.detalhes-jogo__comprar { width: 100%; border: 0; border-radius: var(--radius-sm); padding: .85rem; background: var(--color-secondary); color: var(--color-dark); font-weight: var(--weight-bold); cursor: pointer; }
+.detalhes-jogo__comprar:hover { filter: brightness(1.1); }
+.detalhes-jogo__lista { display: grid; gap: .75rem; color: var(--color-gray-light); font-size: .8rem; }
+.detalhes-jogo__lista strong { color: var(--color-light); display: block; margin-bottom: .15rem; }
+.detalhes-jogo__acoes { display: flex; gap: .6rem; margin-top: .75rem; }
+.detalhes-jogo__favorito { flex: 1; border: 1px solid rgba(232, 236, 235, .2); background: transparent; color: var(--color-light); border-radius: var(--radius-sm); padding: .7rem; cursor: pointer; }
+.detalhes-jogo__favorito.ativo { color: var(--color-primary); border-color: var(--color-primary); }
+
+.detalhes-jogo__tags { display: flex; flex-wrap: wrap; gap: .5rem; }
+.detalhes-jogo__tag { color: var(--color-light); background: rgba(232, 236, 235, .08); border-radius: 99px; padding: .35rem .65rem; font-size: .75rem; }
+.detalhes-jogo__avaliacao { color: var(--color-secondary); margin-bottom: .9rem; }
+.detalhes-jogo__avaliacao span { color: var(--color-gray-light); margin-left: .35rem; }
+
+.detalhes-jogo__requisitos { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.detalhes-jogo__requisitos h3 { color: var(--color-secondary); font-size: .75rem; text-transform: uppercase; }
+.detalhes-jogo__requisitos p { font-size: .78rem; margin: .25rem 0; }
+
+@media (max-width: 768px) {
+  .detalhes-jogo { padding-inline: 1rem; }
+  .detalhes-jogo__hero { min-height: 31rem; }
+  .detalhes-jogo__conteudo { grid-template-columns: 1fr; }
+  .detalhes-jogo__compra { position: static; }
+}
+
+@media (max-width: 480px) {
+  .detalhes-jogo__requisitos { grid-template-columns: 1fr; }
+}

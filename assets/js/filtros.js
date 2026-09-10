@@ -33,6 +33,13 @@
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
   }
 
+  function normalizarTexto(texto) {
+    return texto
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
+  }
+
   function valoresSelecionados(checkboxes) {
     return Array.from(checkboxes)
       .filter((cb) => cb.checked)
@@ -59,7 +66,7 @@
     return `
       <div class="secao-lancamentos__envolucro-cartao col" data-jogo-id="${jogo.id}">
         <article class="secao-lancamentos__cartao card border-0 h-100 text-light">
-          <a href="#" class="link-cobre-card" aria-label="Ver ${jogo.titulo}"></a>
+          <a href="./game-details.html?jogo=${encodeURIComponent(jogo.id)}" class="link-cobre-card" aria-label="Ver ${jogo.titulo}"></a>
           <div class="secao-lancamentos__imagem-envolucro">
             <img src="${jogo.imagem}" alt="${jogo.titulo}"
               class="secao-lancamentos__imagem card-img-top" loading="lazy" />
@@ -97,13 +104,12 @@
   function filtrarJogos() {
     let resultados = [...JOGOS_DATA];
 
-    const termoBusca = (inputBusca.value || '').trim().toLowerCase();
+    const termoBusca = normalizarTexto((inputBusca.value || '').trim());
     if (termoBusca) {
       resultados = resultados.filter(
         (j) =>
-          j.titulo.toLowerCase().includes(termoBusca) ||
-          j.estudio.toLowerCase().includes(termoBusca) ||
-          j.tags.some((t) => t.toLowerCase().includes(termoBusca))
+          [j.titulo, j.estudio, ...j.generos, ...j.momentos, ...j.plataformas, ...j.tags]
+            .some((campo) => normalizarTexto(campo).includes(termoBusca))
       );
     }
 
@@ -176,6 +182,9 @@
   function aplicarFiltrosDaURL() {
     const params = new URLSearchParams(window.location.search);
     const filtroMomento = params.get('filtro');
+    const termoBusca = params.get('search');
+
+    if (termoBusca) inputBusca.value = termoBusca;
 
     if (filtroMomento) {
       const mapa = {
