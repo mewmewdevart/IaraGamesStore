@@ -62,20 +62,40 @@
   color: var(--color-dark-composition);
   border: 1px solid var(--color-light-20);
   padding: 0 1.5rem;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-md, 0.5rem);
   font-weight: var(--weight-bold);
   font-size: var(--text-base);
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+  justify-content: center;
+  transition: background-color var(--transition-base, 0.3s), border-color var(--transition-base, 0.3s), color var(--transition-base, 0.3s);
 }
 
 .busca-jogos__btn-filtro:hover {
   background-color: var(--color-secondary);
   color: var(--color-dark);
   border-color: var(--color-secondary);
+}
+
+.busca-jogos__btn-filtro .texto-aberto {
+  display: none;
+}
+
+.busca-jogos__btn-filtro .texto-fechado {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.busca-jogos__filtro-toggle:checked ~ .busca-jogos__acoes .busca-jogos__btn-filtro .texto-fechado {
+  display: none;
+}
+
+.busca-jogos__filtro-toggle:checked ~ .busca-jogos__acoes .busca-jogos__btn-filtro .texto-aberto {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .busca-jogos__input-wrapper:focus-within {

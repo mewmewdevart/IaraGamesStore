@@ -717,8 +717,11 @@ main {
   height: 100%;
   border-radius: var(--radius-md);
   border: 2px solid var(--color-success);
-  animation: pulso-confirmar 0.6s ease-out;
   opacity: 0;
+}
+
+.carrossel-principal__botao-carrinho:active .carrossel-principal__feedback-carrinho {
+  animation: pulso-confirmar 0.6s ease-out;
 }
 
 @keyframes feedback-carrinho-adicionado {
