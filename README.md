@@ -48,8 +48,10 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco na jornada do usuário, personas, acessibilidade (no-JS) e estrutura arquitetural das páginas adicionais.
 3. **[Sprint 03 - Identidade Visual e Implementação do Bootstrap](./docs/03_sprint.md)**:
    Foco na concepção do Brandbook, Design System, e integração com recursos avançados de CSS e Bootstrap.
-4. **[Sprint 04 - Reformulação](./docs/04_sprint.md)** *(Fase Atual)*:
+4. **[Sprint 04 - Reformulação](./docs/04_sprint.md)**:
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
+5. **[Sprint 05 - Interação](./docs/)** *(Fase Atual)*:
+   Foco na interatividade da página, aplicando o JavaScript.
 
 
 ## Estrutura do Projeto
