@@ -19,7 +19,7 @@
  *    tags          – array de tags (Aventura, Ação, Indie, Metroidvania, Pixel Art, RPG)
  */
 
-onst JOGOS_DATA = [
+const JOGOS_DATA = [
   {
     id: 'a-lenda-do-heroi',
     titulo: 'A Lenda do Herói',
