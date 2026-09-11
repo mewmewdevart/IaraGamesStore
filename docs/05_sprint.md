@@ -13,7 +13,7 @@ Este documento detalha as decisões da Sprint 05 do projeto Iara Games, com foco
 
 - 💻 **Repositório GitHub:** [https://github.com/mewmewdevart/IaraGamesStore](https://github.com/mewmewdevart/IaraGamesStore)
 
-- 📖 **Documentação de Interação:** [Visualizar Documentação Completa](./docs/Sprint%2005%20-%202ºSemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf)
+- 📖 **Documentação de Interação:** [Visualizar Documentação Completa](./Sprint%2005%20-%202ºSemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf)
 
 
 
