@@ -18,11 +18,14 @@ function CarrosselHero(raiz, opcoes) {
   const cfg = Object.assign({ intervalo: 6000, limiarSwipe: 50 }, opcoes);
 
   const slides      = Array.from(raiz.querySelectorAll('.carrossel-principal__slide-item'));
-  const dots        = Array.from(raiz.querySelectorAll('.carrossel-principal__dot'));
   const btnAnterior = raiz.querySelector('.carrossel-principal__btn-anterior');
   const btnProximo  = raiz.querySelector('.carrossel-principal__btn-proximo');
 
-  if (!slides.length || !dots.length) return;
+  const linhasDeDots = Array.from(raiz.querySelectorAll('.carrossel-principal__indicadores'))
+    .map(function (grupo) { return Array.from(grupo.querySelectorAll('.carrossel-principal__dot')); });
+  const todosOsDots = linhasDeDots.reduce(function (acc, linha) { return acc.concat(linha); }, []);
+
+  if (!slides.length || !linhasDeDots.length) return;
 
   let indiceAtual  = 0;
   let timer        = null;
@@ -38,38 +41,46 @@ function CarrosselHero(raiz, opcoes) {
   sincronizarDots(0);
 
   function irPara(prox, moverFoco) {
-    if (prox === indiceAtual) return;
-    slides[indiceAtual].setAttribute('aria-hidden', 'true');
-    slides[indiceAtual].classList.remove('carrossel-principal__slide-item--ativo');
+    if (!slides.length) return;
+    prox = ((prox % slides.length) + slides.length) % slides.length;
+    if (prox === indiceAtual && slides[indiceAtual].classList.contains('carrossel-principal__slide-item--ativo')) return;
+    slides.forEach(function (s) { s.setAttribute('aria-hidden', 'true'); s.classList.remove('carrossel-principal__slide-item--ativo'); });
     indiceAtual = prox;
     slides[indiceAtual].setAttribute('aria-hidden', 'false');
     slides[indiceAtual].classList.add('carrossel-principal__slide-item--ativo');
     sincronizarDots(indiceAtual);
-    if (moverFoco) dots[indiceAtual].focus();
+    if (moverFoco) {
+      const linhaVisivel = linhasDeDots[indiceAtual];
+      if (linhaVisivel && linhaVisivel[indiceAtual]) linhaVisivel[indiceAtual].focus();
+    }
   }
 
   function proximo()   { irPara((indiceAtual + 1) % slides.length, false); }
   function anterior()  { irPara((indiceAtual - 1 + slides.length) % slides.length, false); }
 
   function sincronizarDots(idx) {
-    dots.forEach(function (dot, i) {
-      const ativo = i === idx;
-      dot.classList.toggle('carrossel-principal__dot--ativo', ativo);
-      dot.setAttribute('aria-selected', ativo ? 'true' : 'false');
-      dot.setAttribute('tabindex', ativo ? '0' : '-1');
+    linhasDeDots.forEach(function (linha) {
+      linha.forEach(function (dot, i) {
+        const ativo = i === idx;
+        dot.classList.toggle('carrossel-principal__dot--ativo', ativo);
+        dot.setAttribute('aria-selected', ativo ? 'true' : 'false');
+        dot.setAttribute('tabindex', ativo ? '0' : '-1');
+      });
     });
   }
 
-  dots.forEach(function (dot, i) {
-    dot.dataset.slideIndex = String(i);
-    dot.addEventListener('click', function () { pararAutoPlay(); irPara(i, false); iniciarAutoPlay(); });
+  linhasDeDots.forEach(function (linha) {
+    linha.forEach(function (dot, i) {
+      dot.dataset.slideIndex = String(i);
+      dot.addEventListener('click', function () { pararAutoPlay(); irPara(i, false); iniciarAutoPlay(); });
+    });
   });
 
   if (btnAnterior) btnAnterior.addEventListener('click', function () { pararAutoPlay(); anterior(); iniciarAutoPlay(); });
   if (btnProximo)  btnProximo.addEventListener('click',  function () { pararAutoPlay(); proximo();  iniciarAutoPlay(); });
 
   raiz.addEventListener('keydown', function (e) {
-    if (!dots.includes(document.activeElement)) return;
+    if (!todosOsDots.includes(document.activeElement)) return;
     const total = slides.length;
     let prox = indiceAtual, tratado = true;
     switch (e.key) {
@@ -88,14 +99,16 @@ function CarrosselHero(raiz, opcoes) {
     if (Math.abs(delta) >= cfg.limiarSwipe) { pararAutoPlay(); delta > 0 ? proximo() : anterior(); iniciarAutoPlay(); }
   }, { passive: true });
 
-  raiz.addEventListener('mouseenter', pararAutoPlay);
-  raiz.addEventListener('mouseleave', iniciarAutoPlay);
-  raiz.addEventListener('focusin',    pararAutoPlay);
-  raiz.addEventListener('focusout',   function (e) { if (!raiz.contains(e.relatedTarget)) iniciarAutoPlay(); });
-
   function iniciarAutoPlay() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    timer = setInterval(proximo, cfg.intervalo);
+    pararAutoPlay();
+    timer = setInterval(function () {
+      if (!slides.some(function (s) { return s.classList.contains('carrossel-principal__slide-item--ativo'); })) {
+        irPara(indiceAtual, false);
+        return;
+      }
+      proximo();
+    }, cfg.intervalo);
   }
   function pararAutoPlay() { clearInterval(timer); timer = null; }
 
