@@ -68,7 +68,7 @@
     return `
       <div class="secao-lancamentos__envolucro-cartao col" data-jogo-id="${jogo.id}">
         <article class="secao-lancamentos__cartao card border-0 h-100 text-light">
-          <a href="#" class="link-cobre-card" aria-label="Ver ${jogo.titulo}"></a>
+          <a href="./game-details.html?jogo=${jogo.id}" class="link-cobre-card" aria-label="Ver ${jogo.titulo}"></a>
           <div class="secao-lancamentos__imagem-envolucro">
             <img src="${jogo.imagem}" alt="${jogo.titulo}"
               class="secao-lancamentos__imagem card-img-top" loading="lazy"
@@ -287,6 +287,11 @@
     const params = new URLSearchParams(window.location.search);
     const filtroMomento = params.get('filtro');
     const secao = params.get('secao');
+    const termoBusca = params.get('search');
+
+    if (termoBusca && inputBusca) {
+      inputBusca.value = termoBusca;
+    }
 
     if (filtroMomento) {
       const mapa = {

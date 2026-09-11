@@ -99,6 +99,11 @@ function CarrosselHero(raiz, opcoes) {
     if (Math.abs(delta) >= cfg.limiarSwipe) { pararAutoPlay(); delta > 0 ? proximo() : anterior(); iniciarAutoPlay(); }
   }, { passive: true });
 
+  raiz.addEventListener('mouseenter', pararAutoPlay);
+  raiz.addEventListener('mouseleave', iniciarAutoPlay);
+  raiz.addEventListener('focusin', pararAutoPlay);
+  raiz.addEventListener('focusout', iniciarAutoPlay);
+
   function iniciarAutoPlay() {
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     pararAutoPlay();
