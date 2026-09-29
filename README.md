@@ -50,9 +50,10 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco na concepção do Brandbook, Design System, e integração com recursos avançados de CSS e Bootstrap.
 4. **[Sprint 04 - Reformulação](./docs/04_sprint.md)**:
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
-5. **[Sprint 05 - Interação](./docs/05_sprint.md)**: *(Fase Atual)*:
+5. **[Sprint 05 - Interação](./docs/05_sprint.md)**:
    Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc)
-
+6. **[Sprint 06 - React](./docs/06_sprint.md)**: *(Fase Atual)*:
+   Foco na implementação do framework REACT em uma área da plataforma. 
 
 ## Estrutura do Projeto
 
@@ -74,12 +75,14 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 │   ├── 03_sprint.md   # Documentação resumida da Sprint 03
 │   ├── 04_sprint.md   # Documentação resumida da Sprint 04
 │   ├── 05_sprint.md   # Documentação resumida da Sprint 05
+│   ├── 06_sprint.md   # Documentação resumida da Sprint 06
 │   ├── Iara Games - Brandbook.pdf               # Brandbook da Iara Games
 │   ├── Sprint 01 - Iara Games_2026 - EAD .pdf   # Documentação detalhada da Sprint 01
 │   ├── Sprint 02 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 02
 │   ├── Sprint 03 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 03
 │   ├── Sprint 04 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 04
 │   ├── Sprint 05 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 05
+│   ├── Sprint 06 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 06
 ├── index.html        # Página principal (Home Page)
 ├── LICENSE           # Licença do projeto
 └── README.md         # Documentação principal do repositório
