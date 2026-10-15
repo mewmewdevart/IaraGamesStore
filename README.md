@@ -52,8 +52,9 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
 5. **[Sprint 05 - Interação](./docs/05_sprint.md)**:
    Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc)
-6. **[Sprint 06 - React](./docs/06_sprint.md)**: *(Fase Atual)*:
-   Foco na implementação do framework REACT em uma área da plataforma. 
+6. **Sprint 06 - React** *(Fase Atual)*:
+   [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/06_sprint.pdf).
+   Implementação React na página de detalhes dos jogos.
 
 ## Estrutura do Projeto
 
@@ -65,10 +66,13 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 │   └── js/
 │       ├── busca-navbar.js       # Busca pelo navbar com redirecionamento por URL
 │       ├── carousel.js           # Hero, carrossel de seções e carrossel de destaque
-│       ├── data.js               # Banco de dados centralizado dos jogos
+│       ├── data.js               # Banco de dados centralizado dos jogos (também usado pela página React)
 │       ├── detalhes-navegacao.js # Geração de links dos cards para a página de detalhes
 │       ├── filtros.js            # Sistema completo de filtros e ordenação
-│       └── game-details.js       # Renderização dinâmica da página de detalhes
+├── src/
+│   └── game-details.jsx          # Página de detalhes renderizada em React
+├── package.json                  # Dependências e comandos npm
+├── vite.config.js                # Desenvolvimento e build das páginas
 ├── docs/
 │   ├── 01_sprint.md   # Documentação resumida da Sprint 01
 │   ├── 02_sprint.md   # Documentação resumida da Sprint 02
@@ -96,6 +100,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 
 * Git
 * Navegador (Google Chrome, Firefox, Opera, etc.)
+* Node.js e npm (para executar a página de detalhes em React)
 
 ### Como executar
 
@@ -111,13 +116,29 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    cd IaraGamesStore/
    ```
 
-3. Abra o arquivo `index.html` no navegador.
+3. Para executar o site com o Vite, instale as dependências e inicie o servidor:
+
+   ```sh
+   npm install
+   npm run dev
+   ```
+
+   A página inicial estará disponível pelo endereço informado pelo Vite. A página de detalhes
+   em React pode ser aberta em `/game-details.html?jogo=dandara`; troque `dandara` pelo
+   identificador de qualquer jogo definido em `assets/js/data.js`.
+
+4. Para gerar os arquivos estáticos de produção, execute `npm run build`. Os arquivos serão
+   gerados na pasta `dist/`.
+
+As demais páginas continuam usando HTML, CSS e JavaScript sem React.
 
 ## 🛠️ Tecnologias Utilizadas
 
 * HTML5
 * CSS3
 * JavaScript (manipulação do DOM, URLSearchParams, setInterval)
+* React (página de detalhes dos jogos)
+* Vite e npm
 * Bootstrap 5
 * Font Awesome 6
 * VLibras

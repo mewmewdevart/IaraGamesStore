@@ -1823,3 +1823,5 @@ const JOGOS_DATA = [
     tags: ['Narrativo', 'Realidade VR', 'Indie'],
   },
 ];
+
+window.JOGOS_DATA = JOGOS_DATA;
