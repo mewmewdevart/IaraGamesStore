@@ -4,9 +4,60 @@ import { defineConfig } from 'vite';
 
 const projectRoot = process.cwd();
 
+const reactPageHtml = `<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detalhes do jogo | Iara Games</title>
+  <link rel="icon" type="image/x-icon" href="./assets/favicon_io/favicon.ico" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/game-details.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand me-4" href="https://mewmewdevart.github.io/IaraGamesStore/index.html"><img src="./assets/img/logo_1.svg" alt="Iara Games" width="60"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Abrir menu"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav text-uppercase fw-bold">
+            <li class="nav-item"><a class="nav-link mx-2" href="https://mewmewdevart.github.io/IaraGamesStore/index.html">Loja</a></li>
+            <li class="nav-item"><a class="nav-link mx-2" href="https://mewmewdevart.github.io/IaraGamesStore/games.html">Jogos</a></li>
+            <li class="nav-item"><a class="nav-link mx-2" href="#">Comunidade</a></li>
+          </ul>
+          <div class="ms-auto"><a href="https://mewmewdevart.github.io/IaraGamesStore/login.html" class="btn btn-iara-login fw-bold px-4">Iniciar Sessão</a></div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="detalhes-jogo" id="detalhes-jogo">
+    <div class="detalhes-jogo__carregando">Carregando detalhes...</div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/data.js"></script>
+  <script src="./assets/js/busca-navbar.js"></script>
+  <script type="module" src="./src/game-details.jsx"></script>
+</body>
+</html>`;
+
 export default defineConfig({
   base: './',
   plugins: [
+    {
+      name: 'react-details-entry',
+      enforce: 'pre',
+      transformIndexHtml: {
+        order: 'pre',
+        handler() {
+          return reactPageHtml;
+        },
+      },
+    },
     {
       name: 'copy-static-assets',
       apply: 'build',
@@ -22,10 +73,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        home: resolve(projectRoot, 'index.html'),
-        games: resolve(projectRoot, 'games.html'),
-        login: resolve(projectRoot, 'login.html'),
-        gameDetails: resolve(projectRoot, 'game-details.html'),
+        main: resolve(projectRoot, 'index.html'),
       },
     },
   },

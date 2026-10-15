@@ -45,7 +45,18 @@ function obterJogo() {
   if (!Array.isArray(window.JOGOS_DATA)) return null;
 
   const parametros = new URLSearchParams(window.location.search);
-  const id = parametros.get('jogo');
+  let id = parametros.get('jogo');
+
+  if (!id) {
+    const segmentos = window.location.pathname.split('/').filter(Boolean);
+    if (segmentos.length > 0) {
+      const ultimo = segmentos[segmentos.length - 1].replace(/\.html$/, '');
+      if (ultimo && ultimo !== 'index') {
+        id = ultimo;
+      }
+    }
+  }
+
   const jogoEncontrado = window.JOGOS_DATA.find((item) => item.id === id);
 
   if (jogoEncontrado) return jogoEncontrado;
@@ -69,6 +80,26 @@ function obterJogo() {
   };
 }
 
+const URL_GITHUB_PAGES = 'https://mewmewdevart.github.io/IaraGamesStore/';
+
+function obterUrlVoltarJogos() {
+  return `${URL_GITHUB_PAGES}games.html`;
+}
+
+function manipularVoltar(evento) {
+  if (
+    typeof window !== 'undefined' &&
+    window.history.length > 1 &&
+    document.referrer &&
+    (document.referrer.includes('github.io') ||
+      document.referrer.includes('localhost') ||
+      document.referrer.includes('127.0.0.1'))
+  ) {
+    evento.preventDefault();
+    window.history.back();
+  }
+}
+
 function MensagemErro({ catalogoIndisponivel }) {
   const mensagem = catalogoIndisponivel
     ? 'Não foi possível carregar a lista de jogos. Atualize a página e tente novamente.'
@@ -77,7 +108,11 @@ function MensagemErro({ catalogoIndisponivel }) {
   return (
     <div className="detalhes-jogo__erro" role="alert">
       <p>{mensagem}</p>
-      <a className="detalhes-jogo__voltar" href="./games.html">
+      <a
+        className="detalhes-jogo__voltar"
+        href={obterUrlVoltarJogos()}
+        onClick={manipularVoltar}
+      >
         <i className="fa-solid fa-arrow-left" aria-hidden="true" /> Voltar para jogos
       </a>
     </div>
@@ -99,7 +134,11 @@ function DetalhesJogo({ jogo }) {
 
   return (
     <div className="detalhes-jogo__container">
-      <a className="detalhes-jogo__voltar" href="./games.html">
+      <a
+        className="detalhes-jogo__voltar"
+        href={obterUrlVoltarJogos()}
+        onClick={manipularVoltar}
+      >
         <i className="fa-solid fa-arrow-left" aria-hidden="true" /> Voltar para jogos
       </a>
       <section

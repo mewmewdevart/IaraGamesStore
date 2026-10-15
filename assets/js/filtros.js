@@ -65,10 +65,12 @@
 
     const classPreco = jogo.precoOriginal ? 'secao-lancamentos__preco-novo' : 'secao-lancamentos__preco-novo';
 
+    const urlBaseDetalhes = 'https://iara-games-store.vercel.app/';
+
     return `
       <div class="secao-lancamentos__envolucro-cartao col" data-jogo-id="${jogo.id}">
         <article class="secao-lancamentos__cartao card border-0 h-100 text-light">
-          <a href="./game-details.html?jogo=${jogo.id}" class="link-cobre-card" aria-label="Ver ${jogo.titulo}"></a>
+          <a href="${urlBaseDetalhes}?jogo=${jogo.id}" class="link-cobre-card" aria-label="Ver ${jogo.titulo}"></a>
           <div class="secao-lancamentos__imagem-envolucro">
             <img src="${jogo.imagem}" alt="${jogo.titulo}"
               class="secao-lancamentos__imagem card-img-top" loading="lazy"

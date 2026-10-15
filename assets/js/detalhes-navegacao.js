@@ -14,7 +14,7 @@
     const id = jogosPorTitulo.get(normalizar(tituloOriginal)) || normalizar(tituloOriginal).replace(/[^a-z0-9]+/g, '-');
     const imagem = card.querySelector('img')?.getAttribute('src');
     const parametros = new URLSearchParams({ jogo: id, titulo: tituloOriginal });
-    if (imagem) parametros.set('imagem', imagem);
-    link.href = `./game-details.html?${parametros.toString()}`;
+    const baseUrl = 'https://iara-games-store.vercel.app/';
+    link.href = `${baseUrl}?${parametros.toString()}`;
   });
 })();
