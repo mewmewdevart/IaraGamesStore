@@ -52,8 +52,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
 5. **[Sprint 05 - Interação](./docs/05_sprint.md)**:
    Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc)
-6. **Sprint 06 - React** *(Fase Atual)*:
-   [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/06_sprint.pdf).
+6. **[Sprint 06 - React](./docs/06_sprint.md)**:
    Implementação React na página de detalhes dos jogos.
 
 ## Estrutura do Projeto
