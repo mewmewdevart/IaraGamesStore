@@ -52,8 +52,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
 5. **[Sprint 05 - Interação](./docs/05_sprint.md)**:
    Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc).
-6. **[Sprint 06 - Hospedando React](./docs/06_sprint.md)** *(Fase Atual)*:  
-   [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/Sprint%2006%20-%20Iara%20Games_2026%20-%20EAD.pdf).  
+6. **[Sprint 06 - Hospedando React](./docs/06_sprint.md)** *(Fase Atual)*:    
    Implementação da página de detalhes dinâmica em React (Vite), arquitetura híbrida com hospedagem na Vercel e integração centralizada com `assets/js/data.js`.
 
 ## Estrutura do Projeto
