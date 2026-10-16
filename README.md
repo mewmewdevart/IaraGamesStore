@@ -8,11 +8,12 @@
 </p>
 
   <p align="center">
-    <a href="https://mewmewdevart.github.io/IaraGamesStore/">🔗 Acesse o projeto</a>
+    <a href="https://mewmewdevart.github.io/IaraGamesStore/">🌐 Acesse o catálogo (GitHub Pages)</a> &nbsp;|&nbsp;
+    <a href="https://iara-games-store.vercel.app/?jogo=pocket-bravery">⚛️ Acesse a página React (Vercel)</a>
   </p>
 
   <p align="center">
-    <img src="https://img.shields.io/badge/Sprint-05-6b9acf?style=for-the-badge&logo=headspace&logoColor=white" />
+    <img src="https://img.shields.io/badge/Sprint-06-6b9acf?style=for-the-badge&logo=headspace&logoColor=white" />
     <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-6b9acf?style=for-the-badge&logo=github&logoColor=white" />
     <img src="https://img.shields.io/badge/Projeto-Acadêmico-6b9acf?style=for-the-badge&logo=bookstack&logoColor=white" />
   </p>
@@ -24,7 +25,6 @@ A Iara Games é uma plataforma web de distribuição de jogos indie brasileiros,
 ### Desktop
 <p align="center">
   <img width="2696" alt="Preview do projeto em formato desktop" src="https://github.com/user-attachments/assets/04ee064d-773e-4d9f-abed-ef45b4de3464" />
-" />
 </p>
 
 
@@ -51,10 +51,10 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 4. **[Sprint 04 - Reformulação](./docs/04_sprint.md)**:
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
 5. **[Sprint 05 - Interação](./docs/05_sprint.md)**:
-   Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc)
-6. **Sprint 06 - React** *(Fase Atual)*:
-   [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/06_sprint.pdf).
-   Implementação React na página de detalhes dos jogos.
+   Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc).
+6. **[Sprint 06 - Hospedando React](./docs/06_sprint.md)** *(Fase Atual)*:  
+   [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/Sprint%2006%20-%20Iara%20Games_2026%20-%20EAD.pdf).  
+   Implementação da página de detalhes dinâmica em React (Vite), arquitetura híbrida com hospedagem na Vercel e integração centralizada com `assets/js/data.js`.
 
 ## Estrutura do Projeto
 
@@ -123,22 +123,28 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    npm run dev
    ```
 
-   A página inicial estará disponível pelo endereço informado pelo Vite. A página de detalhes
-   em React pode ser aberta em `/game-details.html?jogo=dandara`; troque `dandara` pelo
-   identificador de qualquer jogo definido em `assets/js/data.js`.
+   A aplicação React estará disponível no endereço informado pelo Vite (ex: `http://localhost:5173/?jogo=dandara`).
+   Você pode trocar `dandara` pelo identificador de qualquer um dos 120 jogos cadastrados em `assets/js/data.js`.
 
-4. Para gerar os arquivos estáticos de produção, execute `npm run build`. Os arquivos serão
-   gerados na pasta `dist/`.
+4. Para gerar os arquivos estáticos de produção, execute:
 
-As demais páginas continuam usando HTML, CSS e JavaScript sem React.
+   ```sh
+   npm run build
+   ```
+
+   Os arquivos otimizados serão gerados na pasta `dist/` (pipeline idêntico ao executado na Vercel).
+
+As páginas institucionais e o catálogo principal continuam operando no GitHub Pages usando HTML, CSS e JavaScript puro.
 
 ## 🛠️ Tecnologias Utilizadas
 
-* HTML5
-* CSS3
-* JavaScript (manipulação do DOM, URLSearchParams, setInterval)
-* React (página de detalhes dos jogos)
-* Vite e npm
+* HTML5 Semântico
+* CSS3 / Variáveis Customizadas
+* JavaScript ES6+ (manipulação do DOM, URLSearchParams, Single Source of Truth)
+* React 18 & React DOM (página dinâmica de detalhes dos jogos)
+* Vite (bundler e dev-server)
+* Vercel (deploy da aplicação React)
+* GitHub Pages (deploy do catálogo e portal estático)
 * Bootstrap 5
 * Font Awesome 6
 * VLibras
@@ -164,6 +170,8 @@ As demais páginas continuam usando HTML, CSS e JavaScript sem React.
 * VLIBRAS. Portal do Governo Federal. Disponível em: https://vlibras.gov.br. Acesso em: set. 2026.
 * MDN WEB DOCS. URLSearchParams. Disponível em: https://developer.mozilla.org/pt-BR/docs/Web/API/URLSearchParams. Acesso em: set. 2026.
 * MDN WEB DOCS. Documentação JavaScript. Disponível em: https://developer.mozilla.org/pt-BR/. Acesso em: set. 2026.
+* REACT. Documentação Oficial do React. Disponível em: https://react.dev/. Acesso em: out. 2026.
+* VITE. Next Generation Frontend Tooling. Disponível em: https://vite.dev/. Acesso em: out. 2026.
 * W3C. ARIA Carousel Pattern. Disponível em: https://www.w3.org/WAI/ARIA/apg/patterns/carousel. Acesso em: set. 2026. 
 
 <p align="right">
