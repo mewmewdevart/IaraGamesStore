@@ -71,7 +71,7 @@ flowchart LR
 ---
 
 <p align="center">
-  <a href="./Sprint%2006%20-%20Iara%20Games_2026%20-%20EAD.pdf">📝 Visualizar documentação completa da Sprint 06 (PDF)</a>
+  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2006%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf">📝 Visualizar documentação completa da Sprint 06 (PDF)</a>
 </p>
 
 <p align="center">
