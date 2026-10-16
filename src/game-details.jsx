@@ -1,39 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 
-const descricoes = {
-  'a-lenda-do-heroi':
-    'Uma aventura musical e bem-humorada inspirada nas lendas brasileiras, com exploração, desafios e muita personalidade.',
-  dandara:
-    'Explore um mundo fantástico inspirado na cultura brasileira e desafie as leis da gravidade nesta aventura metroidvania.',
-  'dandy-ace':
-    'Enfrente um labirinto em constante mudança combinando cartas, poderes e muita ação em uma aventura roguelike.',
-  dolmen:
-    'Sobreviva a um universo de ficção científica hostil em uma experiência de ação e horror cósmico.',
-  'gaucho-and-the-grassland':
-    'Viaje por paisagens brasileiras, cuide da sua fazenda e descubra uma aventura relaxante cheia de descobertas.',
-  'horizon-chase-turbo':
-    'Reviva a velocidade e a estética dos clássicos arcades em corridas coloridas ao redor do mundo.',
-  'kaze-and-the-wild-masks':
-    'Domine plataformas precisas, máscaras ancestrais e desafios intensos nesta aventura inspirada nos clássicos.',
-  'mark-of-the-deep':
-    'Mergulhe em uma aventura pirata com exploração, mistérios e combates em um mundo cheio de segredos.',
-  pipistrello:
-    'Use um ioiô amaldiçoado para enfrentar inimigos e desvendar uma cidade vibrante em uma aventura de ação.',
-  'pocket-bravery':
-    'Entre no ringue com lutadores brasileiros e domine combates rápidos em um jogo de luta com visual pixel art.',
-  'ruff-ghanor':
-    'Assuma o papel de Ruff, um jovem clérigo treinado pelos monges do mosteiro de São Arnaldo, e enfrente o tirano Dragão Vermelho Zamir.',
-  'arida-backlands-awakening':
-    'Atravesse o sertão do século XIX em uma jornada de sobrevivência, memória e descoberta.',
-  'knights-of-pen-and-paper':
-    'Monte seu grupo de aventureiros e viva uma campanha de RPG de mesa cheia de humor e estratégia.',
-  'odallus-the-dark-call':
-    'Enfrente criaturas sombrias e descubra os segredos de uma terra amaldiçoada em uma aventura retrô.',
-  'fobia-st-dinfna-hotel':
-    'Investigue um hotel abandonado e encare fenômenos sobrenaturais em uma experiência brasileira de terror.',
-};
-
 const descricaoPadrao =
   'Descubra uma nova experiência criada por desenvolvedores independentes brasileiros.';
 
@@ -68,6 +35,7 @@ function obterJogo() {
     id,
     titulo,
     estudio: 'Desenvolvedora independente',
+    descricao: parametros.get('descricao') || descricaoPadrao,
     imagem: parametros.get('imagem') || './assets/img/og-image.png',
     nota: 0,
     totalVotos: 0,
@@ -122,7 +90,7 @@ function MensagemErro({ catalogoIndisponivel }) {
 function DetalhesJogo({ jogo }) {
   const [noCarrinho, setNoCarrinho] = useState(false);
   const [favorito, setFavorito] = useState(false);
-  const descricao = descricoes[jogo.id] || descricaoPadrao;
+  const descricao = jogo.descricao || descricaoPadrao;
   const tags = [...new Set([...jogo.generos, ...jogo.tags])];
   const plataformas = jogo.plataformas
     .map((plataforma) => plataforma[0].toUpperCase() + plataforma.slice(1))
