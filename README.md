@@ -122,10 +122,6 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    npm run dev
    ```
 
-   A página inicial estará disponível pelo endereço informado pelo Vite. A página de detalhes
-   em React pode ser aberta em `/game-details.html?jogo=dandara`; troque `dandara` pelo
-   identificador de qualquer jogo definido em `assets/js/data.js`.
-
 4. Para gerar os arquivos estáticos de produção, execute `npm run build`. Os arquivos serão
    gerados na pasta `dist/`.
 
