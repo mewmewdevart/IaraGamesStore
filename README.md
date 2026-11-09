@@ -56,28 +56,6 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
 >>>>>>> 914d8773275aff1a8700f002ed4adb73ad8cee74
    Implementação da página de detalhes dinâmica em React (Vite), arquitetura híbrida com hospedagem na Vercel e integração centralizada com `assets/js/data.js`.
 
-## Fase 07
-
-A loja, o catálogo, o login e os detalhes do jogo são renderizados em React e saem do mesmo build do Vite. Os arquivos da Fase 06 em `docs/` registram a estrutura anterior.
-
-```sh
-npm ci
-npm run dev
-```
-
-- `/` abre a loja.
-- `/jogos` abre o catálogo. Os parâmetros `search`, `filtro` e `secao` permitem abrir a página com uma busca, momento ou seção selecionada.
-- `/login` abre o login. `/login#cadastro` abre o cadastro.
-- `/jogo?jogo=dandara` abre a tela de detalhes. Troque `dandara` pelo identificador de outro jogo.
-
-As telas ficam em `src/pages/`. Os componentes compartilhados ficam em `src/components/`, e os hooks e utilitários ficam em `src/hooks/` e `src/utils/`.
-
-A seleção das telas e os links internos ficam em `src/routes/`. Os estilos das telas e dos componentes ficam ao lado dos respectivos arquivos JSX. Tokens, reset e regras compartilhadas ficam em `src/styles/global.css`.
-
-Os dados locais da loja, do catálogo e dos detalhes vêm de `src/data/catalogo.js`. A integração pode adaptar a resposta externa ao formato dos jogos usado nesse módulo. Os formulários de autenticação mantêm validação nativa e exibem um aviso de indisponibilidade no envio.
-
-Para validar a versão de produção, execute `npm run build` e depois `npm run preview`. O arquivo `vercel.json` configura a publicação da entrada única `index.html` a partir da pasta `dist/` e encaminha a abertura direta das rotas para ela.
-
 ## Integrantes
 
 * **Ingrid Silva de Lima** — [rm570149@fiap.com.br](mailto:rm570149@fiap.com.br)
