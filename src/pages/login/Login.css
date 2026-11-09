@@ -152,6 +152,54 @@
 	border-radius: var(--radius-sm);
 }
 
+.autenticacao__mensagem {
+	margin-top: 1rem;
+	color: var(--color-primary);
+	font-size: var(--text-sm);
+	line-height: 1.5;
+}
+
+.autenticacao__mensagem--sucesso {
+	color: var(--color-success);
+}
+
+.autenticacao__corpo button:disabled {
+	cursor: wait;
+	opacity: 0.7;
+	transform: none;
+}
+
+.autenticacao__modal-fundo {
+	position: fixed;
+	inset: 0;
+	z-index: var(--z-modal);
+	display: grid;
+	place-items: center;
+	padding: 1rem;
+	background: var(--color-dark-75);
+}
+
+.autenticacao__modal {
+	width: min(100%, 28rem);
+	padding: 2rem;
+	border: 1px solid var(--color-light-10);
+	border-radius: var(--radius-md);
+	background: var(--color-dark-composition);
+	box-shadow: var(--shadow-card);
+	text-align: center;
+}
+
+.autenticacao__modal .autenticacao__subtitulo {
+	margin-bottom: 1rem;
+}
+
+.autenticacao__modal-aviso {
+	margin-bottom: 1.5rem;
+	color: var(--color-gray-light);
+	font-size: var(--text-sm);
+	line-height: 1.5;
+}
+
 /* Ajustes Responsivos */
 @media (max-width: 576px) {
 	.autenticacao {
