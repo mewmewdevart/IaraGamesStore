@@ -152,7 +152,7 @@ Para gerar e conferir a versão de produção: `npm run build` e depois `npm run
 ---
 
 <p align="center">
-  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint%2007%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf">📝 Visualizar documentação completa da Sprint 07 (PDF)</a>
+  <a href="https://github.com/mewmewdevart/IaraGamesStore/main/docs/Sprint%2007%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf">📝 Visualizar documentação completa da Sprint 07 (PDF)</a>
 </p>
 
 <p align="center">
