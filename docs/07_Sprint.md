@@ -11,7 +11,7 @@ Este documento detalha as decisões da **Sprint 07**, etapa final do projeto Iar
 - 🌐 **Deploy da Plataforma (Vercel):** [https://iaragames-store.vercel.app/](https://iaragames-store.vercel.app/)
 - 🔐 **Área desenvolvida – Login e cadastro:** [https://iaragames-store.vercel.app/login.html](https://iaragames-store.vercel.app/login.html)
 - 💻 **Repositório GitHub:** [https://github.com/mewmewdevart/IaraGamesStore](https://github.com/mewmewdevart/IaraGamesStore)
-- 📖 **Documentação da Sprint:** [Visualizar Documentação Completa (PDF)]((https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint_07_-_2_Semestre_-_Iara_Games_2026_-_EAD.pdf))
+- 📖 **Documentação da Sprint:** [Visualizar Documentação Completa (PDF)](href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint_07_-_2_Semestre_-_Iara_Games_2026_-_EAD.pdf")
 - 🛠️ **Documentação técnica da integração:** [Integração do Login e Cadastro com DummyJSON (PDF)](./docs/integracao_dummyjson_login.pdf)
 
 ---
@@ -152,7 +152,7 @@ Para gerar e conferir a versão de produção: `npm run build` e depois `npm run
 ---
 
 <p align="center">
-  <a href="(https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint_07_-_2_Semestre_-_Iara_Games_2026_-_EAD.pdf)">📝 Visualizar documentação completa da Sprint 07 (PDF)</a>
+  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint_07_-_2_Semestre_-_Iara_Games_2026_-_EAD.pdf">📝 Visualizar documentação completa da Sprint 07 (PDF)</a>
 </p>
 
 <p align="center">
