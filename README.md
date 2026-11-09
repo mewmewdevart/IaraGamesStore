@@ -103,7 +103,7 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/Sprint%2006%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf).  
    Implementação em React (Vite) e hospedagem na Vercel.
 7. **[Sprint 07 - Deploy com API Real](./docs/07_sprint.md)**:  
-   [Documento em Markdown](./docs/07_sprint.md) | [Documento em PDF](./docs/Sprint_07_-_2_Semestre_-_Iara_Games_2026_-_EAD.pdf) 
+   [Documento em Markdown](./docs/07_Sprint.md) | [Documento em PDF](./docs/Sprint_07_-_2_Semestre_-_Iara_Games_2026_-_EAD.pdf) 
    Tela de login e cadastro em React integrada à API DummyJSON, migração de todo o projeto para React e deploy unificado na Vercel.
 
 ## Integrantes
