@@ -156,10 +156,7 @@ Para gerar e conferir a versão de produção: `npm run build` e depois `npm run
 </p>
 
 <p align="center">
-  <a href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/integracao_dummyjson_login.pdf">🛠️ Visualizar documentação técnica da integração com DummyJSON (PDF)</a>
+  <a href="https://iaragames-store.vercel.app/">🌐 Acessar a plataforma online</a> ·
 </p>
 
-<p align="center">
-  <a href="https://iaragames-store.vercel.app/">🌐 Acessar a plataforma online</a> ·
-  <a href="https://github.com/mewmewdevart/IaraGamesStore">💻 Acessar código-fonte no GitHub</a>
-</p>
+[🔙 Voltar para a (Sprint 06)](./06_sprint.md)
