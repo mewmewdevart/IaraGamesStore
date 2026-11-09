@@ -1,0 +1,33 @@
+.destaque-dots {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+ 
+.destaque-dot {
+  appearance: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-gray-light);
+  opacity: 0.45;
+  transition: opacity 0.2s ease, transform 0.2s ease, background 0.2s ease;
+}
+ 
+.destaque-dot--ativo {
+  opacity: 1;
+  transform: scale(1.45);
+  background: var(--color-secondary);
+}
+ 
+.destaque-dot:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+ 
+@media (max-width: 576px) {
+  .destaque-dot { width: 6px; height: 6px; }
+}

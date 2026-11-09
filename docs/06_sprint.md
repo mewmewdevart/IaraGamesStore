@@ -11,7 +11,7 @@ Este documento detalha as decisões da **Sprint 06** do projeto Iara Games, cujo
 - 🌐 **Deploy Principal (GitHub Pages):** [https://mewmewdevart.github.io/IaraGamesStore/](https://mewmewdevart.github.io/IaraGamesStore/)
 - ⚛️ **Deploy da Aplicação React (Vercel):** [https://iara-games-store.vercel.app/?jogo=pocket-bravery](https://iara-games-store.vercel.app/?jogo=pocket-bravery)
 - 💻 **Repositório GitHub:** [https://github.com/mewmewdevart/IaraGamesStore](https://github.com/mewmewdevart/IaraGamesStore)
-- 📖 **Documentação da Sprint:** [Visualizar Documentação Completa (PDF)](./Sprint%2006%20-%20Iara%20Games_2026%20-%20EAD.pdf)
+- 📖 **Documentação da Sprint:** [Visualizar Documentação Completa (PDF)](./Sprint%2006%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf)
 
 ---
 

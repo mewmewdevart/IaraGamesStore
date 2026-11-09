@@ -1,0 +1,388 @@
+/* ==========================================================================
+   PAGINA JOGOS: SEÇÃO BUSCA
+   ========================================================================== */
+
+.nav-link.active {
+  color: var(--color-primary) !important;
+  /* Cor exata do sublinhado */
+}
+
+.busca-jogos {
+  width: 100%;
+  padding: var(--section-padding-v);
+  background-color: var(--color-dark-composition);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-light-5);
+}
+
+.busca-jogos__container {
+  width: 100%;
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  margin-top: 4.0625rem;
+}
+
+.busca-jogos__titulo {
+  font-size: var(--text-4xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-light);
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  margin: 0;
+}
+
+.busca-jogos__acoes {
+  width: 100%;
+}
+
+.busca-jogos__input-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background-color: var(--color-gray);
+  border-radius: var(--radius-md);
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--color-light-10);
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.busca-jogos__btn-filtro {
+  background-image: url(../../../assets/img/pattern-secondary.svg);
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: var(--color-dark-composition);
+  border: 1px solid var(--color-light-20);
+  padding: 0 1.5rem;
+  border-radius: var(--radius-md, 0.5rem);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-base);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-base, 0.3s), border-color var(--transition-base, 0.3s), color var(--transition-base, 0.3s);
+}
+
+.busca-jogos__btn-filtro:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+  border-color: var(--color-secondary);
+}
+
+.busca-jogos__btn-filtro .texto-aberto {
+  display: none;
+}
+
+.busca-jogos__btn-filtro .texto-fechado {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.busca-jogos__filtro-toggle:checked ~ .busca-jogos__acoes .busca-jogos__btn-filtro .texto-fechado {
+  display: none;
+}
+
+.busca-jogos__filtro-toggle:checked ~ .busca-jogos__acoes .busca-jogos__btn-filtro .texto-aberto {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.busca-jogos__input-wrapper:focus-within {
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 0.25rem var(--color-secondary-20);
+}
+
+.busca-jogos__input {
+  width: 100%;
+  background: none;
+  border: none;
+  color: var(--color-light);
+  padding: 0.75rem 1rem;
+  font-size: var(--text-base);
+  outline: none;
+}
+
+.busca-jogos__btn-pesquisa {
+  background-image: url(../../../assets/img/pattern-secondary.svg);
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: var(--color-dark);
+  border: none;
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: transform var(--transition-fast), background-color var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+}
+
+.busca-jogos__btn-pesquisa:hover {
+  background-color: var(--color-secondary);
+  transform: scale(1.05);
+}
+
+/* ==========================================================================
+   PAINEL DE FILTROS EXPANSÍVEL
+   ========================================================================== */
+.busca-jogos__filtro-toggle {
+  display: none;
+}
+
+.busca-jogos__painel-filtros {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  margin-top: 0;
+  border-color: transparent;
+  display: flex;
+  background-color: var(--color-gray);
+  border-radius: var(--radius-lg);
+  transition: all 0.4s ease-in-out;
+}
+
+.busca-jogos__filtro-toggle:checked~.busca-jogos__painel-filtros {
+  max-height: 2000px;
+  opacity: 1;
+  padding: var(--space-lg);
+  margin-top: 1rem;
+  border: 1px solid var(--color-light-10);
+}
+
+.busca-jogos__filtro-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.busca-jogos__filtro-titulo {
+  font-size: var(--text-base);
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.05rem;
+  border-bottom: 1px solid var(--color-light-10);
+  padding-bottom: 0.25rem;
+}
+
+.busca-jogos__filtro-opcao {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: var(--text-sm);
+  color: var(--color-light);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.busca-jogos__filtro-opcao:hover {
+  color: var(--color-secondary);
+}
+
+.busca-jogos__filtro-opcao input[type="checkbox"],
+.busca-jogos__filtro-opcao input[type="radio"] {
+  accent-color: var(--color-secondary);
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
+.busca-jogos__filtro-tags-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.busca-jogos__filtro-chip {
+  background: var(--color-gray);
+  border: 1px solid var(--color-light-10);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-lg);
+  font-size: var(--text-xs);
+  cursor: pointer;
+  color: var(--color-light);
+  transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
+}
+
+.busca-jogos__filtro-chip:hover {
+  background-color: var(--color-gray-light);
+  color: var(--color-dark);
+}
+
+.busca-jogos__filtro-chip:has(input:checked) {
+  background-color: var(--color-secondary);
+  color: var(--color-dark);
+  border-color: var(--color-secondary);
+  font-weight: var(--weight-bold);
+}
+
+@media (max-width: 900px) {
+  .busca-jogos {
+    padding-top: 4.0625rem;
+    padding-left: var(--section-padding-h);
+    padding-right: var(--section-padding-h);
+  }
+
+  .busca-jogos__btn-filtro {
+    padding: 1rem;
+  }
+
+  .busca-jogos__titulo {
+    font-size: var(--text-xl);
+  }
+}
+
+/* ==========================================================================
+   BIBLIOTECA E PAGINAÇÃO
+   ========================================================================== */
+
+.biblioteca {
+  padding: var(--section-padding-v) var(--section-padding-h);
+}
+
+.biblioteca__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.biblioteca__subtitulo {
+  font-size: var(--text-base);
+  color: var(--color-gray-light);
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+.biblioteca__titulo {
+  font-size: var(--text-3xl);
+  margin: 0.3125rem 0 0 0;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  color: var(--color-light);
+}
+
+/* ==========================================================================
+   ORDENAÇÃO DE JOGOS E CABEÇALHO DA BIBLIOTECA
+   ========================================================================== */
+.biblioteca__ordenacao-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.biblioteca__total {
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+}
+
+.biblioteca__ordenacao {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  cursor: pointer;
+}
+
+.biblioteca__ordenacao-label {
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+  font-weight: var(--weight-semibold);
+}
+
+.biblioteca__select-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.biblioteca__select {
+  background-color: var(--color-dark-composition);
+  color: var(--color-light);
+  border: 1px solid var(--color-light-20);
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: var(--text-sm);
+  cursor: pointer;
+  transition: border-color var(--transition-base), box-shadow var(--transition-base);
+}
+
+.biblioteca__select:focus,
+.biblioteca__select:hover {
+  border-color: var(--color-secondary);
+  outline: none;
+}
+
+.biblioteca__grade {
+  margin-bottom: 3rem;
+}
+
+.paginacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.375rem;
+  padding-bottom: var(--section-padding-v);
+}
+
+.paginacao__item {
+  width: 2.25rem;
+  height: 2.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  cursor: pointer;
+  border: none;
+  background-color: var(--color-gray);
+  color: var(--color-gray-light);
+  transition: background-color var(--transition-fast), color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+}
+
+.paginacao__item:hover {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  transform: translateY(-0.125rem);
+}
+
+.paginacao__item--ativo {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+}
+
+.paginacao__item--reticencias {
+  background: none;
+  cursor: default;
+  color: var(--color-gray-light);
+}
+
+.paginacao__item--reticencias:hover {
+  background: none;
+  transform: none;
+}
+.paginacao__item:disabled {
+  cursor: default;
+  opacity: 0.45;
+  pointer-events: none;
+}

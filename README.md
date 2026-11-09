@@ -7,13 +7,9 @@
   🧜‍♀️ | Plataforma Iara Games desenvolvida como projeto acadêmico do Tecnólogo em Web Design da FIAP, com foco em UX, design, HTML, CSS e JavaScript.
 </p>
 
-  <p align="center">
-    <a href="https://mewmewdevart.github.io/IaraGamesStore/">🌐 Acesse o catálogo (GitHub Pages)</a> &nbsp;|&nbsp;
-    <a href="https://iara-games-store.vercel.app/?jogo=pocket-bravery">⚛️ Acesse a página React (Vercel)</a>
-  </p>
 
   <p align="center">
-    <img src="https://img.shields.io/badge/Sprint-06-6b9acf?style=for-the-badge&logo=headspace&logoColor=white" />
+    <img src="https://img.shields.io/badge/Sprint-07-6b9acf?style=for-the-badge&logo=headspace&logoColor=white" />
     <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-6b9acf?style=for-the-badge&logo=github&logoColor=white" />
     <img src="https://img.shields.io/badge/Projeto-Acadêmico-6b9acf?style=for-the-badge&logo=bookstack&logoColor=white" />
   </p>
@@ -52,106 +48,31 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
 5. **[Sprint 05 - Interação](./docs/05_sprint.md)**:
    Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc).
-6. **[Sprint 06 - Hospedando React](./docs/06_sprint.md)** *(Fase Atual)*:  
-   [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/Sprint%2006%20-%20Iara%20Games_2026%20-%20EAD.pdf).  
+6. **[Sprint 06 - Hospedando React](./docs/06_sprint.md)**:  
+   [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/Sprint%2006%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf).  
    Implementação da página de detalhes dinâmica em React (Vite), arquitetura híbrida com hospedagem na Vercel e integração centralizada com `assets/js/data.js`.
 
-## Estrutura do Projeto
+## Fase 07
 
-```bash
-.
-├── assets/
-│   ├── css/        # Estilos da aplicação
-│   ├── img/        # Imagens e ícones
-│   └── js/
-│       ├── busca-navbar.js       # Busca pelo navbar com redirecionamento por URL
-│       ├── carousel.js           # Hero, carrossel de seções e carrossel de destaque
-│       ├── data.js               # Banco de dados centralizado dos jogos (também usado pela página React)
-│       ├── detalhes-navegacao.js # Geração de links dos cards para a página de detalhes
-│       ├── filtros.js            # Sistema completo de filtros e ordenação
-├── src/
-│   └── game-details.jsx          # Página de detalhes renderizada em React
-├── package.json                  # Dependências e comandos npm
-├── vite.config.js                # Desenvolvimento e build das páginas
-├── docs/
-│   ├── 01_sprint.md   # Documentação resumida da Sprint 01
-│   ├── 02_sprint.md   # Documentação resumida da Sprint 02
-│   ├── 03_sprint.md   # Documentação resumida da Sprint 03
-│   ├── 04_sprint.md   # Documentação resumida da Sprint 04
-│   ├── 05_sprint.md   # Documentação resumida da Sprint 05
-│   ├── 06_sprint.md   # Documentação resumida da Sprint 06
-│   ├── Iara Games - Brandbook.pdf               # Brandbook da Iara Games
-│   ├── Sprint 01 - Iara Games_2026 - EAD .pdf   # Documentação detalhada da Sprint 01
-│   ├── Sprint 02 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 02
-│   ├── Sprint 03 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 03
-│   ├── Sprint 04 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 04
-│   ├── Sprint 05 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 05
-│   ├── Sprint 06 - Iara Games_2026 - EAD.pdf    # Documentação detalhada da Sprint 06
-├── index.html        # Página principal (Home Page)
-├── LICENSE           # Licença do projeto
-└── README.md         # Documentação principal do repositório
-````
+A loja, o catálogo, o login e os detalhes do jogo são renderizados em React e saem do mesmo build do Vite. Os arquivos da Fase 06 em `docs/` registram a estrutura anterior.
 
-## Instruções de Uso
+```sh
+npm ci
+npm run dev
+```
 
-### Pré-requisitos
+- `/` abre a loja.
+- `/jogos` abre o catálogo. Os parâmetros `search`, `filtro` e `secao` permitem abrir a página com uma busca, momento ou seção selecionada.
+- `/login` abre o login. `/login#cadastro` abre o cadastro.
+- `/jogo?jogo=dandara` abre a tela de detalhes. Troque `dandara` pelo identificador de outro jogo.
 
-❗ Certifique-se de ter as seguintes ferramentas instaladas:
+As telas ficam em `src/pages/`. Os componentes compartilhados ficam em `src/components/`, e os hooks e utilitários ficam em `src/hooks/` e `src/utils/`.
 
-* Git
-* Navegador (Google Chrome, Firefox, Opera, etc.)
-* Node.js e npm (para executar a página de detalhes em React)
+A seleção das telas e os links internos ficam em `src/routes/`. Os estilos das telas e dos componentes ficam ao lado dos respectivos arquivos JSX. Tokens, reset e regras compartilhadas ficam em `src/styles/global.css`.
 
-### Como executar
+Os dados locais da loja, do catálogo e dos detalhes vêm de `src/data/catalogo.js`. A integração pode adaptar a resposta externa ao formato dos jogos usado nesse módulo. Os formulários de autenticação mantêm validação nativa e exibem um aviso de indisponibilidade no envio.
 
-1. Clone o repositório:
-
-   ```sh
-   git clone https://github.com/mewmewdevart/IaraGamesStore.git
-   ```
-
-2. Acesse o diretório do projeto:
-
-   ```sh
-   cd IaraGamesStore/
-   ```
-
-3. Para executar o site com o Vite, instale as dependências e inicie o servidor:
-
-   ```sh
-   npm install
-   npm run dev
-   ```
-
-   A aplicação React estará disponível no endereço informado pelo Vite (ex: `http://localhost:5173/?jogo=dandara`).
-   Você pode trocar `dandara` pelo identificador de qualquer um dos 120 jogos cadastrados em `assets/js/data.js`.
-
-4. Para gerar os arquivos estáticos de produção, execute:
-
-   ```sh
-   npm run build
-   ```
-
-   Os arquivos otimizados serão gerados na pasta `dist/` (pipeline idêntico ao executado na Vercel).
-
-As páginas institucionais e o catálogo principal continuam operando no GitHub Pages usando HTML, CSS e JavaScript puro.
-
-## 🛠️ Tecnologias Utilizadas
-
-* HTML5 Semântico
-* CSS3 / Variáveis Customizadas
-* JavaScript ES6+ (manipulação do DOM, URLSearchParams, Single Source of Truth)
-* React 18 & React DOM (página dinâmica de detalhes dos jogos)
-* Vite (bundler e dev-server)
-* Vercel (deploy da aplicação React)
-* GitHub Pages (deploy do catálogo e portal estático)
-* Bootstrap 5
-* Font Awesome 6
-* VLibras
-* Git & GitHub
-* Figma
-* Miro
-* Canva
+Para validar a versão de produção, execute `npm run build` e depois `npm run preview`. O arquivo `vercel.json` configura a publicação da entrada única `index.html` a partir da pasta `dist/` e encaminha a abertura direta das rotas para ela.
 
 ## Integrantes
 

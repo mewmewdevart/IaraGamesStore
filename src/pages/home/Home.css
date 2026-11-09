@@ -1,0 +1,291 @@
+.secao-momentos {
+  width: 100%;
+  padding: var(--section-padding-v) var(--section-padding-h) 0;
+  transition: padding var(--transition-slow);
+}
+
+.card-momento {
+  background-color: var(--color-dark-composition);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-light-5);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+  z-index: 1;
+  min-height: 12rem;
+  text-align: center;
+}
+
+
+.card-momento--blob1,
+.card-momento--blob2,
+.card-momento--blob3,
+.card-momento--blob4 {
+  clip-path: none;
+}
+
+.card-momento::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background-image: radial-gradient(circle at top, var(--color-light-5), transparent 70%);
+  z-index: -1;
+  opacity: 0.5;
+  transition: opacity var(--transition-base);
+}
+
+.card-momento__icone-svg {
+  width: 3.5rem;
+  height: 3.5rem;
+  filter: drop-shadow(0px 4px 6px var(--color-shadow));
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-momento__titulo {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-light);
+}
+
+.card-momento__desc {
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+  font-weight: var(--weight-regular);
+  line-height: 1.4;
+  padding: 0 0.5rem;
+}
+.card-momento:hover,
+.card-momento:focus-visible {
+  transform: translateY(-8px);
+  outline: none;
+  border-color: transparent;
+}
+
+.card-momento:hover::before {
+  opacity: 1;
+}
+
+.card-momento:hover .card-momento__icone-svg {
+  transform: scale(1.15) rotate(5deg);
+}
+.card-momento--pausa:hover,
+.card-momento--pausa:focus-visible {
+  filter: drop-shadow(0 0 15px var(--color-secondary));
+}
+
+.card-momento--pausa .card-momento__icone-svg,
+.card-momento--pausa .card-momento__titulo {
+  color: var(--color-secondary);
+}
+
+.card-momento--calmaria:hover,
+.card-momento--calmaria:focus-visible {
+  filter: drop-shadow(0 0 15px var(--color-light));
+}
+
+.card-momento--calmaria .card-momento__icone-svg,
+.card-momento--calmaria .card-momento__titulo {
+  color: var(--color-light);
+}
+
+.card-momento--raizes:hover,
+.card-momento--raizes:focus-visible {
+  filter: drop-shadow(0 0 15px var(--color-success));
+}
+
+.card-momento--raizes .card-momento__icone-svg,
+.card-momento--raizes .card-momento__titulo {
+  color: var(--color-success);
+}
+
+.card-momento--resenha:hover,
+.card-momento--resenha:focus-visible {
+  filter: drop-shadow(0 0 15px var(--color-primary));
+}
+
+.card-momento--resenha .card-momento__icone-svg,
+.card-momento--resenha .card-momento__titulo {
+  color: var(--color-primary);
+}
+@media (max-width: 576px) {
+  .card-momento {
+    min-height: auto;
+    border-radius: var(--radius-lg);
+  }
+
+  .card-momento__icone-svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .card-momento__desc {
+    line-height: 1.2;
+  }
+}
+
+.secao-lancamentos {
+  content-visibility: auto;
+  contain-intrinsic-size: 62.5rem;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 50vh;
+  padding: var(--section-padding-v) var(--section-padding-h) 0;
+}
+
+.secao-lancamentos__cabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5625rem;
+}
+
+.secao-lancamentos__subtitulo {
+  font-size: var(--text-base);
+  color: var(--color-gray-light);
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+}
+
+.secao-lancamentos__titulo {
+  font-size: var(--text-3xl);
+  margin: 0.3125rem 0 0 0;
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+}
+
+.secao-lancamentos__link-ver-todos {
+  color: var(--color-secondary);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.secao-lancamentos__link-ver-todos:hover {
+  color: var(--color-primary);
+}
+.secao-cta-login {
+  width: 100%;
+  padding: var(--section-padding-v) var(--section-padding-h);
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.cta-login-card {
+  width: 100%;
+  max-width: 60rem;
+  background: linear-gradient(135deg, var(--color-dark-composition) 0%, rgba(18, 32, 24, 0.6) 100%);
+  border: 1px solid var(--color-light-10);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+  text-align: left;
+  box-shadow: var(--shadow-card);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.cta-login-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top left, rgba(252, 163, 17, 0.08), transparent 70%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cta-login-card:hover {
+  border-color: var(--color-secondary-70);
+  box-shadow: 0 1.5rem 3.5rem rgba(0, 0, 0, 0.8), 0 0 15px rgba(252, 163, 17, 0.15);
+  transform: translateY(-2px);
+}
+
+.cta-login-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 2;
+}
+
+.cta-login-title {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: var(--color-light);
+  margin-bottom: 0;
+  line-height: 1.2;
+}
+
+.cta-login-description {
+  font-size: var(--text-base);
+  color: var(--color-gray-light);
+  margin-bottom: 0;
+  max-width: 38rem;
+  line-height: 1.5;
+}
+
+.cta-login-botao-wrapper {
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.cta-login-card .btn-iara-login {
+  min-width: 12rem;
+  height: 3.5rem;
+  font-size: var(--text-base);
+  font-weight: 800 !important;
+}
+
+@media (max-width: 992px) {
+  .cta-login-card {
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .cta-login-title {
+    font-size: var(--text-xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .cta-login-card {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .cta-login-description {
+    max-width: 100%;
+  }
+  .cta-login-card .btn-iara-login {
+    width: 100%;
+    min-width: 15rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cta-login-card {
+    padding: 1.5rem 1.25rem;
+    gap: 1.25rem;
+  }
+  .cta-login-card .btn-iara-login {
+    min-width: unset;
+    width: 100%;
+  }
+}
+@media (max-width: 576px) {
+  .card-momento {
+    min-height: 12rem;
+  }
+}

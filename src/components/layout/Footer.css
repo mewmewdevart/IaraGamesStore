@@ -1,0 +1,52 @@
+.footer-custom {
+  background-color: var(--color-) !important;
+}
+
+
+.footer-custom h6 {
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+.footer-link {
+  color: var(--color-gray-light);
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: block;
+  margin-bottom: 12px;
+  transition: all 0.3s ease;
+}
+.footer-link:hover {
+  color: var(--color-primary);
+  padding-left: 5px;
+}
+
+.toast-em-breve {
+  position: fixed;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translate(-50%, 1rem);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background-color: var(--color-dark-composition);
+  color: var(--color-light);
+  border: 1px solid var(--color-light-20);
+  border-left: 4px solid var(--color-secondary);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  font-size: var(--text-sm);
+  z-index: 2000;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  max-width: 90vw;
+}
+
+.toast-em-breve--visivel {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+.toast-em-breve__icone {
+  color: var(--color-secondary);
+}

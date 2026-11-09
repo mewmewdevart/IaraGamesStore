@@ -1,0 +1,117 @@
+.preco-antigo {
+  color: var(--color-gray-light);
+  text-decoration: line-through;
+}
+
+.secao-consumidor__cartao-lista,
+.secao-lancamentos__cartao {
+  background: var(--color-dark-composition);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+  position: relative;
+}
+
+.secao-consumidor__cartao-lista:hover,
+.secao-consumidor__cartao-lista:focus-within,
+.secao-lancamentos__cartao:hover,
+.secao-lancamentos__cartao:focus-within {
+  transform: translateY(-0.375rem);
+  box-shadow: var(--shadow-card);
+  outline: 0.1875rem solid var(--color-secondary);
+  outline-offset: 0.25rem;
+}
+
+.secao-consumidor__imagem-envolucro,
+.secao-lancamentos__imagem-envolucro {
+  position: relative;
+}
+
+.secao-consumidor__imagem-envolucro::after,
+.secao-lancamentos__imagem-envolucro::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10rem;
+  background: linear-gradient(to bottom, transparent, var(--color-dark-composition));
+}
+
+.secao-consumidor__imagem-lista,
+.secao-lancamentos__imagem {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  display: block;
+}
+
+.secao-lancamentos__imagem--sem-capa {
+  object-fit: contain;
+  padding: 1.5rem;
+  background-color: rgb(44, 46, 48);
+}
+
+.secao-consumidor__info-lista,
+.secao-lancamentos__info {
+  padding: 0.875rem 0.875rem 1rem;
+  flex: 1;
+}
+
+.secao-consumidor__titulo-lista,
+.secao-lancamentos__titulo-jogo {
+  font-family: var(--font-inter);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-light);
+  margin-bottom: 0.125rem;
+}
+
+.secao-consumidor__estudio,
+.secao-lancamentos__estudio {
+  font-size: var(--text-sm);
+  color: var(--color-gray-light);
+  margin-bottom: 0.5rem;
+}
+
+.secao-consumidor__avaliacao,
+.secao-lancamentos__avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  font-size: var(--text-sm);
+  margin-bottom: 0.5rem;
+}
+
+.secao-consumidor__icone-estrela,
+.secao-lancamentos__icone-estrela {
+  color: var(--color-secondary);
+  font-size: var(--text-sm);
+}
+
+.secao-consumidor__nota,
+.secao-lancamentos__nota {
+  font-weight: var(--weight-bold);
+  color: var(--color-secondary);
+}
+
+.secao-consumidor__total-votos,
+.secao-lancamentos__total-votos {
+  color: var(--color-gray-light);
+}
+
+.secao-consumidor__bloco-preco,
+.secao-lancamentos__bloco-preco {
+  font-size: var(--text-sm);
+  margin-bottom: auto;
+}
+
+.secao-consumidor__preco-novo,
+.secao-lancamentos__preco-novo,
+.secao-consumidor__preco-desconto,
+.secao-lancamentos__preco-desconto {
+  color: var(--color-secondary);
+  font-weight: var(--weight-bold);
+  font-size: var(--text-base);
+}
