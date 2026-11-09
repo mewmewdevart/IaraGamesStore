@@ -3,31 +3,82 @@
   
   <h1>Iara Games 🌊</h1>
   
-<p>
-  🧜‍♀️ | Plataforma Iara Games desenvolvida como projeto acadêmico do Tecnólogo em Web Design da FIAP, com foco em UX, design, HTML, CSS e JavaScript.
-</p>
-
+  <p>
+    🧜‍♀️ | Plataforma Iara Games desenvolvida como projeto acadêmico do Tecnólogo em Web Design da FIAP, com foco em UX, design, HTML, CSS, JavaScript e React.
+  </p>
 
   <p align="center">
-    <img src="https://img.shields.io/badge/Sprint-07-6b9acf?style=for-the-badge&logo=headspace&logoColor=white" />
-    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-6b9acf?style=for-the-badge&logo=github&logoColor=white" />
-    <img src="https://img.shields.io/badge/Projeto-Acadêmico-6b9acf?style=for-the-badge&logo=bookstack&logoColor=white" />
+    <a href="https://iaragames-store.vercel.app/" target="_blank">
+      <img src="https://img.shields.io/badge/Deploy-Vercel-6b9acf?style=for-the-badge&logo=vercel&logoColor=white" alt="Deploy na Vercel" />
+    </a>
+    <img src="https://img.shields.io/badge/Sprint-07-6b9acf?style=for-the-badge&logo=headspace&logoColor=white" alt="Sprint 07" />
+    <img src="https://img.shields.io/badge/Status-Em%20Desenvolvimento-6b9acf?style=for-the-badge&logo=github&logoColor=white" alt="Status Em Desenvolvimento" />
+    <img src="https://img.shields.io/badge/Projeto-Acadêmico-6b9acf?style=for-the-badge&logo=bookstack&logoColor=white" alt="Projeto Acadêmico" />
   </p>
 </div>
 
 ## 📚 Sobre o Projeto
-A Iara Games é uma plataforma web de distribuição de jogos indie brasileiros, criada como projeto acadêmico do Tecnólogo em Web Design da FIAP, com foco em experiência do usuário (UX), design e desenvolvimento web. 
+A Iara Games é uma plataforma web de distribuição de jogos indie brasileiros, criada como projeto acadêmico do Tecnólogo em Web Design da FIAP, com foco em experiência do usuário (UX), design e desenvolvimento web.
+
+🔗 **Acesse o projeto online:** [https://iaragames-store.vercel.app/](https://iaragames-store.vercel.app/)
 
 ### Desktop
 <p align="center">
   <img width="2696" alt="Preview do projeto em formato desktop" src="https://github.com/user-attachments/assets/04ee064d-773e-4d9f-abed-ef45b4de3464" />
 </p>
 
-
 ### Mobile
 <p align="center">
   <img width="331" alt="Preview do projeto em formato mobile" src="https://github.com/user-attachments/assets/9856178e-91ac-4482-99d9-d5f3b3a9a87b" />
 </p>
+
+## 📂 Estrutura de Pastas
+
+```text
+IaraGamesStore/
+├── assets/                 # Recursos estáticos (imagens, ícones, favicons e estilos base)
+├── docs/                   # Documentações e entregas de cada Sprint (Markdown e PDF)
+├── src/                    # Código-fonte da aplicação React
+│   ├── components/         # Componentes reutilizáveis (Header, Footer, GameCard, Indicadores)
+│   ├── data/               # Catálogo centralizado de jogos (catalogo.js)
+│   ├── hooks/              # Custom hooks (ex.: controle de carrossel)
+│   ├── pages/              # Páginas da aplicação (Home, Games, GameDetails, Login)
+│   ├── routes/             # Configuração de rotas e caminhos de navegação
+│   ├── styles/             # Estilos globais da aplicação
+│   ├── types/              # Definições e estruturas de dados dos jogos
+│   ├── utils/              # Funções utilitárias (ex.: formatação de preços)
+│   └── main.jsx            # Ponto de entrada da aplicação React
+├── index.html              # HTML principal da aplicação
+├── package.json            # Dependências e scripts do projeto
+├── vercel.json             # Configuração de rotas para hospedagem na Vercel
+└── vite.config.js          # Configuração do bundler Vite
+```
+
+## 🚀 Como Rodar Localmente
+
+Pré-requisitos: ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
+
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/larissacbenedito/IaraGamesStore.git
+   ```
+
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd IaraGamesStore
+   ```
+
+3. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+
+5. Acesse o endereço exibido no terminal (geralmente `http://localhost:5173`) no seu navegador.
 
 # Navegação da Documentação
 
@@ -48,13 +99,9 @@ Para manter o repositório organizado e escalável, as entregas foram separadas 
    Foco na identificação de problemas de design de interação com base nos Conceitos de Cooper.
 5. **[Sprint 05 - Interação](./docs/05_sprint.md)**:
    Foco na interatividade da página, aplicando o JavaScript (VLibras, Busca pelo Navbar, Sistema de Filtros etc).
-<<<<<<< HEAD
 6. **[Sprint 06 - Hospedando React](./docs/06_sprint.md)**:  
    [Documento em Markdown](./docs/06_sprint.md) | [Documento em PDF](./docs/Sprint%2006%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf).  
-=======
-6. **[Sprint 06 - Hospedando React](./docs/06_sprint.md)** *(Fase Atual)*:    
->>>>>>> 914d8773275aff1a8700f002ed4adb73ad8cee74
-   Implementação da página de detalhes dinâmica em React (Vite), arquitetura híbrida com hospedagem na Vercel e integração centralizada com `assets/js/data.js`.
+   Implementação em React (Vite) e hospedagem na Vercel.
 
 ## Integrantes
 
