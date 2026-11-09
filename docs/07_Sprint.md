@@ -11,7 +11,7 @@ Este documento detalha as decisões da **Sprint 07**, etapa final do projeto Iar
 - 🌐 **Deploy da Plataforma (Vercel):** [https://iaragames-store.vercel.app/](https://iaragames-store.vercel.app/)
 - 🔐 **Área desenvolvida – Login e cadastro:** [https://iaragames-store.vercel.app/login.html](https://iaragames-store.vercel.app/login.html)
 - 💻 **Repositório GitHub:** [https://github.com/mewmewdevart/IaraGamesStore](https://github.com/mewmewdevart/IaraGamesStore)
-- 📖 **Documentação da Sprint:** [Visualizar Documentação Completa (PDF)](href="https://github.com/mewmewdevart/IaraGamesStore/blob/main/docs/Sprint_07_-_2_Semestre_-_Iara_Games_2026_-_EAD.pdf")
+- 📖 **Documentação da Sprint:** [Visualizar Documentação Completa (PDF)](./Sprint%2007%20-%202%C2%BASemestre%20-%20Iara%20Games_2026%20-%20EAD.pdf)
 - 🛠️ **Documentação técnica da integração:** [Integração do Login e Cadastro com DummyJSON (PDF)](./docs/integracao_dummyjson_login.pdf)
 
 ---
